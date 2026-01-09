@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.5.0-1-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Desktop HDD.15
@@ -11,10 +11,10 @@ User Capacity:    4,000,787,030,016 bytes [4.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5900 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5660
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Sep 24 16:41:37 2023 CEST
+Local Time is:    Sun Mar 23 15:09:24 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,30 +65,30 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    203934096
+  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    193682656
   3 Spin_Up_Time            PO----   095   091   000    -    0
-  4 Start_Stop_Count        -O--CK   087   087   020    -    14115
+  4 Start_Stop_Count        -O--CK   085   085   020    -    16314
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    17845662
-  9 Power_On_Hours          -O--CK   064   064   000    -    31749
+  7 Seek_Error_Rate         POSR--   072   060   030    -    20141130
+  9 Power_On_Hours          -O--CK   056   056   000    -    38663
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2800
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3490
 183 Runtime_Bad_Block       -O--CK   085   085   000    -    15
 184 End-to-End_Error        -O--CK   094   094   099    NOW  6
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   095   055   000    -    818 865 895
+188 Command_Timeout         -O--CK   100   055   000    -    884 932 967
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 25/38)
+190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 17/39)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1328
-193 Load_Cycle_Count        -O--CK   086   086   000    -    29685
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1440
+193 Load_Cycle_Count        -O--CK   080   080   000    -    41851
 194 Temperature_Celsius     -O---K   038   051   000    -    38 (0 10 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    5
-240 Head_Flying_Hours       ------   100   253   000    -    13132h+52m+33.368s
-241 Total_LBAs_Written      ------   100   253   000    -    17375593116
-242 Total_LBAs_Read         ------   100   253   000    -    278390613173
+240 Head_Flying_Hours       ------   100   253   000    -    13588h+30m+20.948s
+241 Total_LBAs_Written      ------   100   253   000    -    19725837350
+242 Total_LBAs_Read         ------   100   253   000    -    287506275522
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,7 +96,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands require SAT ATA PASS-THROUGH (16)
 Read GP Log Directory failed
 
 SMART Log Directory Version 1 [multi-sector log support]
@@ -127,7 +127,11 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               30%     23843         -
+# 1  Extended offline    Completed without error       00%     38560         -
+# 2  Extended offline    Interrupted (host reset)      00%     38534         -
+# 3  Extended offline    Interrupted (host reset)      00%     38520         -
+# 4  Extended offline    Aborted by host               90%     31860         -
+# 5  Short offline       Aborted by host               30%     23843         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -143,8 +147,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     25/38 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     17/39 Celsius
 Lifetime    Min/Max Temperature:     10/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -163,6 +167,8 @@ Page  Offset Size        Value Flags Description
 
 Pending Defects log (GP Log 0x0c) not supported
 
-ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
+ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands require SAT ATA PASS-THROUGH (16)
 Read SATA Phy Event Counters failed
+
+
 

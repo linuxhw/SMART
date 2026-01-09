@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.20-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.9-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 3.AAA
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Feb  6 15:14:51 2024 CET
+Local Time is:    Sun Jan 19 08:13:25 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,19 +55,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    87016092
+  1 Raw_Read_Error_Rate     POSR--   118   093   006    -    180165248
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1343
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1868
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    123135313
-  9 Power_On_Hours          -O--CK   095   095   000    -    4497
+  7 Seek_Error_Rate         POSR--   084   060   030    -    303292523
+  9 Power_On_Hours          -O--CK   091   091   000    -    8728
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1343
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1851
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   054   045    -    36 (Min/Max 36/36)
-194 Temperature_Celsius     -O---K   036   046   000    -    36 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   102   053   000    -    150256314
+190 Airflow_Temperature_Cel -O---K   076   054   045    -    24 (Min/Max 18/24)
+194 Temperature_Celsius     -O---K   024   046   000    -    24 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   097   053   000    -    27313397
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
@@ -92,10 +92,10 @@ Address    Access  R/W   Size  Description
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
+0x20       GPL,SL  R/O      1  Streaming performance log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
-0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
+0x23       GPL,SL  R/O      1  Delayed sector log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0       GPL,SL  VS       1  Device vendor specific log
 0xa1       GPL,SL  VS      20  Device vendor specific log
@@ -110,6 +110,20 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      6695         -
+# 2  Extended offline    Completed without error       00%      6546         -
+# 3  Extended offline    Completed without error       00%      6398         -
+# 4  Extended offline    Completed without error       00%      6231         -
+# 5  Extended offline    Completed without error       00%      6064         -
+# 6  Extended offline    Completed without error       00%      5792         -
+# 7  Extended offline    Completed without error       00%      5624         -
+# 8  Extended offline    Completed without error       00%      5457         -
+# 9  Extended offline    Completed without error       00%      5290         -
+#10  Extended offline    Completed without error       00%      5154         -
+#11  Extended offline    Completed without error       00%      4986         -
+#12  Extended offline    Completed without error       00%      4832         -
+#13  Extended offline    Completed without error       00%      4665         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -136,7 +150,7 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
 0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific

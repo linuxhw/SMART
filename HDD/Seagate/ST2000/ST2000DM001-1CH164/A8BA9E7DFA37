@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-8-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.19-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -11,14 +11,14 @@ User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Sep  9 22:16:50 2021 MSK
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Fri Mar 28 11:11:10 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -30,19 +30,20 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 241)	Self-test routine in progress...
-					10% of test remaining.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  575) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -62,30 +63,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   100   006    -    283688
-  3 Spin_Up_Time            PO----   094   091   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    387
+  1 Raw_Read_Error_Rate     POSR--   116   099   006    -    108728856
+  3 Spin_Up_Time            PO----   092   091   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1803
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   065   060   030    -    3155452
-  9 Power_On_Hours          -O--CK   100   100   000    -    261
+  7 Seek_Error_Rate         POSR--   079   060   030    -    100049698
+  9 Power_On_Hours          -O--CK   097   097   000    -    3275
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    382
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    743
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 2
-189 High_Fly_Writes         -O-RCK   099   099   000    -    1
-190 Airflow_Temperature_Cel -O---K   042   040   045    NOW  58 (Min/Max 29/58 #116)
+189 High_Fly_Writes         -O-RCK   094   094   000    -    6
+190 Airflow_Temperature_Cel -O---K   055   040   045    Past 45 (Min/Max 26/45 #134)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    12
-193 Load_Cycle_Count        -O--CK   100   100   000    -    1659
-194 Temperature_Celsius     -O---K   058   060   000    -    58 (0 19 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    171
+193 Load_Cycle_Count        -O--CK   099   099   000    -    3162
+194 Temperature_Celsius     -O---K   045   060   000    -    45 (128 0 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    153h+20m+14.254s
-241 Total_LBAs_Written      ------   100   253   000    -    7448871225
-242 Total_LBAs_Read         ------   100   253   000    -    9446249275
+240 Head_Flying_Hours       ------   100   253   000    -    1608h+44m+17.897s
+241 Total_LBAs_Written      ------   100   253   000    -    32337581440
+242 Total_LBAs_Read         ------   100   253   000    -    120054767377
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,7 +127,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Self-test routine in progress 10%       261         -
+# 1  Extended offline    Completed without error       00%       261         -
 # 2  Conveyance offline  Completed without error       00%       246         -
 # 3  Short offline       Completed without error       00%       246         -
 
@@ -144,10 +145,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    58 Celsius
-Power Cycle Min/Max Temperature:     29/58 Celsius
+Current Temperature:                    45 Celsius
+Power Cycle Min/Max Temperature:     26/45 Celsius
 Lifetime    Min/Max Temperature:     19/60 Celsius
-Under/Over Temperature Limit Count:   0/2
+Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
 
