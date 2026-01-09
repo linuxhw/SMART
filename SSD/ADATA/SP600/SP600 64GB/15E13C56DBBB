@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jan  7 12:08:26 2024 UTC
+Local Time is:    Sun Jan 28 13:13:43 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(   32) seconds.
 Offline data collection
@@ -65,16 +64,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_JMF_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_JMF_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    7553
+  9 Power_On_Hours          -O--C-   100   100   000    -    7811
  10 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1916
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1933
 167 Unknown_JMF_Attribute   -O---K   100   100   000    -    0
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    3
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    1
 169 Unknown_JMF_Attribute   PO--C-   099   099   010    -    0
-173 Erase_Count             -O--C-   180   180   000    -    0 0 0
-175 Bad_Cluster_Table_Count PO--C-   092   100   010    -    0
+173 Erase_Count             -O--C-   179   179   000    -    0 0 0
+175 Bad_Cluster_Table_Count PO--C-   093   100   010    -    0
 192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    335
-194 Temperature_Celsius     PO---K   062   062   030    -    38 (Min/Max 36/40)
+194 Temperature_Celsius     PO---K   066   066   030    -    34 (Min/Max 30/40)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -255,10 +254,13 @@ Error 5749 [116] occurred at disk power-on lifetime: 5155 hours (214 days + 19 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      7525         -
-# 2  Extended offline    Completed without error       00%      7453         -
-# 3  Extended offline    Completed without error       00%      7419         -
-# 4  Extended offline    Completed without error       00%      7400         -
+# 1  Extended offline    Aborted by host               00%      7796         -
+# 2  Extended offline    Completed without error       00%      7703         -
+# 3  Extended offline    Completed without error       00%      7595         -
+# 4  Extended offline    Completed without error       00%      7525         -
+# 5  Extended offline    Completed without error       00%      7453         -
+# 6  Extended offline    Completed without error       00%      7419         -
+# 7  Extended offline    Completed without error       00%      7400         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -283,7 +285,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (215)
+Temperature History Size (Index):    478 (435)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -295,14 +297,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            3  Command failed due to ICRC error
+0x0001  2            1  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
