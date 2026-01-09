@@ -10,10 +10,10 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Aug 19 08:34:24 2024 MSK
+Local Time is:    Wed Aug  6 10:57:35 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     254 (maximum performance), recommended: 128
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 118)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -56,26 +55,26 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   105   097   006    -    66172540
-  3 Spin_Up_Time            PO----   099   099   085    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2579
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    14
-  7 Seek_Error_Rate         POSR--   081   060   030    -    135441417
-  9 Power_On_Hours          -O--CK   097   097   000    -    3180
+  1 Raw_Read_Error_Rate     POSR--   117   097   006    -    126718377
+  3 Spin_Up_Time            PO----   099   098   085    -    0
+  4 Start_Stop_Count        -O--CK   096   096   020    -    4326
+  5 Reallocated_Sector_Ct   PO--CK   098   098   036    -    92
+  7 Seek_Error_Rate         POSR--   083   060   030    -    224253777
+  9 Power_On_Hours          -O--CK   093   093   000    -    6691
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2798
-187 Reported_Uncorrect      -O--CK   061   061   000    -    39
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3731
+187 Reported_Uncorrect      -O--CK   001   001   000    -    345
 189 High_Fly_Writes         -O-RCK   092   092   000    -    8
-190 Airflow_Temperature_Cel -O---K   054   048   045    -    46 (Min/Max 37/49)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1271
-193 Load_Cycle_Count        -O--CK   075   075   000    -    51075
-194 Temperature_Celsius     -O---K   046   052   000    -    46 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   060   000    -    79780301
-197 Current_Pending_Sector  -O--C-   100   100   000    -    7
-198 Offline_Uncorrectable   ----C-   100   100   000    -    7
+190 Airflow_Temperature_Cel -O---K   061   048   045    -    39 (Min/Max 30/39)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1627
+193 Load_Cycle_Count        -O--CK   066   066   000    -    69179
+194 Temperature_Celsius     -O---K   039   052   000    -    39 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   074   058   000    -    199808621
+197 Current_Pending_Sector  -O--C-   099   097   000    -    36
+198 Offline_Uncorrectable   ----C-   099   097   000    -    36
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
-202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   099   252   000    -    1
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +111,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 41 (device log contains only the most recent five errors)
+ATA Error Count: 351 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -127,101 +126,103 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 41 occurred at disk power-on lifetime: 3127 hours (130 days + 7 hours)
+Error 351 occurred at disk power-on lifetime: 6691 hours (278 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 16 47 74 eb  Error: UNC at LBA = 0x0b744716 = 192169750
+  40 51 00 9e f6 d6 e6  Error: UNC at LBA = 0x06d6f69e = 114751134
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 10 47 74 eb 00      06:02:44.920  READ DMA
-  c8 00 20 00 28 6e e1 00      06:02:44.920  READ DMA
-  27 00 00 00 00 00 e0 00      06:02:44.920  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:02:44.920  IDENTIFY DEVICE
-  ef 03 46 00 00 00 a0 00      06:02:44.919  SET FEATURES [Set transfer mode]
+  c8 00 08 98 f6 d6 e6 00      00:05:00.572  READ DMA
+  27 00 00 00 00 00 e0 00      00:05:02.767  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      00:05:02.766  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 00      00:05:02.764  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      00:05:02.762  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 40 occurred at disk power-on lifetime: 3127 hours (130 days + 7 hours)
+Error 350 occurred at disk power-on lifetime: 6691 hours (278 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 16 47 74 eb  Error: UNC at LBA = 0x0b744716 = 192169750
+  40 51 00 9e f6 d6 e6  Error: UNC at LBA = 0x06d6f69e = 114751134
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 10 47 74 eb 00      06:02:44.920  READ DMA
-  c8 00 08 08 47 74 eb 00      06:02:44.920  READ DMA
-  c8 00 08 00 47 74 eb 00      06:02:44.920  READ DMA
-  c8 00 08 f8 46 74 eb 00      06:02:44.920  READ DMA
-  c8 00 08 f0 46 74 eb 00      06:02:44.919  READ DMA
+  c8 00 08 98 f6 d6 e6 00      00:05:00.572  READ DMA
+  c8 00 08 90 f6 d6 e6 00      00:05:00.571  READ DMA
+  c8 00 08 88 f6 d6 e6 00      00:05:00.571  READ DMA
+  c8 00 08 80 f6 d6 e6 00      00:05:00.571  READ DMA
+  c8 00 08 78 f6 d6 e6 00      00:05:00.571  READ DMA
 
-Error 39 occurred at disk power-on lifetime: 3127 hours (130 days + 7 hours)
+Error 349 occurred at disk power-on lifetime: 6691 hours (278 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 16 47 74 e0  Error: UNC at LBA = 0x00744716 = 7620374
+  40 51 00 9e f6 d6 e6  Error: UNC at LBA = 0x06d6f69e = 114751134
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 00 78 46 74 e0 00      06:02:41.201  READ DMA EXT
-  c8 00 08 58 35 11 e1 00      06:02:41.443  READ DMA
-  c8 00 00 70 85 80 e1 00      06:02:41.443  READ DMA
-  c8 00 08 50 35 11 e1 00      06:02:41.441  READ DMA
-  25 00 e8 20 80 80 e0 00      06:02:41.425  READ DMA EXT
+  c8 00 00 e0 f5 d6 e6 00      00:04:58.271  READ DMA
+  c8 00 00 e0 f4 d6 e6 00      00:04:58.258  READ DMA
+  c8 00 00 e0 f3 d6 e6 00      00:04:58.245  READ DMA
+  c8 00 00 e0 f2 d6 e6 00      00:04:58.233  READ DMA
+  c8 00 00 e0 f1 d6 e6 00      00:04:58.220  READ DMA
 
-Error 38 occurred at disk power-on lifetime: 3127 hours (130 days + 7 hours)
+Error 348 occurred at disk power-on lifetime: 6672 hours (278 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 d6 44 74 eb  Error: UNC at LBA = 0x0b7444d6 = 192169174
+  40 51 00 9e f6 d6 e6  Error: UNC at LBA = 0x06d6f69e = 114751134
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 d0 44 74 eb 00      06:02:38.754  READ DMA
-  c8 00 20 00 5e ed e1 00      06:02:38.751  READ DMA
-  27 00 00 00 00 00 e0 00      06:02:38.751  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:02:38.749  IDENTIFY DEVICE
-  ef 03 46 00 00 00 a0 00      06:02:36.519  SET FEATURES [Set transfer mode]
+  c8 00 08 98 f6 d6 e6 00      05:12:18.313  READ DMA
+  ca 00 08 b0 d7 9d e3 00      05:12:18.313  WRITE DMA
+  27 00 00 00 00 00 e0 00      05:12:18.313  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      05:12:18.313  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 00      05:12:20.509  SET FEATURES [Set transfer mode]
 
-Error 37 occurred at disk power-on lifetime: 3127 hours (130 days + 7 hours)
+Error 347 occurred at disk power-on lifetime: 6672 hours (278 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 d6 44 74 eb  Error: UNC at LBA = 0x0b7444d6 = 192169174
+  40 51 00 9e f6 d6 e6  Error: UNC at LBA = 0x06d6f69e = 114751134
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 d0 44 74 eb 00      06:02:36.426  READ DMA
-  c8 00 08 c8 44 74 eb 00      06:02:36.418  READ DMA
-  c8 00 08 c0 44 74 eb 00      06:02:36.418  READ DMA
-  c8 00 08 b8 44 74 eb 00      06:02:36.376  READ DMA
-  c8 00 08 b0 44 74 eb 00      06:02:36.519  READ DMA
+  c8 00 08 98 f6 d6 e6 00      05:12:18.313  READ DMA
+  c8 00 08 90 f6 d6 e6 00      05:12:18.313  READ DMA
+  c8 00 08 88 f6 d6 e6 00      05:12:18.313  READ DMA
+  c8 00 08 80 f6 d6 e6 00      05:12:18.313  READ DMA
+  c8 00 08 78 f6 d6 e6 00      05:12:18.313  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3115         -
-# 2  Short offline       Aborted by host               90%      3047         -
-# 3  Short offline       Completed without error       00%         1         -
-# 4  Short offline       Aborted by host               60%         1         -
-# 5  Short offline       Completed without error       00%         0         -
-# 6  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed: read failure       60%      4591         119496129
+# 2  Short offline       Completed: read failure       70%      3219         194327391
+# 3  Short offline       Completed without error       00%      3115         -
+# 4  Short offline       Aborted by host               90%      3047         -
+# 5  Short offline       Completed without error       00%         1         -
+# 6  Short offline       Aborted by host               60%         1         -
+# 7  Short offline       Completed without error       00%         0         -
+# 8  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -237,7 +238,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
+Current Temperature:                    39 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -249,16 +250,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
-SATA Phy Event Counters (GP Log 0x11)
-ID      Size     Value  Description
-0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
-0x0001  2            0  Command failed due to ICRC error
-0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           14  Transition from drive PhyRdy to drive PhyNRdy
-0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
-0x8004  2            0  Vendor specific
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

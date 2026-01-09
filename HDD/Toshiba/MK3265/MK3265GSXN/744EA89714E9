@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-27-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-36-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Mon Nov  3 22:25:57 2025 CST
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sat Nov 22 04:20:34 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -67,27 +67,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   099   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1178
-  4 Start_Stop_Count        -O--CK   100   100   000    -    8585
+  3 Spin_Up_Time            POS--K   100   100   001    -    1150
+  4 Start_Stop_Count        -O--CK   100   100   000    -    8605
   5 Reallocated_Sector_Ct   PO--CK   001   001   050    NOW  2047
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   078   078   000    -    9019
+  9 Power_On_Hours          -O--CK   077   077   000    -    9251
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    7243
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    7263
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    174
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    187
-193 Load_Cycle_Count        -O--CK   096   096   000    -    49215
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    191
+193 Load_Cycle_Count        -O--CK   095   095   000    -    50793
 194 Temperature_Celsius     -O---K   100   100   000    -    40 (Min/Max 13/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1028
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    31
-222 Loaded_Hours            -O--CK   081   081   000    -    7647
+222 Loaded_Hours            -O--CK   081   081   000    -    7812
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    305
+226 Load-in_Time            -OS--K   100   100   000    -    319
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,7 +129,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [57] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65535 [125] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -140,13 +140,13 @@ Error 65535 [57] occurred at disk power-on lifetime: 9005 hours (375 days + 5 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ff ff ff ff ff ff ff ff ff ff ff ff 0c     11:59:22.508  [VENDOR SPECIFIC]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     11:59:22.197  [RESERVED]
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:18.409  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
+  ff ff ff ff ff ff ff ff ff ff ff ff 0c     05:09:04.703  [VENDOR SPECIFIC]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:09:04.401  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:09:04.246  [RESERVED]
+  25 00 00 00 04 00 00 21 31 8f 3c e0 00     05:09:00.101  READ DMA EXT
+  25 00 00 00 3c 00 00 21 31 8f 00 e0 00     05:09:00.100  READ DMA EXT
 
-Error 65534 [56] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65534 [124] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -157,113 +157,113 @@ Error 65534 [56] occurred at disk power-on lifetime: 9005 hours (375 days + 5 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     11:59:22.197  [RESERVED]
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:18.409  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:18.408  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:09:04.401  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:09:04.246  [RESERVED]
+  25 00 00 00 04 00 00 21 31 8f 3c e0 00     05:09:00.101  READ DMA EXT
+  25 00 00 00 3c 00 00 21 31 8f 00 e0 00     05:09:00.100  READ DMA EXT
+  25 00 00 00 03 00 00 21 31 8e fd e0 00     05:09:00.099  READ DMA EXT
 
-Error 65533 [55] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65533 [123] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c d8 ff e0 00  Error: ABRT at LBA = 0x237cd8ff = 595384575
+  30 -- 00 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:18.409  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:18.409  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:18.408  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:18.407  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:09:04.246  [RESERVED]
+  25 00 00 00 04 00 00 21 31 8f 3c e0 00     05:09:00.101  READ DMA EXT
+  25 00 00 00 3c 00 00 21 31 8f 00 e0 00     05:09:00.100  READ DMA EXT
+  25 00 00 00 03 00 00 21 31 8e fd e0 00     05:09:00.099  READ DMA EXT
+  25 00 00 00 3d 00 00 21 31 8e c0 e0 00     05:09:00.099  READ DMA EXT
 
-Error 65532 [54] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65532 [122] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c d8 ff e0 00  Error: ABRT at LBA = 0x237cd8ff = 595384575
+  30 -- 50 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:14.564  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:14.564  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:14.564  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:14.564  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:14.563  IDENTIFY DEVICE
+  90 00 00 00 01 00 00 00 00 00 00 e0 00     05:08:54.987  EXECUTE DEVICE DIAGNOSTIC
+  ec 00 00 00 00 00 00 01 00 00 00 e0 00     05:08:54.132  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 00 00 01 e0 00     05:08:54.122  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     05:08:54.057  READ DMA EXT
+  c6 00 00 3f 10 00 00 00 00 00 00 00 00     05:08:53.740  SET MULTIPLE MODE
 
-Error 65531 [53] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65531 [121] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c d8 ff e0 00  Error: ABRT at LBA = 0x237cd8ff = 595384575
+  30 -- 50 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:10.709  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:10.708  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:10.708  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:10.708  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:10.707  IDENTIFY DEVICE
+  90 08 ff 01 01 00 00 01 00 00 01 e0 00     05:08:53.280  EXECUTE DEVICE DIAGNOSTIC
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:08:49.164  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:08:48.960  [RESERVED]
+  60 00 08 00 40 00 00 0c 01 1a e0 40 08     05:08:48.763  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 0c 01 1a e8 40 08     05:08:48.745  READ FPDMA QUEUED
 
-Error 65530 [52] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65530 [120] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c d6 3f e0 00  Error: ABRT at LBA = 0x237cd63f = 595383871
+  30 -- 00 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 05 40 00 00 23 7c d1 00 e0 00     11:59:09.153  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:09.152  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:09.152  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:09.152  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:09.151  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:08:49.164  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:08:48.960  [RESERVED]
+  60 00 08 00 40 00 00 0c 01 1a e0 40 08     05:08:48.763  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 0c 01 1a e8 40 08     05:08:48.745  READ FPDMA QUEUED
+  60 00 08 00 30 00 00 0c 01 13 b0 40 08     05:08:48.745  READ FPDMA QUEUED
 
-Error 65529 [51] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65529 [119] occurred at disk power-on lifetime: 9251 hours (385 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c de 3f e0 00  Error: ABRT at LBA = 0x237cde3f = 595385919
+  30 -- 00 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 05 40 00 00 23 7c d9 00 e0 00     11:59:05.308  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:05.308  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:05.308  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:05.308  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:05.307  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     05:08:48.960  [RESERVED]
+  60 00 08 00 40 00 00 0c 01 1a e0 40 08     05:08:48.763  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 0c 01 1a e8 40 08     05:08:48.745  READ FPDMA QUEUED
+  60 00 08 00 30 00 00 0c 01 13 b0 40 08     05:08:48.745  READ FPDMA QUEUED
+  60 00 08 00 28 00 00 0f 81 11 20 40 08     05:08:48.738  READ FPDMA QUEUED
 
-Error 65528 [50] occurred at disk power-on lifetime: 9005 hours (375 days + 5 hours)
+Error 65528 [118] occurred at disk power-on lifetime: 9246 hours (385 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 23 7c d8 ff e0 00  Error: ABRT at LBA = 0x237cd8ff = 595384575
+  30 -- 50 00 01 00 00 00 00 00 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 02 c0 00 00 23 7c d6 40 e0 00     11:59:01.464  WRITE DMA EXT
-  ef 10 10 02 03 00 00 00 00 00 00 a0 00     11:59:01.463  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     11:59:01.463  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:59:01.463  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     11:59:01.462  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff 0c     00:00:15.699  [VENDOR SPECIFIC]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:15.395  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:15.348  [RESERVED]
+  25 00 00 00 04 00 00 21 31 8f 3c e0 00     00:00:11.282  READ DMA EXT
+  25 00 00 00 3c 00 00 21 31 8f 00 e0 00     00:00:11.281  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -289,7 +289,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     33/41 Celsius
+Power Cycle Min/Max Temperature:     26/40 Celsius
 Lifetime    Min/Max Temperature:     13/58 Celsius
 Under/Over Temperature Limit Count:   0/164
 
@@ -298,7 +298,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (414)
+Temperature History Size (Index):    478 (330)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -318,8 +318,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4       289552  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           67  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        92106  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
