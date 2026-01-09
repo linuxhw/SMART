@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.5-desktop-3omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -14,11 +14,11 @@ TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jun 22 13:10:42 2023 -05
+Local Time is:    Sun Aug 17 12:09:33 2025 -05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     0 (reserved)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -62,8 +62,8 @@ SMART Attributes Data Structure revision number: 5
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10064
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1610
+  9 Power_On_Hours          -O--CK   100   100   000    -    15588
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2933
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -75,18 +75,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    282
-194 Temperature_Celsius     -O---K   031   031   000    -    31 (Min/Max 29/31)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    438
+194 Temperature_Celsius     -O---K   034   034   000    -    34 (Min/Max 30/34)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   091   091   000    -    91
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    26761
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    17294
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    21486
-244 Average_Erase_Count     ------   100   100   000    -    91
-245 Max_Erase_Count         ------   100   100   000    -    117
-246 Total_Erase_Count       ------   100   100   000    -    247838
+231 SSD_Life_Left           ------   086   086   000    -    86
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    40781
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    26128
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    31161
+244 Average_Erase_Count     ------   100   100   000    -    140
+245 Max_Erase_Count         ------   100   100   000    -    154
+246 Total_Erase_Count       ------   100   100   000    -    379694
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+Read SMART Error Log failed: scsi error badly formed scsi parameters
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -120,10 +120,11 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
+Warning! SATA Phy Event Counters error: invalid SMART checksum.
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 
 
 

@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-28-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.0-14-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -11,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri May  1 22:40:12 2020 CDT
+Local Time is:    Thu Feb 13 23:43:15 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,31 +63,31 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2529
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    870
+  9 Power_On_Hours          -O--CK   100   100   000    -    16914
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4509
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 169 Bad_Block_Rate          ------   100   100   000    -    6
-170 Bad_Blk_Ct_Erl/Lat      ------   100   100   000    -    0/7
+170 Bad_Blk_Ct_Lat/Erl      ------   100   100   000    -    0/7
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    43 (Average 35)
+173 MaxAvgErase_Ct          ------   100   100   000    -    279 (Average 263)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    57
-194 Temperature_Celsius     -O---K   069   059   000    -    31 (Min/Max 16/41)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    478
+194 Temperature_Celsius     -O---K   067   058   000    -    33 (Min/Max 16/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   004   004   000    -    96
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    3935
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    3602
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    2398
-244 Average_Erase_Count     ------   100   100   000    -    35
-245 Max_Erase_Count         ------   100   100   000    -    43
-246 Total_Erase_Count       ------   100   100   000    -    209364
+231 SSD_Life_Left           ------   027   027   000    -    73
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    28371
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    26592
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    17291
+244 Average_Erase_Count     ------   100   100   000    -    263
+245 Max_Erase_Count         ------   100   100   000    -    279
+246 Total_Erase_Count       ------   100   100   000    -    1551420
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,7 +115,15 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     16378         -
+# 2  Short offline       Completed without error       00%     11065         -
+# 3  Short offline       Completed without error       00%     11056         -
+# 4  Short offline       Completed without error       00%      9913         -
+# 5  Short offline       Completed without error       00%      9902         -
+# 6  Short offline       Completed without error       00%      9893         -
+# 7  Short offline       Completed without error       00%      9889         -
+# 8  Short offline       Completed without error       00%      9887         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -133,20 +142,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             870  ---  Lifetime Power-On Resets
-0x01  0x010  4            2529  ---  Power-on Hours
-0x01  0x018  6      7555894415  ---  Logical Sectors Written
-0x01  0x028  6      5029591963  ---  Logical Sectors Read
+0x01  0x008  4            4509  ---  Lifetime Power-On Resets
+0x01  0x010  4           16914  ---  Power-on Hours
+0x01  0x018  6     55767786946  ---  Logical Sectors Written
+0x01  0x028  6     36262908812  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
-0x05  0x020  1              41  ---  Highest Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              26  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -161,7 +170,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          131  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4           48  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

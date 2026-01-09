@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.6-100.fc37.x86_64] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.14.11-200.fc41.x86_64] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 24 12:44:09 2024 CET
+Local Time is:    Sat Jun 21 16:06:42 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,8 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -63,28 +62,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    12365
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2686
+  9 Power_On_Hours          -O--C-   100   100   000    -    15420
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3129
 167 Write_Protect_Mode      -O---K   100   100   000    -    0
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 169 Bad_Block_Rate          ------   100   100   000    -    23
 170 Bad_Blk_Ct_Lat/Erl      PO--C-   100   100   010    -    0/46
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    92 (Average 37)
+173 MaxAvgErase_Ct          ------   100   100   000    -    92 (Average 39)
 181 Program_Fail_Count      -O--C-   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    724
-194 Temperature_Celsius     PO---K   071   054   000    -    29 (Min/Max 18/46)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    766
+194 Temperature_Celsius     PO---K   069   054   000    -    31 (Min/Max 18/46)
 196 Reallocated_Event_Count ------   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         ------   100   100   000    -    4
 231 SSD_Life_Left           PO--C-   100   100   000    -    96
-233 Flash_Writes_GiB        PO--C-   100   100   000    -    11823
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    12047
-242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    9959
-244 Average_Erase_Count     ------   100   100   000    -    37
+233 Flash_Writes_GiB        PO--C-   100   100   000    -    12720
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    13136
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    16077
+244 Average_Erase_Count     ------   100   100   000    -    39
 245 Max_Erase_Count         ------   100   100   000    -    92
-246 Total_Erase_Count       ------   100   100   000    -    3250624
+246 Total_Erase_Count       ------   100   100   000    -    3408544
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -162,14 +161,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2686  ---  Lifetime Power-On Resets
-0x01  0x010  4           12365  ---  Power-on Hours
-0x01  0x018  6     25266209182  ---  Logical Sectors Written
-0x01  0x028  6     20887366323  ---  Logical Sectors Read
+0x01  0x008  4            3129  ---  Lifetime Power-On Resets
+0x01  0x010  4           15420  ---  Power-on Hours
+0x01  0x018  6     27549915699  ---  Logical Sectors Written
+0x01  0x028  6     33717044703  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
+0x05  0x008  1              31  ---  Current Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
@@ -190,7 +189,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4           10  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

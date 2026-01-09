@@ -13,8 +13,8 @@ Rotation Rate:    Solid State Device
 TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Oct 11 14:49:34 2025 EDT
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Sat Oct 11 15:10:56 2025 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,21 +22,20 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x03)	Offline data collection activity
+					is in progress.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 248)	Self-test routine in progress...
+					80% of test remaining.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		( 1671) seconds.
 Offline data collection
 capabilities: 			 (0x7d) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -63,29 +62,29 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/7832019
+  1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   098   098   003    -    6
-  9 Power_On_Hours_and_Msec -O--CK   078   078   000    -    19467h+23m+26.030s
- 12 Power_Cycle_Count       -O--CK   083   083   000    -    18363
+  9 Power_On_Hours_and_Msec -O--CK   078   078   000    -    19467h+40m+47.830s
+ 12 Power_Cycle_Count       -O--CK   083   083   000    -    18367
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    15873
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    15877
 177 Wear_Range_Delta        ------   000   000   000    -    86
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 189 Airflow_Temperature_Cel ------   033   044   000    -    33 (Min/Max 19/44)
 194 Temperature_Celsius     -O---K   033   044   000    -    33 (Min/Max 19/44)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/7832019
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/0
 196 Reallocated_Event_Count PO--CK   098   098   003    -    6
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/7832019
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/7832019
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           ------   087   087   011    -    8589934592
 233 SandForce_Internal      -O--CK   000   000   000    -    59675
 234 SandForce_Internal      -O--CK   000   000   000    -    15315
 241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    15315
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    11222
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    11223
 244 Unknown_Attribute       ------   085   085   010    -    196673998
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,7 +128,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-Device State:                        Active (0)
+Device State:                        DST executing in background (3)
 Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     19/44 Celsius
 Lifetime    Min/Max Temperature:     19/44 Celsius
@@ -140,17 +139,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (24)
+Temperature History Size (Index):    478 (30)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4           18363  ---  Lifetime Power-On Resets
+0x01  0x008  4           18367  ---  Lifetime Power-On Resets
 0x01  0x010  4           19467  ---  Power-on Hours
-0x01  0x018  6     32118042454  ---  Logical Sectors Written
-0x01  0x028  6     23535095665  ---  Logical Sectors Read
+0x01  0x018  6     32118158208  ---  Logical Sectors Written
+0x01  0x028  6     23537268054  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4           22497  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -170,7 +169,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4            5903  ---  Number of ASR Events
+0x06  0x010  4            5905  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              14  ---  Percentage Used Endurance Indicator
@@ -188,8 +187,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           14  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

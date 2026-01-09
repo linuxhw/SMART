@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,11 +14,11 @@ TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jun 27 17:49:16 2024 CEST
+Local Time is:    Wed May 14 16:05:50 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    100
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    363
+  9 Power_On_Hours          -O--CK   100   100   000    -    126
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    798
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    204
-194 Temperature_Celsius     -O---K   041   060   000    -    41 (Min/Max 13/60)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    501
+194 Temperature_Celsius     -O---K   041   060   000    -    41 (Min/Max 12/60)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   099   099   000    -    99
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    305
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    1194
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    512
-244 Average_Erase_Count     ------   100   100   000    -    16
-245 Max_Erase_Count         ------   100   100   000    -    17
-246 Total_Erase_Count       ------   100   100   000    -    24505
+231 SSD_Life_Left           ------   098   098   000    -    98
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    306
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    2077
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    835
+244 Average_Erase_Count     ------   100   100   000    -    28
+245 Max_Erase_Count         ------   100   100   000    -    29
+246 Total_Erase_Count       ------   100   100   000    -    40964
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,13 +109,38 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Self-test routine in progress 80%        93         -
-# 2  Short offline       Completed without error       00%        93         -
-# 3  Short offline       Completed without error       00%        91         -
+# 1  Short offline       Completed without error       00%       118         -
+# 2  Short offline       Completed without error       00%       106         -
+# 3  Short offline       Self-test routine in progress 70%       106         -
+# 4  Short offline       Aborted by host               20%       106         -
+# 5  Short offline       Self-test routine in progress 20%       106         -
+# 6  Short offline       Aborted by host               60%       103         -
+# 7  Short offline       Self-test routine in progress 60%       103         -
+# 8  Extended offline    Self-test routine in progress 90%       103         -
+# 9  Short offline       Completed without error       00%       103         -
+#10  Short offline       Completed without error       00%       100         -
+#11  Extended offline    Self-test routine in progress 80%        93         -
+#12  Short offline       Completed without error       00%        93         -
+#13  Short offline       Completed without error       00%        91         -
 
 Selective Self-tests/Logging not supported
 
@@ -124,14 +149,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             363  ---  Lifetime Power-On Resets
-0x01  0x010  4             100  ---  Power-on Hours
-0x01  0x018  6      2505523698  ---  Logical Sectors Written
-0x01  0x020  6           13729  ---  Number of Write Commands
-0x01  0x028  6      1074767230  ---  Logical Sectors Read
-0x01  0x030  6           29188  ---  Number of Read Commands
+0x01  0x008  4             798  ---  Lifetime Power-On Resets
+0x01  0x010  4             126  ---  Power-on Hours
+0x01  0x018  6        61276307  ---  Logical Sectors Written
+0x01  0x020  6           10129  ---  Number of Write Commands
+0x01  0x028  6      1751229987  ---  Logical Sectors Read
+0x01  0x030  6           38635  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -143,5 +168,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           16  Device-to-host register FISes sent due to a COMRESET
 

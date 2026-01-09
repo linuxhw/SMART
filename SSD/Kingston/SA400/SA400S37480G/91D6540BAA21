@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.7-zen1-1-zen] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.17.7-zen1-1-zen] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -11,19 +11,18 @@ User Capacity:    480,103,981,056 bytes [480 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jul  5 18:45:30 2024 CEST
+Local Time is:    Thu Nov  6 18:08:50 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -60,12 +59,12 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    452
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    604
+  9 Power_On_Hours          -O--CK   100   100   000    -    662
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1526
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    1
 169 Bad_Block_Rate          ------   100   100   000    -    0
 170 Bad_Blk_Ct_Lat/Erl      ------   100   100   010    -    0/0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -73,18 +72,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    57
-194 Temperature_Celsius     -O---K   030   040   000    -    30 (Min/Max 14/40)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    65
+194 Temperature_Celsius     -O---K   029   042   000    -    29 (Min/Max 14/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   099   099   000    -    99
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    731
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    1067
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    604
-244 Average_Erase_Count     ------   100   100   000    -    15
-245 Max_Erase_Count         ------   100   100   000    -    32
-246 Total_Erase_Count       ------   100   100   000    -    8063
+218 CRC_Error_Count         -O--CK   100   100   000    -    1
+231 SSD_Life_Left           ------   096   096   000    -    96
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    1656
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    3849
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    3038
+244 Average_Erase_Count     ------   100   100   000    -    40
+245 Max_Erase_Count         ------   100   100   000    -    59
+246 Total_Erase_Count       ------   100   100   000    -    21351
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,10 +108,45 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 2 [1] log entry is empty
+Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       547         -
+# 2  Short offline       Interrupted (host reset)      90%       547         -
+# 3  Short offline       Completed without error       00%       547         -
+# 4  Short offline       Completed without error       00%       545         -
+# 5  Short offline       Completed without error       00%       544         -
+# 6  Extended offline    Completed without error       00%       544         -
+# 7  Short offline       Completed without error       00%       543         -
+# 8  Short offline       Completed without error       00%       542         -
+# 9  Short offline       Completed without error       00%       542         -
+#10  Short offline       Completed without error       00%       533         -
+#11  Short offline       Completed without error       00%       531         -
+#12  Short offline       Completed without error       00%       528         -
+#13  Short offline       Completed without error       00%       528         -
+#14  Short offline       Completed without error       00%       528         -
+#15  Short offline       Completed without error       00%       528         -
+#16  Short offline       Completed without error       00%       528         -
+#17  Short offline       Completed without error       00%       527         -
+#18  Short offline       Completed without error       00%       527         -
+#19  Extended offline    Completed without error       00%       527         -
 
 Selective Self-tests/Logging not supported
 
@@ -121,14 +155,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             604  ---  Lifetime Power-On Resets
-0x01  0x010  4             452  ---  Power-on Hours
-0x01  0x018  6      2239442965  ---  Logical Sectors Written
-0x01  0x020  6            3117  ---  Number of Write Commands
-0x01  0x028  6      1266863767  ---  Logical Sectors Read
-0x01  0x030  6           18208  ---  Number of Read Commands
+0x01  0x008  4            1526  ---  Lifetime Power-On Resets
+0x01  0x010  4             662  ---  Power-on Hours
+0x01  0x018  6      3778058595  ---  Logical Sectors Written
+0x01  0x020  6           14751  ---  Number of Write Commands
+0x01  0x028  6      2076985300  ---  Logical Sectors Read
+0x01  0x030  6           63757  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

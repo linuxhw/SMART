@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Oct 11 16:33:30 2024 -03
+Local Time is:    Tue Apr 29 10:34:42 2025 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -32,8 +32,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(65535) seconds.
 Offline data collection
@@ -59,8 +60,8 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6994
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    7817
+  9 Power_On_Hours          -O--CK   100   100   000    -    7466
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    9306
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    2
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -68,22 +69,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    22
 170 Bad_Blk_Ct_Lat/Erl      ------   100   100   010    -    0/15
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    35 (Average 12)
+173 MaxAvgErase_Ct          ------   100   100   000    -    62 (Average 18)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    418
-194 Temperature_Celsius     -O---K   069   049   000    -    31 (Min/Max 13/51)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    1115
+194 Temperature_Celsius     -O---K   072   049   000    -    28 (Min/Max 13/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   002   002   000    -    98
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    4646
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    3447
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    6689
-244 Average_Erase_Count     ------   100   100   000    -    12
-245 Max_Erase_Count         ------   100   100   000    -    35
-246 Total_Erase_Count       ------   100   100   000    -    195104
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    5595
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    3771
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    7353
+244 Average_Erase_Count     ------   100   100   000    -    18
+245 Max_Erase_Count         ------   100   100   000    -    62
+246 Total_Erase_Count       ------   100   100   000    -    281504
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,8 +113,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      00%      2441         -
-# 2  Short offline       Interrupted (host reset)      00%        51         -
+# 1  Short offline       Completed without error       00%      7300         -
+# 2  Short offline       Completed without error       00%      7297         -
+# 3  Short offline       Completed without error       00%      7296         -
+# 4  Short offline       Completed without error       00%      7283         -
+# 5  Short offline       Completed without error       00%      7282         -
+# 6  Short offline       Completed without error       00%      7278         -
+# 7  Short offline       Completed without error       00%      7276         -
+# 8  Short offline       Completed without error       00%      7272         -
+# 9  Short offline       Completed without error       00%      7271         -
+#10  Short offline       Interrupted (host reset)      00%      7271         -
+#11  Short offline       Completed without error       00%      7269         -
+#12  Short offline       Completed without error       00%      7269         -
+#13  Short offline       Completed without error       00%      7267         -
+#14  Short offline       Completed without error       00%      7265         -
+#15  Short offline       Completed without error       00%      7263         -
+#16  Short offline       Completed without error       00%      7263         -
+#17  Short offline       Interrupted (host reset)      00%      7263         -
+#18  Short offline       Completed without error       00%      7258         -
+#19  Short offline       Interrupted (host reset)      00%      7258         -
 
 Selective Self-tests/Logging not supported
 
@@ -122,14 +140,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            7817  ---  Lifetime Power-On Resets
-0x01  0x010  4            6994  ---  Power-on Hours
-0x01  0x018  6      7230441087  ---  Logical Sectors Written
-0x01  0x028  6     14029826226  ---  Logical Sectors Read
+0x01  0x008  4            9306  ---  Lifetime Power-On Resets
+0x01  0x010  4            7466  ---  Power-on Hours
+0x01  0x018  6      7909988958  ---  Logical Sectors Written
+0x01  0x028  6     15421046559  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
+0x05  0x008  1              28  ---  Current Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1              13  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==

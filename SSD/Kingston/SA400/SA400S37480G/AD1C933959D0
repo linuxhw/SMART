@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-53-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.0-17-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Feb 21 22:39:49 2025 CET
+Local Time is:    Sat Feb 22 18:40:56 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    9001
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    425
+  9 Power_On_Hours          -O--CK   100   100   000    -    9010
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    446
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    186
-194 Temperature_Celsius     -O---K   025   059   000    -    25 (Min/Max 3/59)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    198
+194 Temperature_Celsius     -O---K   015   059   000    -    15 (Min/Max 3/59)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   081   081   000    -    81
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    4687
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    5538
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    11676
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    4760
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    5609
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    11778
 244 Average_Erase_Count     ------   100   100   000    -    133
 245 Max_Erase_Count         ------   100   100   000    -    158
-246 Total_Erase_Count       ------   100   100   000    -    27005
+246 Total_Erase_Count       ------   100   100   000    -    27074
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,12 +121,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             425  ---  Lifetime Power-On Resets
-0x01  0x010  4            9001  ---  Power-on Hours
-0x01  0x018  6      3025870072  ---  Logical Sectors Written
-0x01  0x020  6         2189029  ---  Number of Write Commands
-0x01  0x028  6      3012941180  ---  Logical Sectors Read
-0x01  0x030  6           96660  ---  Number of Read Commands
+0x01  0x008  4             446  ---  Lifetime Power-On Resets
+0x01  0x010  4            9010  ---  Power-on Hours
+0x01  0x018  6      3174499685  ---  Logical Sectors Written
+0x01  0x020  6         2248160  ---  Number of Write Commands
+0x01  0x028  6      3227036800  ---  Logical Sectors Read
+0x01  0x030  6           40008  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              24  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -140,5 +140,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

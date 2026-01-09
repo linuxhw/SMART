@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.3-200.fc36.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.1-200.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     KINGSTON RBU-SNS8100S3256GD
@@ -10,10 +10,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jun 12 17:39:20 2022 CST
+Local Time is:    Sun Feb  9 18:20:35 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,26 +66,26 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
   9 Power_On_Hours          -O--C-   100   100   000    -    20000
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    9069
-168 Unknown_Attribute       -O--C-   100   100   000    -    5
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    9309
+168 Unknown_Attribute       -O--C-   100   100   000    -    6
 170 Unknown_Attribute       PO----   100   100   010    -    568
-173 Unknown_Attribute       -O--C-   100   100   000    -    9961724
+173 Unknown_Attribute       -O--C-   100   100   000    -    10682624
 175 Program_Fail_Count_Chip -O--C-   100   100   010    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    229
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    240
 194 Temperature_Celsius     PO---K   100   100   020    -    0
 196 Reallocated_Event_Count -O----   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
-218 Unknown_Attribute       PO-R--   100   100   050    -    0
-233 Media_Wearout_Indicator PO-R--   100   100   000    -    28701
+199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    1
+218 Unknown_Attribute       PO-R--   100   100   050    -    1
+233 Media_Wearout_Indicator PO-R--   100   100   000    -    31003
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    25284
-242 Total_LBAs_Read         -O--C-   100   100   000    -    11832
-244 Unknown_Attribute       -O----   100   100   050    -    152
-245 Unknown_Attribute       -O----   100   100   050    -    252
-246 Unknown_Attribute       -O----   100   100   050    -    11649620
-250 Read_Error_Retry_Rate   -O----   100   100   050    -    12807
+241 Total_LBAs_Written      -O--C-   100   100   000    -    27405
+242 Total_LBAs_Read         -O--C-   100   100   000    -    13131
+244 Unknown_Attribute       -O----   100   100   050    -    163
+245 Unknown_Attribute       -O----   100   100   050    -    256
+246 Unknown_Attribute       -O----   100   100   050    -    12401860
+250 Read_Error_Retry_Rate   -O----   100   100   050    -    14809
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,8 +107,46 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 26379 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 26379 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 00 a0 ba
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 a0 08     00:14:22.206  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 a0 08     00:14:22.204  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 a0 08     00:14:22.202  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 a0 08     00:14:22.200  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 a0 08     00:14:22.198  DATA SET MANAGEMENT
+
+Error 26378 [255] log entry is empty
+Error 26377 [254] log entry is empty
+Error 26376 [253] log entry is empty
+Error 26375 [252] log entry is empty
+Error 26374 [251] log entry is empty
+Error 26373 [250] log entry is empty
+Error 26372 [249] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%        24         -
@@ -133,8 +171,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          126  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

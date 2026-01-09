@@ -1,5 +1,5 @@
-smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.15.0-206-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-206-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     Micron 1100 SATA 1024GB
@@ -13,13 +13,14 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Sep  6 17:37:09 2023 CEST
+Local Time is:    Wed Sep 20 10:19:56 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -28,14 +29,14 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x04)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x03)	Offline data collection activity
+					is in progress.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 1091) seconds.
+data collection: 		(  319) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -64,13 +65,13 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    47510
+  9 Power_On_Hours          -O--CK   100   100   000    -    47839
  12 Power_Cycle_Count       PO--CK   100   100   001    -    58
 181 Program_Fail_Cnt_Total  PO--CK   100   100   001    -    0
 182 Erase_Fail_Count_Total  PO--CK   100   100   001    -    0
 177 Wear_Leveling_Count     PO--CK   099   099   010    -    28
 187 Reported_Uncorrect      PO--CK   100   100   001    -    0
-194 Temperature_Celsius     -O---K   063   042   000    -    37 (Min/Max 15/58)
+194 Temperature_Celsius     -O---K   061   042   000    -    39 (Min/Max 15/58)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 238 Unknown_Attribute       ----CK   099   099   000    -    1
 175 Program_Fail_Count_Chip PO--CK   100   100   000    -    0
@@ -78,8 +79,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  PO--CK   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    5484
 195 Hardware_ECC_Recovered  POSR-K   100   000   050    Past 0
-241 Total_LBAs_Written      PO--CK   100   100   000    -    29860634533
-242 Total_LBAs_Read         PO--CK   100   100   000    -    7496557772
+241 Total_LBAs_Written      PO--CK   100   100   000    -    30155583745
+242 Total_LBAs_Read         PO--CK   100   100   000    -    7499342916
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x13       GPL     R/O      1  SATA NCQ Send and Receive log
 0x24       GPL     R/O   8000  Current Device Internal Status Data log
@@ -125,7 +126,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%     47508         -
+# 1  Vendor (0xff)       Completed without error       00%     47839         -
 # 2  Vendor (0xff)       Completed without error       00%     47165         -
 # 3  Vendor (0xff)       Completed without error       00%     47059         -
 # 4  Vendor (0xff)       Completed without error       00%     46721         -
@@ -158,10 +159,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   0
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     30/44 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     30/51 Celsius
 Lifetime    Min/Max Temperature:     15/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -170,7 +170,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (469)
+Temperature History Size (Index):    478 (470)
 
 SCT Error Recovery Control command not supported
 
@@ -178,16 +178,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              58  ---  Lifetime Power-On Resets
-0x01  0x010  4           47510  ---  Power-on Hours
-0x01  0x018  6     29860634533  ---  Logical Sectors Written
-0x01  0x020  6       379216247  ---  Number of Write Commands
-0x01  0x028  6      7496557772  ---  Logical Sectors Read
-0x01  0x030  6       210573669  ---  Number of Read Commands
+0x01  0x010  4           47839  ---  Power-on Hours
+0x01  0x018  6     30155583745  ---  Logical Sectors Written
+0x01  0x020  6       385998379  ---  Number of Write Commands
+0x01  0x028  6      7499342916  ---  Logical Sectors Read
+0x01  0x030  6       210707473  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             157  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
+0x05  0x008  1              39  ---  Current Temperature
 0x05  0x010  1              30  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
@@ -209,6 +209,8 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

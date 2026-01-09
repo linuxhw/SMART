@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.9-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Jan 20 23:28:29 2025 -03
+Local Time is:    Sat Sep 13 16:07:40 2025 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,24 +61,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    1247
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    512
+  9 Power_On_Hours          -O--CK   100   100   050    -    3679
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1668
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
-161 Unknown_Attribute       -O--CK   100   100   050    -    2148
+161 Unknown_Attribute       -O--CK   100   100   050    -    1892
 163 Unknown_Attribute       -O--CK   100   100   050    -    88
-164 Unknown_Attribute       -O--CK   100   100   050    -    38
-165 Unknown_Attribute       -O--CK   100   100   050    -    46
-166 Unknown_Attribute       -O--CK   100   100   050    -    25
-167 Unknown_Attribute       -O--CK   100   100   050    -    40
+164 Unknown_Attribute       -O--CK   100   100   050    -    127
+165 Unknown_Attribute       -O--CK   100   100   050    -    157
+166 Unknown_Attribute       -O--CK   100   100   050    -    124
+167 Unknown_Attribute       -O--CK   100   100   050    -    140
 168 Unknown_Attribute       -O--CK   100   100   050    -    0
 169 Unknown_Attribute       -O--CK   100   100   050    -    100
-175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
-176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    2698
-177 Wear_Leveling_Count     -O--CK   100   100   050    -    542429
+175 Program_Fail_Count_Chip -O--CK   100   100   050    -    16777216
+176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    21131
+177 Wear_Leveling_Count     -O--CK   100   100   050    -    18169636
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    140
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    440
 194 Temperature_Celsius     -O--CK   100   100   050    -    36
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
@@ -86,8 +86,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      -O--CK   100   100   050    -    102352
-242 Total_LBAs_Read         -O--CK   100   100   050    -    44285
+241 Total_LBAs_Written      -O--CK   100   100   050    -    360206
+242 Total_LBAs_Read         -O--CK   100   100   050    -    146816
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,7 +115,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
+Device Error Count: 2
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -130,6 +130,23 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 2151 hours (89 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 40 00 38 00 02 4d 00 eb 50 00 00   at LBA = 0x24d00eb50 = 9881840464
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 02 b0 00 38 00 02 4d 00 eb 50 40 08     01:04:29.730  WRITE FPDMA QUEUED
+  61 0a 00 00 30 00 02 43 00 eb 50 40 08     01:04:29.730  WRITE FPDMA QUEUED
+  61 0a 00 00 28 00 02 39 00 eb 50 40 08     01:04:29.730  WRITE FPDMA QUEUED
+  61 00 68 00 20 00 02 0f 00 eb 98 40 08     01:04:29.720  WRITE FPDMA QUEUED
+  61 0a 00 00 18 00 02 05 00 eb 98 40 08     01:04:29.720  WRITE FPDMA QUEUED
 
 Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -148,8 +165,27 @@ Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   60 00 40 00 b0 00 00 ff 00 d7 82 40 00     00:00:17.110  READ FPDMA QUEUED
   61 00 08 00 a8 00 00 57 00 6a c0 40 00     00:00:17.110  WRITE FPDMA QUEUED
 
-SMART Extended Self-test Log Version: 0 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Completed without error       00%      2764         -
+# 2  Offline             Self-test routine in progress 10%      2764         -
+# 3  Offline             Self-test routine in progress 10%      2764         -
+# 4  Offline             Self-test routine in progress 10%      2764         -
+# 5  Offline             Self-test routine in progress 10%      2764         -
+# 6  Offline             Self-test routine in progress 10%      2764         -
+# 7  Offline             Self-test routine in progress 10%      2764         -
+# 8  Offline             Self-test routine in progress 10%      2764         -
+# 9  Offline             Self-test routine in progress 10%      2764         -
+#10  Offline             Self-test routine in progress 10%      2764         -
+#11  Offline             Self-test routine in progress 10%      2764         -
+#12  Offline             Self-test routine in progress 10%      2764         -
+#13  Offline             Self-test routine in progress 10%      2764         -
+#14  Offline             Self-test routine in progress 10%      2764         -
+#15  Offline             Self-test routine in progress 10%      2764         -
+#16  Offline             Self-test routine in progress 10%      2764         -
+#17  Offline             Self-test routine in progress 10%      2764         -
+#18  Offline             Self-test routine in progress 10%      2764         -
+#19  Offline             Self-test routine in progress 10%      2764         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -168,61 +204,61 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4            1247  ---  Power-on Hours
-0x01  0x018  6      6707740672  ---  Logical Sectors Written
-0x01  0x020  6        38949560  ---  Number of Write Commands
-0x01  0x028  6      2902261760  ---  Logical Sectors Read
-0x01  0x030  6        35850260  ---  Number of Read Commands
+0x01  0x008  4            1668  ---  Lifetime Power-On Resets
+0x01  0x010  4            3679  ---  Power-on Hours
+0x01  0x018  6     23606460416  ---  Logical Sectors Written
+0x01  0x020  6       163954465  ---  Number of Write Commands
+0x01  0x028  6      9621733376  ---  Logical Sectors Read
+0x01  0x030  6       113336903  ---  Number of Read Commands
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -232,8 +268,10 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2         2970  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2         2528  Device-to-host register FISes sent due to a COMRESET
-0x000b  2            1  CRC errors within host-to-device FIS
-0x000d  2            1  Non-CRC errors within host-to-device FIS
+0x0009  2        11617  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2        10440  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            2  CRC errors within host-to-device FIS
+0x000d  2            2  Non-CRC errors within host-to-device FIS
+
+
 
