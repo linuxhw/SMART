@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.0-desktop-0.rc2.1omv2301] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -12,7 +12,7 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Feb 22 00:14:42 2023 CST
+Local Time is:    Mon Nov 10 19:16:13 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,21 +63,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   175   173   021    -    2225
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9579
+  3 Spin_Up_Time            POS--K   176   173   021    -    2183
+  4 Start_Stop_Count        -O--CK   087   087   000    -    13027
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   077   077   000    -    17334
+  9 Power_On_Hours          -O--CK   072   072   000    -    20519
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7300
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1463
-193 Load_Cycle_Count        -O--CK   198   198   000    -    8115
-194 Temperature_Celsius     -O---K   116   103   000    -    27
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9908
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    2157
+193 Load_Cycle_Count        -O--CK   197   197   000    -    10869
+194 Temperature_Celsius     -O---K   113   102   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    8
+199 UDMA_CRC_Error_Count    -O--CK   200   197   000    -    115
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 1351 (device log contains only the most recent 24 errors)
+Device Error Count: 1357 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,108 @@ Device Error Count: 1351 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1357 [12] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 1f 22 05 18 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x1f220518 = 522323224
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:26:22.976  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:25:51.446  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:25:19.945  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:24:48.548  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:24:17.090  READ DMA EXT
+
+Error 1356 [11] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 f0 00 00 48 cc cc f0 e0 00  Device Fault; Error: ABRT 240 sectors at LBA = 0x48ccccf0 = 1221381360
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:25:51.446  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:25:19.945  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:24:48.548  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:24:17.090  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:23:42.594  WRITE DMA EXT
+
+Error 1355 [10] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 1f 22 05 18 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x1f220518 = 522323224
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:25:19.945  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:24:48.548  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:24:17.090  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:23:42.594  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc cb f0 e0 00     00:23:41.058  WRITE DMA EXT
+
+Error 1354 [9] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 f0 00 00 48 cc cc f0 e0 00  Device Fault; Error: ABRT 240 sectors at LBA = 0x48ccccf0 = 1221381360
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:24:48.548  WRITE DMA EXT
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:24:17.090  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:23:42.594  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc cb f0 e0 00     00:23:41.058  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc ca f0 e0 00     00:23:41.054  WRITE DMA EXT
+
+Error 1353 [8] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 1f 22 05 18 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x1f220518 = 522323224
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 03 00 08 00 00 1f 22 05 18 e0 00     00:24:17.090  READ DMA EXT
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:23:42.594  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc cb f0 e0 00     00:23:41.058  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc ca f0 e0 00     00:23:41.054  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc c9 f0 e0 00     00:23:41.050  WRITE DMA EXT
+
+Error 1352 [7] occurred at disk power-on lifetime: 18827 hours (784 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 f0 00 00 48 cc cc f0 e0 00  Device Fault; Error: ABRT 240 sectors at LBA = 0x48ccccf0 = 1221381360
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 03 00 f0 00 00 48 cc cc f0 e0 00     00:23:42.594  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc cb f0 e0 00     00:23:41.058  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc ca f0 e0 00     00:23:41.054  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc c9 f0 e0 00     00:23:41.050  WRITE DMA EXT
+  35 00 03 01 00 00 00 48 cc c8 f0 e0 00     00:23:41.046  WRITE DMA EXT
 
 Error 1351 [6] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -160,128 +262,26 @@ Error 1350 [5] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hour
   25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.632  READ DMA EXT
   ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.632  SET FEATURES [Enable SATA feature]
 
-Error 1349 [4] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 02 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.638  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.638  IDENTIFY DEVICE
-  25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.632  READ DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.631  IDENTIFY DEVICE
-
-Error 1348 [3] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 08 00 00 74 70 6d 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x74706d00 = 1953524992
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.632  READ DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.631  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:15:22.631  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.630  SET FEATURES [Enable SATA feature]
-
-Error 1347 [2] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 02 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.631  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:15:22.631  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.630  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.630  IDENTIFY DEVICE
-
-Error 1346 [1] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:15:22.631  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.630  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.630  IDENTIFY DEVICE
-  25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.625  READ DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.625  SET FEATURES [Enable SATA feature]
-
-Error 1345 [0] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 02 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.630  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.630  IDENTIFY DEVICE
-  25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.625  READ DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.625  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.623  IDENTIFY DEVICE
-
-Error 1344 [23] occurred at disk power-on lifetime: 2433 hours (101 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 08 00 00 74 70 6d 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x74706d00 = 1953524992
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 74 70 6d 00 e0 00     00:15:22.625  READ DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.625  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:15:22.623  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:15:22.623  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:15:22.622  SET FEATURES [Enable SATA feature]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     16614         -
-# 2  Short offline       Completed without error       00%     16306         -
-# 3  Short offline       Completed without error       00%     15785         -
-# 4  Short offline       Completed without error       00%     15758         -
-# 5  Short offline       Completed without error       00%     15709         -
-# 6  Short offline       Completed without error       00%     15708         -
-# 7  Short offline       Completed without error       00%     15698         -
-# 8  Short offline       Completed without error       00%     15675         -
-# 9  Short offline       Completed without error       00%     15671         -
-#10  Short offline       Completed without error       00%     15664         -
-#11  Short offline       Completed without error       00%     14667         -
-#12  Extended offline    Interrupted (host reset)      80%     14617         -
-#13  Short offline       Completed without error       00%     14611         -
-#14  Short offline       Completed without error       00%     13832         -
-#15  Short offline       Aborted by host               90%      1972         -
-#16  Short offline       Aborted by host               90%      1972         -
-#17  Short offline       Aborted by host               90%      1972         -
-#18  Short offline       Aborted by host               90%      1972         -
+# 1  Short offline       Completed without error       00%     19713         -
+# 2  Short offline       Completed without error       00%     19705         -
+# 3  Short offline       Completed without error       00%     19675         -
+# 4  Short offline       Completed without error       00%     19568         -
+# 5  Short offline       Completed without error       00%     19562         -
+# 6  Short offline       Completed without error       00%     19549         -
+# 7  Short offline       Completed without error       00%     19544         -
+# 8  Short offline       Completed without error       00%     19532         -
+# 9  Extended offline    Interrupted (host reset)      90%     18761         -
+#10  Short offline       Completed without error       00%     18748         -
+#11  Short offline       Completed without error       00%     18740         -
+#12  Short offline       Completed without error       00%     18731         -
+#13  Short offline       Completed without error       00%     18684         -
+#14  Short offline       Completed without error       00%     18628         -
+#15  Short offline       Completed without error       00%     18602         -
+#16  Short offline       Completed without error       00%     18309         -
+#17  Short offline       Completed without error       00%     17750         -
+#18  Short offline       Completed without error       00%     17685         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,9 +297,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     18/27 Celsius
-Lifetime    Min/Max Temperature:     18/40 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     19/30 Celsius
+Lifetime    Min/Max Temperature:     19/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -310,7 +310,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (315)
+Temperature History Size (Index):    478 (340)
 
 SCT Error Recovery Control command not supported
 
@@ -328,12 +328,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           23  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         6473  Vendor specific
-
-
+0x8000  4         3812  Vendor specific
 

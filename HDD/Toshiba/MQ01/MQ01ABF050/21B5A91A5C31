@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-41-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.33+kali-amd64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Aug 26 18:54:06 2024 CEST
+Local Time is:    Sun Aug 10 16:32:18 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,27 +65,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1342
-  4 Start_Stop_Count        -O--CK   100   100   000    -    1724
+  3 Spin_Up_Time            POS--K   100   100   001    -    1335
+  4 Start_Stop_Count        -O--CK   100   100   000    -    2423
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   087   087   000    -    5498
- 10 Spin_Retry_Count        PO--CK   134   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1698
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1658
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    1142
-193 Load_Cycle_Count        -O--CK   100   100   000    -    4983
-194 Temperature_Celsius     -O---K   100   100   000    -    36 (Min/Max 12/51)
+  9 Power_On_Hours          -O--CK   083   083   000    -    7048
+ 10 Spin_Retry_Count        PO--CK   148   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2367
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1736
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    1392
+193 Load_Cycle_Count        -O--CK   100   100   000    -    7011
+194 Temperature_Celsius     -O---K   100   100   000    -    40 (Min/Max 12/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   087   087   000    -    5473
+222 Loaded_Hours            -O--CK   083   083   000    -    7013
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    181
+226 Load-in_Time            -OS--K   100   100   000    -    178
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1088 (device log contains only the most recent 256 errors)
+Device Error Count: 1113 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,7 +128,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1088 [63] occurred at disk power-on lifetime: 5490 hours (228 days + 18 hours)
+Error 1113 [88] occurred at disk power-on lifetime: 6868 hours (286 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -139,13 +139,12 @@ Error 1088 [63] occurred at disk power-on lifetime: 5490 hours (228 days + 18 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:33.193  SECURITY UNLOCK
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:23.589  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:23.588  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:23.583  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:05.045  [RESERVED]
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:44.482  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:37.829  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:37.827  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:37.813  [RESERVED]
 
-Error 1087 [62] occurred at disk power-on lifetime: 5434 hours (226 days + 10 hours)
+Error 1112 [87] occurred at disk power-on lifetime: 6496 hours (270 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -156,12 +155,13 @@ Error 1087 [62] occurred at disk power-on lifetime: 5434 hours (226 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:30.831  SECURITY UNLOCK
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:21.155  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:21.154  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:21.149  [RESERVED]
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:41.573  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:01:34.291  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:34.290  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:01:34.275  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:05.151  [RESERVED]
 
-Error 1086 [61] occurred at disk power-on lifetime: 5430 hours (226 days + 6 hours)
+Error 1111 [86] occurred at disk power-on lifetime: 6478 hours (269 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -172,13 +172,12 @@ Error 1086 [61] occurred at disk power-on lifetime: 5430 hours (226 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:43.104  SECURITY UNLOCK
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:33.118  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:33.116  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:33.102  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:02.154  [RESERVED]
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:24.773  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:16.320  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:16.318  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:16.304  [RESERVED]
 
-Error 1085 [60] occurred at disk power-on lifetime: 5427 hours (226 days + 3 hours)
+Error 1110 [85] occurred at disk power-on lifetime: 6359 hours (264 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -189,12 +188,13 @@ Error 1085 [60] occurred at disk power-on lifetime: 5427 hours (226 days + 3 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:34.072  SECURITY UNLOCK
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:20.207  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:20.206  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:20.201  [RESERVED]
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:27.702  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:18.706  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:18.705  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:18.700  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:05.185  [RESERVED]
 
-Error 1084 [59] occurred at disk power-on lifetime: 5372 hours (223 days + 20 hours)
+Error 1109 [84] occurred at disk power-on lifetime: 6271 hours (261 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -205,62 +205,61 @@ Error 1084 [59] occurred at disk power-on lifetime: 5372 hours (223 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:14.970  SECURITY UNLOCK
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:18.569  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:18.567  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:18.553  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:02.211  [RESERVED]
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:26.652  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:19.642  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:19.640  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:19.626  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:05.037  [RESERVED]
 
-Error 1083 [58] occurred at disk power-on lifetime: 5280 hours (220 days + 0 hours)
+Error 1108 [83] occurred at disk power-on lifetime: 6195 hours (258 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 c0 00 00 00 68 33 f7 40 00  Error: UNC at LBA = 0x006833f7 = 6829047
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 40 00 e8 00 00 28 10 a0 73 40 00     09:39:30.557  READ FPDMA QUEUED
-  60 00 58 00 e0 00 00 21 1c bc a0 40 00     09:39:30.547  READ FPDMA QUEUED
-  61 00 08 00 d8 00 00 00 33 65 48 40 00     09:39:30.547  WRITE FPDMA QUEUED
-  60 00 40 00 d0 00 00 30 c6 40 1b 40 00     09:39:30.218  READ FPDMA QUEUED
-  60 00 50 00 c8 00 00 01 4f 33 08 40 00     09:39:30.115  READ FPDMA QUEUED
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:17.653  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:01:09.410  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:09.409  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:01:09.403  [RESERVED]
 
-Error 1082 [57] occurred at disk power-on lifetime: 5280 hours (220 days + 0 hours)
+Error 1107 [82] occurred at disk power-on lifetime: 6051 hours (252 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 80 00 00 00 68 33 f6 40 00  Error: UNC at LBA = 0x006833f6 = 6829046
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 80 00 00 00 68 33 f6 40 00     09:39:26.456  READ FPDMA QUEUED
-  61 00 08 00 78 00 00 01 29 d3 28 40 00     09:39:26.456  WRITE FPDMA QUEUED
-  60 00 40 00 70 00 00 00 35 e9 38 40 00     09:39:26.456  READ FPDMA QUEUED
-  61 00 d8 00 68 00 00 00 61 e8 38 40 00     09:39:26.456  WRITE FPDMA QUEUED
-  60 00 08 00 60 00 00 01 4d b5 b8 40 00     09:39:26.456  READ FPDMA QUEUED
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:10:49.499  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:10:39.985  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:10:39.983  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:10:39.968  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:10:36.544  [RESERVED]
 
-Error 1081 [56] occurred at disk power-on lifetime: 5280 hours (220 days + 0 hours)
+Error 1106 [81] occurred at disk power-on lifetime: 6051 hours (252 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 18 00 00 00 68 33 f5 40 00  Error: UNC at LBA = 0x006833f5 = 6829045
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 e2 00 10 00 00 13 fc 5e b8 40 00     09:39:23.001  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 13 fc 5d b8 40 00     09:39:23.001  READ FPDMA QUEUED
-  60 01 00 00 f8 00 00 13 fc 5c b8 40 00     09:39:23.001  READ FPDMA QUEUED
-  60 01 00 00 f0 00 00 13 fc 5b b8 40 00     09:39:23.001  READ FPDMA QUEUED
-  60 01 00 00 e8 00 00 13 fc 5a b8 40 00     09:39:23.001  READ FPDMA QUEUED
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:03:02.084  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:02:51.898  SET FEATURES [Set transfer mode]
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:02:51.896  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:02:51.881  [RESERVED]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:02:48.459  [RESERVED]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -279,9 +278,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     27/36 Celsius
-Lifetime    Min/Max Temperature:     12/51 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     26/40 Celsius
+Lifetime    Min/Max Temperature:     12/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -289,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (415)
+Temperature History Size (Index):    478 (308)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -298,29 +297,29 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1698  ---  Lifetime Power-On Resets
-0x01  0x010  4            5498  ---  Power-on Hours
-0x01  0x018  6     61472219662  ---  Logical Sectors Written
-0x01  0x020  6       781173075  ---  Number of Write Commands
-0x01  0x028  6     72236616583  ---  Logical Sectors Read
-0x01  0x030  6       945968043  ---  Number of Read Commands
+0x01  0x008  4            2367  ---  Lifetime Power-On Resets
+0x01  0x010  4            7048  ---  Power-on Hours
+0x01  0x018  6     75427776806  ---  Logical Sectors Written
+0x01  0x020  6       865232780  ---  Number of Write Commands
+0x01  0x028  6     82900274319  ---  Logical Sectors Read
+0x01  0x030  6      1095154857  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4            1658  ---  Overlimit Shock Events
+0x02  0x010  4            1736  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            2119  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            5473  ---  Head Flying Hours
-0x03  0x018  4            4983  ---  Head Load Events
+0x03  0x008  4            2888  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            7013  ---  Head Flying Hours
+0x03  0x018  4            7011  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4               6  ---  Read Recovery Attempts
+0x03  0x028  4               7  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             986  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              36  ---  Current Temperature
-0x05  0x010  1              38  N--  Average Short Term Temperature
-0x05  0x018  1              37  N--  Average Long Term Temperature
-0x05  0x020  1              51  ---  Highest Temperature
+0x05  0x008  1              40  ---  Current Temperature
+0x05  0x010  1              37  N--  Average Short Term Temperature
+0x05  0x018  1              34  N--  Average Long Term Temperature
+0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              12  ---  Lowest Temperature
 0x05  0x030  1              45  N--  Highest Average Short Term Temperature
 0x05  0x038  1              28  N--  Lowest Average Short Term Temperature
@@ -331,10 +330,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6544  ---  Number of Hardware Resets
+0x06  0x008  4           10500  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              11  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -351,8 +350,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4        45041  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        64233  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database 7.5/5706
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Dec  6 22:12:30 2025 EST
+Local Time is:    Sat Dec  6 22:40:00 2025 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,13 +68,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1848
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    2026
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    277
-193 Load_Cycle_Count        -O--CK   037   037   000    -    635415
-194 Temperature_Celsius     -O---K   100   100   000    -    25 (Min/Max 14/61)
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    256891953
-200 Multi_Zone_Error_Rate   -O--CK   100   100   000    -    5597217520
+193 Load_Cycle_Count        -O--CK   037   037   000    -    635420
+194 Temperature_Celsius     -O---K   100   100   000    -    26 (Min/Max 14/61)
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    256892068
+200 Multi_Zone_Error_Rate   -O--CK   100   100   000    -    5597227020
 240 Head_Flying_Hours       -O--CK   001   001   000    -    41597
 241 Total_LBAs_Written      -O--CK   100   100   000    -    118801259990
-242 Total_LBAs_Read         -O--CK   100   100   000    -    106720634380
+242 Total_LBAs_Read         -O--CK   100   100   000    -    106720648100
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    4
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -121,8 +121,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     18/26 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     18/27 Celsius
 Lifetime    Min/Max Temperature:     14/61 Celsius
 Specified Max Operating Temperature:    29 Celsius
 Under/Over Temperature Limit Count:   0/102
@@ -132,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    478 (139)
+Temperature History Size (Index):    478 (141)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -145,14 +145,14 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4           62369  ---  Power-on Hours
 0x01  0x018  6    118801259990  ---  Logical Sectors Written
 0x01  0x020  6      1958663306  ---  Number of Write Commands
-0x01  0x028  6    106720634380  ---  Logical Sectors Read
-0x01  0x030  6      1513213422  ---  Number of Read Commands
+0x01  0x028  6    106720648100  ---  Logical Sectors Read
+0x01  0x030  6      1513213787  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4            2026  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           62021  ---  Spindle Motor Power-on Hours
+0x03  0x008  4           62022  ---  Spindle Motor Power-on Hours
 0x03  0x010  4           41597  ---  Head Flying Hours
-0x03  0x018  4          635415  ---  Head Load Events
+0x03  0x018  4          635420  ---  Head Load Events
 0x03  0x020  4              64  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -160,7 +160,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             122  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              25  ---  Current Temperature
+0x05  0x008  1              26  ---  Current Temperature
 0x05  0x010  1              26  N--  Average Short Term Temperature
 0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              61  ---  Highest Temperature
@@ -194,7 +194,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          250  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          582  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-30-amd64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-37-amd64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,20 +12,23 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb  2 20:57:26 2025 +05
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Tue Jun 17 14:19:27 2025 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Enabled
+Write SCT (Get) Feature Control Command failed: Operation not supported
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -64,16 +67,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   236   221   021    -    7158
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11984
+  3 Spin_Up_Time            POS--K   237   221   021    -    7141
+  4 Start_Stop_Count        -O--CK   089   089   000    -    11989
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   037   037   000    -    46441
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   032   032   000    -    49662
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1447
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    770
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1619257
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1452
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    775
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1685803
 194 Temperature_Celsius     -O---K   131   093   000    -    19
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
@@ -133,16 +136,12 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    19 Celsius
-Power Cycle Min/Max Temperature:     19/22 Celsius
-Lifetime    Min/Max Temperature:     19/57 Celsius
+Power Cycle Min/Max Temperature:     18/26 Celsius
+Lifetime    Min/Max Temperature:     18/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:      0/60 Celsius
-Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (112)
+Write SCT Data Table failed: Operation not supported
+Read SCT Temperature History failed
 
 SCT Error Recovery Control command not supported
 
@@ -160,12 +159,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       642497  Vendor specific
+0x8000  4       199574  Vendor specific
 
 
 

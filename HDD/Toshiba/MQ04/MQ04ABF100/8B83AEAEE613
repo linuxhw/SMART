@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-25-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.8.0-62-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     TOSHIBA MQ04ABF100
@@ -11,14 +11,14 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Zoned Device:     Device managed zones
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Apr  1 08:01:54 2024 MSK
+Local Time is:    Mon Jun 30 12:42:11 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -65,28 +65,28 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1288
-  4 Start_Stop_Count        -O--CK   100   100   000    -    19328
+  3 Spin_Up_Time            POS--K   100   100   001    -    1234
+  4 Start_Stop_Count        -O--CK   100   100   000    -    23850
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   080   080   000    -    8389
+  9 Power_On_Hours          -O--CK   072   072   000    -    11341
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    6474
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    30
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    51
-193 Load_Cycle_Count        -O--CK   092   092   000    -    83100
-194 Temperature_Celsius     -O---K   100   100   000    -    23 (Min/Max 10/46)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    8705
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    136
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    75
+193 Load_Cycle_Count        -O--CK   089   089   000    -    114986
+194 Temperature_Celsius     -O---K   100   100   000    -    27 (Min/Max 10/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-206 Flying_Height           -----K   100   100   000    -    16592
-220 Disk_Shift              -O----   100   100   000    -    4119
-222 Loaded_Hours            -O--CK   094   094   000    -    2615
+199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
+206 Flying_Height           -----K   100   100   000    -    16723
+220 Disk_Shift              -O----   100   100   000    -    0
+222 Loaded_Hours            -O--CK   091   091   000    -    3677
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    174
+226 Load-in_Time            -OS--K   100   100   000    -    257
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -119,7 +119,9 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Vendor (0x50)       Completed without error       00%      9224         -
+# 2  Short offline       Completed without error       00%      9224         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -135,8 +137,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     20/23 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     21/27 Celsius
 Lifetime    Min/Max Temperature:     10/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -145,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (440)
+Temperature History Size (Index):    478 (214)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,44 +156,44 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            6474  ---  Lifetime Power-On Resets
-0x01  0x010  4            8389  ---  Power-on Hours
-0x01  0x018  6     11527290228  ---  Logical Sectors Written
-0x01  0x020  6       125279800  ---  Number of Write Commands
-0x01  0x028  6     15727294897  ---  Logical Sectors Read
-0x01  0x030  6       162358465  ---  Number of Read Commands
-0x01  0x038  6     30201522947  ---  Date and Time TimeStamp
+0x01  0x008  4            8705  ---  Lifetime Power-On Resets
+0x01  0x010  4           11341  ---  Power-on Hours
+0x01  0x018  6     14816633988  ---  Logical Sectors Written
+0x01  0x020  6       169922625  ---  Number of Write Commands
+0x01  0x028  6     22412323607  ---  Logical Sectors Read
+0x01  0x030  6       229605892  ---  Number of Read Commands
+0x01  0x038  6     40829935052  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4              30  ---  Overlimit Shock Events
+0x02  0x010  4             136  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            5458  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            2615  ---  Head Flying Hours
-0x03  0x018  4           83100  ---  Head Load Events
+0x03  0x008  4            7710  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            3677  ---  Head Flying Hours
+0x03  0x018  4          114987  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             578  ---  Read Recovery Attempts
+0x03  0x028  4             916  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              51  ---  Number of High Priority Unload Events
+0x03  0x040  4              75  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              23  ---  Current Temperature
+0x05  0x008  1              27  ---  Current Temperature
 0x05  0x010  1              25  N--  Average Short Term Temperature
-0x05  0x018  1              24  N--  Average Long Term Temperature
+0x05  0x018  1              26  N--  Average Long Term Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              10  ---  Lowest Temperature
 0x05  0x030  1              39  N--  Highest Average Short Term Temperature
 0x05  0x038  1              20  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              28  N--  Highest Average Long Term Temperature
+0x05  0x040  1              29  N--  Highest Average Long Term Temperature
 0x05  0x048  1              24  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           16869  ---  Number of Hardware Resets
-0x06  0x010  4            6502  ---  Number of ASR Events
+0x06  0x008  4           21017  ---  Number of Hardware Resets
+0x06  0x010  4            8736  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -210,7 +212,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          123  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          128  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
