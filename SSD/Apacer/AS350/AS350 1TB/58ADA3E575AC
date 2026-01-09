@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.15.0-desktop-0.rc2.3omv2590] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,8 +14,8 @@ Form Factor:      2.5 inches
 TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ACS-4 (minor revision not indicated)
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Apr 30 04:23:43 2025 +10
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Sun Jun  1 20:31:05 2025 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,8 +62,8 @@ recommended polling time: 	 (   6) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   100   100   000    -    94
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    105
+  9 Power_On_Hours          -O--CK   100   100   000    -    409
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    221
 163 Max_Erase_Count         -O--CK   100   100   000    -    2
 164 Average_Erase_Count     -O--CK   100   100   000    -    0
 166 Later_Bad_Block_Count   -O--CK   100   100   000    -    0
@@ -72,10 +72,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 175 Bad_Cluster_Table_Count -O--CK   100   100   000    -    0
-192 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    60
+192 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    92
 194 Temperature_Celsius     -O---K   067   067   058    -    33 (Min/Max 33/33)
 231 Lifetime_Left           -O--C-   100   100   000    -    100
-241 Total_LBAs_Written      -O--CK   100   100   000    -    1749865799
+241 Total_LBAs_Written      -O--CK   100   100   000    -    1873958231
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -122,10 +122,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             105  ---  Lifetime Power-On Resets
-0x01  0x010  4              94  ---  Power-on Hours
-0x01  0x018  6      1749865799  ---  Logical Sectors Written
-0x01  0x028  6      1239505350  ---  Logical Sectors Read
+0x01  0x008  4             221  ---  Lifetime Power-On Resets
+0x01  0x010  4             409  ---  Power-on Hours
+0x01  0x018  6      1873958231  ---  Logical Sectors Written
+0x01  0x028  6      3549706678  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -133,7 +133,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             415  ---  Number of Hardware Resets
+0x06  0x008  4            1001  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -151,10 +151,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

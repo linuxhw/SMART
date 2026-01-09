@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-60-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-29-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Jun 18 20:00:13 2025 CEST
+Local Time is:    Sun Dec 21 12:37:00 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,28 +63,28 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0/4559111
+  1 Raw_Read_Error_Rate     POSR--   116   116   050    -    0/123028126
   5 Retired_Block_Count     PO--CK   100   100   003    -    8
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    17421h+04m+02.460s
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7723
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    18364h+57m+33.570s
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    8147
 171 Program_Fail_Count      -O--CK   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    840
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    885
 177 Wear_Range_Delta        ------   000   000   000    -    3
 181 Program_Fail_Count      -O--CK   000   000   000    -    0
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--CK   000   000   000    -    17282
-194 Temperature_Celsius     -O---K   037   057   000    -    37 (Min/Max 11/57)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/4559111
+194 Temperature_Celsius     -O---K   030   057   000    -    30 (Min/Max 11/57)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/123028126
 196 Reallocated_Event_Count PO--CK   100   100   003    -    8
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/4559111
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/4559111
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/123028126
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/123028126
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   100   100   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    16426
-234 SandForce_Internal      -O--CK   000   000   000    -    18248
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    18248
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    19935
+233 SandForce_Internal      ------   000   000   000    -    18854
+234 SandForce_Internal      -O--CK   000   000   000    -    20865
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    20865
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    22909
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,9 +110,7 @@ SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Self-test routine in progress 60%     12789         -
-# 2  Short offline       Self-test routine in progress 20%     12789         -
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -128,17 +126,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     28/37 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     20/30 Celsius
 Lifetime    Min/Max Temperature:     11/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     10 (Unknown, should be 2)
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:     92/100 Celsius
-Min/Max Temperature Limit:           72/74 Celsius
-Temperature History Size (Index):    31744 (143)
+Min/Max recommended Temperature:     -14/117 Celsius
+Min/Max Temperature Limit:           -79/-1 Celsius
+Temperature History Size (Index):    52992 (295)
 Invalid Temperature History Size or Index
 
 SCT Error Recovery Control command not supported
@@ -155,7 +153,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

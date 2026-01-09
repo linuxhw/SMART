@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-45-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-57-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Oct  7 22:52:50 2024 CEST
+Local Time is:    Thu Apr  3 00:14:10 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,11 +22,13 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Read SCT Status failed: scsi error badly formed scsi parameters
+Read SCT Status failed: Connection timed out
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x02)	Offline data collection activity
@@ -66,11 +68,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1387
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    852
+  9 Power_On_Hours          -O--CK   100   100   000    -    1407
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    868
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   099   099   000    -    48
+173 Ave_Block-Erase_Count   -O--CK   099   099   000    -    50
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    30
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    43
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    10
@@ -84,9 +86,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   099   099   001    -    1
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    4200808179
-247 Host_Program_Page_Count -O--CK   100   100   000    -    40245916
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    34226856
+246 Total_LBAs_Written      -O--CK   100   100   000    -    4339364208
+247 Host_Program_Page_Count -O--CK   100   100   000    -    41492533
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    35820429
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,43 +121,45 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Completed without error       00%      1387         -
-# 2  Offline             Completed without error       00%      1280         -
-# 3  Offline             Completed without error       00%        65         -
-# 4  Offline             Completed without error       00%      1326         -
-# 5  Offline             Completed without error       00%      1322         -
-# 6  Offline             Completed without error       00%      1267         -
-# 7  Offline             Completed without error       00%      1260         -
-# 8  Offline             Completed without error       00%      1251         -
-# 9  Offline             Completed without error       00%      1223         -
-#10  Offline             Completed without error       00%      1160         -
-#11  Offline             Completed without error       00%      1152         -
-#12  Offline             Completed without error       00%      1135         -
-#13  Offline             Completed without error       00%      1119         -
-#14  Offline             Completed without error       00%      1119         -
-#15  Short offline       Completed without error       00%         4         -
-#16  Short offline       Self-test routine in progress 90%         4         -
+# 1  Offline             Completed without error       00%      1404         -
+# 2  Offline             Completed without error       00%      1398         -
+# 3  Offline             Completed without error       00%      1387         -
+# 4  Offline             Completed without error       00%      1280         -
+# 5  Offline             Completed without error       00%        65         -
+# 6  Offline             Completed without error       00%      1326         -
+# 7  Offline             Completed without error       00%      1322         -
+# 8  Offline             Completed without error       00%      1267         -
+# 9  Offline             Completed without error       00%      1260         -
+#10  Offline             Completed without error       00%      1251         -
+#11  Offline             Completed without error       00%      1223         -
+#12  Offline             Completed without error       00%      1160         -
+#13  Offline             Completed without error       00%      1152         -
+#14  Offline             Completed without error       00%      1135         -
+#15  Offline             Completed without error       00%      1119         -
+#16  Offline             Completed without error       00%      1119         -
+#17  Short offline       Completed without error       00%         4         -
+#18  Short offline       Self-test routine in progress 90%         4         -
 
-Read SMART Selective Self-test Log failed: scsi error badly formed scsi parameters
+Read SMART Selective Self-test Log failed: Connection timed out
 
-Read SCT Status failed: scsi error badly formed scsi parameters
+Read SCT Status failed: Connection timed out
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             852  ---  Lifetime Power-On Resets
-0x01  0x010  4            1387  ---  Power-on Hours
-0x01  0x018  6      4200808179  ---  Logical Sectors Written
-0x01  0x020  6        38746140  ---  Number of Write Commands
-0x01  0x028  6      3866840909  ---  Logical Sectors Read
-0x01  0x030  6        99910224  ---  Number of Read Commands
+0x01  0x008  4             868  ---  Lifetime Power-On Resets
+0x01  0x010  4            1407  ---  Power-on Hours
+0x01  0x018  6        44396912  ---  Logical Sectors Written
+0x01  0x020  6        39689119  ---  Number of Write Commands
+0x01  0x028  6      3987340712  ---  Logical Sectors Read
+0x01  0x030  6       101329399  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4         1064551  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4603  ---  Number of Hardware Resets
+0x06  0x008  4            4663  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
@@ -176,7 +180,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

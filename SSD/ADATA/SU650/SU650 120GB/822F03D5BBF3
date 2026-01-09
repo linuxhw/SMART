@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.9-1-cachyos] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.12.43-3-cachyos-lts] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-3, ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Oct 28 23:03:47 2024 UTC
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Sep 14 17:28:25 2025 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,8 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -66,34 +65,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    42
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    89
+  9 Power_On_Hours          -O--CK   100   100   000    -    120
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    228
 161 Valid_Spare_Block_Cnt   -O--CK   100   100   000    -    0
-162 Cache_Block_Count       -O--CK   100   100   000    -    11945
+162 Cache_Block_Count       -O--CK   100   100   000    -    15016
 163 Initial_Bad_Block_Count -O--CK   100   100   000    -    100
-164 Total_Erase_Count       -O--CK   100   100   000    -    32
+164 Total_Erase_Count       -O--CK   100   100   000    -    41
 166 Min_Erase_Count         -O--CK   100   100   000    -    62
 167 Average_Erase_Count     -O--CK   100   100   050    -    0
 168 Max_Erase_Count_of_Spec -O--CK   100   100   000    -    0
 169 Remaining_Lifetime_Perc -O--CK   100   100   000    -    100
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    10
+174 Unknown_Attribute       -O--CK   100   100   000    -    35
 175 Program_Fail_Count_Chip -O--CK   100   100   000    -    0
-181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    4986067
+181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    5734501
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   030    -    49
-195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
+194 Temperature_Celsius     -O---K   100   100   030    -    35
+195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    5
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-206 Unknown_SSD_Attribute   -O--CK   100   100   000    -    10
-207 Unknown_SSD_Attribute   -O--CK   100   100   000    -    45
+206 Unknown_SSD_Attribute   -O--CK   100   100   000    -    14
+207 Unknown_SSD_Attribute   -O--CK   100   100   000    -    68
 232 Available_Reservd_Space -O--CK   100   100   000    -    100
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    332
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    814
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    943
-249 Unkn_SiliconMotion_Attr -O--CK   100   100   000    -    336
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    850
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    1013
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    1044
+249 Unkn_SiliconMotion_Attr -O--CK   100   100   000    -    462
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    1067
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -160,21 +159,21 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              89  ---  Lifetime Power-On Resets
-0x01  0x010  4              42  ---  Power-on Hours
-0x01  0x018  6      1707410168  ---  Logical Sectors Written
-0x01  0x020  6        25461301  ---  Number of Write Commands
-0x01  0x028  6      1978697529  ---  Logical Sectors Read
-0x01  0x030  6        31093952  ---  Number of Read Commands
-0x01  0x038  6       129011324  ---  Date and Time TimeStamp
+0x01  0x008  4             228  ---  Lifetime Power-On Resets
+0x01  0x010  4             120  ---  Power-on Hours
+0x01  0x018  6      2124608289  ---  Logical Sectors Written
+0x01  0x020  6        29288790  ---  Number of Write Commands
+0x01  0x028  6      2191049334  ---  Logical Sectors Read
+0x01  0x030  6        33212886  ---  Number of Read Commands
+0x01  0x038  6       432215611  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             256  ---  Number of Hardware Resets
+0x06  0x008  4             421  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              20  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              25  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -184,5 +183,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+
+
 

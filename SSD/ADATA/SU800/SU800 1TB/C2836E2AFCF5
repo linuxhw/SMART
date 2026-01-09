@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 23 05:02:28 2024 CET
+Local Time is:    Thu Mar 13 06:47:20 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,20 +66,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    18791
- 12 Power_Cycle_Count       ------   100   100   000    -    3001
+  9 Power_On_Hours          ------   100   100   000    -    19098
+ 12 Power_Cycle_Count       ------   100   100   000    -    3019
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    42
 163 Initial_Bad_Block_Count ------   100   100   000    -    13
-164 Total_Erase_Count       ------   100   100   000    -    162022
+164 Total_Erase_Count       ------   100   100   000    -    163825
 165 Max_Erase_Count         ------   100   100   000    -    184
-166 Min_Erase_Count         ------   100   100   000    -    80
-167 Average_Erase_Count     ------   100   100   000    -    121
+166 Min_Erase_Count         ------   100   100   000    -    81
+167 Average_Erase_Count     ------   100   100   000    -    122
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    1000
 169 Remaining_Lifetime_Perc ------   100   100   000    -    88
 175 Program_Fail_Count_Chip ------   100   100   000    -    0
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    936
+177 Wear_Leveling_Count     ------   100   100   050    -    941
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
@@ -91,9 +91,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    3
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    3107101
-242 Host_Reads_32MiB        ------   100   100   000    -    3454851
-245 TLC_Writes_32MiB        ------   100   100   000    -    2592352
+241 Host_Writes_32MiB       ------   100   100   000    -    3126718
+242 Host_Reads_32MiB        ------   100   100   000    -    3544755
+245 TLC_Writes_32MiB        ------   100   100   000    -    2621200
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -152,24 +152,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (96)
+Temperature History Size (Index):    128 (110)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3001  ---  Lifetime Power-On Resets
-0x01  0x010  4           18791  ---  Power-on Hours
-0x01  0x018  6      1763523601  ---  Logical Sectors Written
-0x01  0x020  6      2541022895  ---  Number of Write Commands
-0x01  0x028  6      3078816602  ---  Logical Sectors Read
-0x01  0x030  6      3459584535  ---  Number of Read Commands
+0x01  0x008  4            3019  ---  Lifetime Power-On Resets
+0x01  0x010  4           19098  ---  Power-on Hours
+0x01  0x018  6      3049169620  ---  Logical Sectors Written
+0x01  0x020  6      2603196077  ---  Number of Write Commands
+0x01  0x028  6       380830188  ---  Logical Sectors Read
+0x01  0x030  6      3520288529  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             343  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           16315  ---  Number of Hardware Resets
+0x06  0x008  4           17179  ---  Number of Hardware Resets
 0x06  0x018  4               3  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              12  ---  Percentage Used Endurance Indicator
@@ -190,7 +190,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           40  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

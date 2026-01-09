@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jan 27 17:43:26 2025 UTC
+Local Time is:    Mon Jan 27 20:35:00 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -66,16 +66,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    7716
- 12 Power_Cycle_Count       ------   100   100   000    -    43
+  9 Power_On_Hours          ------   100   100   000    -    7718
+ 12 Power_Cycle_Count       ------   100   100   000    -    49
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    24
 163 Unknown_Attribute       ------   100   100   000    -    7
-164 Unknown_Attribute       ------   100   100   000    -    292068
+164 Unknown_Attribute       ------   100   100   000    -    292108
 165 Unknown_Attribute       ------   100   100   000    -    1366
-166 Unknown_Attribute       ------   100   100   000    -    1285
-167 Unknown_Attribute       ------   100   100   000    -    1345
-148 Unknown_Attribute       ------   100   100   000    -    183829
+166 Unknown_Attribute       ------   100   100   000    -    1286
+167 Unknown_Attribute       ------   100   100   000    -    1346
+148 Unknown_Attribute       ------   100   100   000    -    183831
 149 Unknown_Attribute       ------   100   100   000    -    16734
 150 Unknown_Attribute       ------   100   100   000    -    16686
 151 Unknown_Attribute       ------   100   100   000    -    16711
@@ -85,15 +85,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 177 Wear_Leveling_Count     ------   100   100   050    -    204
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    31
+192 Power-Off_Retract_Count ------   100   100   000    -    35
 194 Temperature_Celsius     ------   100   100   000    -    47
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    2
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    4925809
-242 Total_LBAs_Read         ------   100   100   000    -    5587397
-245 Unknown_Attribute       ------   100   100   000    -    47315016
+241 Total_LBAs_Written      ------   100   100   000    -    4927236
+242 Total_LBAs_Read         ------   100   100   000    -    5587667
+245 Unknown_Attribute       ------   100   100   000    -    47321496
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -151,23 +151,23 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (103)
+Temperature History Size (Index):    128 (61)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              43  ---  Lifetime Power-On Resets
-0x01  0x010  4            7716  ---  Power-on Hours
-0x01  0x018  6       695325510  ---  Logical Sectors Written
-0x01  0x020  6      2847342653  ---  Number of Write Commands
-0x01  0x028  6      1103444153  ---  Logical Sectors Read
-0x01  0x030  6      4218438827  ---  Number of Read Commands
-0x01  0x038  6      2009082611  ---  Date and Time TimeStamp
+0x01  0x008  4              49  ---  Lifetime Power-On Resets
+0x01  0x010  4            7718  ---  Power-on Hours
+0x01  0x018  6       788847982  ---  Logical Sectors Written
+0x01  0x020  6      2847641577  ---  Number of Write Commands
+0x01  0x028  6      1121153958  ---  Logical Sectors Read
+0x01  0x030  6      4218728557  ---  Number of Read Commands
+0x01  0x038  6      2015167818  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              31  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              35  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              47  ---  Current Temperature
 0x05  0x010  1              47  ---  Average Short Term Temperature
@@ -183,8 +183,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             229  ---  Number of Hardware Resets
-0x06  0x010  4              28  ---  Number of ASR Events
+0x06  0x008  4             244  ---  Number of Hardware Resets
+0x06  0x010  4              30  ---  Number of ASR Events
 0x06  0x018  4               2  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              67  ---  Percentage Used Endurance Indicator
@@ -205,13 +205,11 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

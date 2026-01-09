@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.5/5852
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Sep 11 21:16:40 2025 EDT
+Local Time is:    Sat Sep 13 23:14:28 2025 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -66,17 +66,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14076
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2269
+  9 Power_On_Hours          -O--CK   100   100   000    -    14098
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2288
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   071   071   000    -    879
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    381
+173 Ave_Block-Erase_Count   -O--CK   071   071   000    -    880
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    384
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    1990
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   059   041   000    -    41 (Min/Max 0/59)
+194 Temperature_Celsius     -O---K   061   041   000    -    39 (Min/Max 0/59)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -84,9 +84,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain P---CK   071   071   000    -    29
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   ---    -    13707510158
-247 Host_Program_Page_Count -O--CK   100   100   ---    -    437185681
-248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2173483886
+246 Total_LBAs_Written      -O--CK   100   100   ---    -    13727601264
+247 Host_Program_Page_Count -O--CK   100   100   ---    -    437838744
+248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2175539554
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -145,8 +145,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     41/41 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     38/39 Celsius
 Lifetime    Min/Max Temperature:      0/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -155,25 +155,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (415)
+Temperature History Size (Index):    478 (259)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2269  ---  Lifetime Power-On Resets
-0x01  0x010  4           14076  ---  Power-on Hours
-0x01  0x018  6     13707510158  ---  Logical Sectors Written
-0x01  0x020  6       238436938  ---  Number of Write Commands
-0x01  0x028  6        55243052  ---  Logical Sectors Read
-0x01  0x030  6         1349829  ---  Number of Read Commands
+0x01  0x008  4            2288  ---  Lifetime Power-On Resets
+0x01  0x010  4           14098  ---  Power-on Hours
+0x01  0x018  6     13727601264  ---  Logical Sectors Written
+0x01  0x020  6       238827029  ---  Number of Write Commands
+0x01  0x028  6        58687318  ---  Logical Sectors Read
+0x01  0x030  6         1437351  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            4393  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            4410  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              41  ---  Current Temperature
-0x05  0x010  1              41  ---  Average Short Term Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1              39  ---  Average Short Term Temperature
 0x05  0x018  1              36  ---  Average Long Term Temperature
 0x05  0x020  1              59  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
@@ -200,7 +200,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 
 
 

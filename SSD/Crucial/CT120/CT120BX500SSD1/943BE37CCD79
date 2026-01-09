@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.58-generic-1rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.12.25-generic-1rosa13-x86_64] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron Client SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar  2 20:54:13 2024 MSK
+Local Time is:    Thu Jul  3 07:10:43 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,7 +24,6 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -63,27 +62,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    7642
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    309
+  9 Power_On_Hours          -O--CK   100   100   050    -    8979
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    563
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    257
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    99
+173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    279
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    289
 180 Unused_Reserve_NAND_Blk -O--CK   100   100   050    -    100
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    0
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   066   032   050    Past 34 (Min/Max 15/68)
+194 Temperature_Celsius     -O---K   063   032   050    Past 37 (Min/Max 15/68)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
-202 Percent_Lifetime_Remain ----CK   083   083   001    -    83
+199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    5
+202 Percent_Lifetime_Remain ----CK   082   082   001    -    82
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    21733842157
-247 Host_Program_Page_Count -O--CK   100   100   050    -    679182567
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    967396912
+246 Total_LBAs_Written      -O--CK   100   100   050    -    26151673394
+247 Host_Program_Page_Count -O--CK   100   100   050    -    817239793
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    1140595936
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 13 (device log contains only the most recent 4 errors)
+Device Error Count: 25 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,10 +124,10 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13 [0] log entry is empty
-Error 12 [3] log entry is empty
-Error 11 [2] log entry is empty
-Error 10 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 25 [0] log entry is empty
+Error 24 [3] log entry is empty
+Error 23 [2] log entry is empty
+Error 22 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -139,16 +138,18 @@ Error 10 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 80 00 00 33 00 35 c8 00 00     00:00:00.000  WRITE FPDMA QUEUED
-  61 00 08 00 38 00 00 47 00 7d c8 00 00     00:00:00.000  WRITE FPDMA QUEUED
-  60 00 20 00 58 00 00 55 00 31 a0 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 90 00 60 00 00 56 00 31 a8 00 00     00:00:00.000  READ FPDMA QUEUED
-  61 00 08 00 88 00 00 2d 00 cd f0 00 00     00:00:00.000  WRITE FPDMA QUEUED
+  60 00 a0 00 00 00 00 95 00 ac 70 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 a0 00 00 00 00 95 00 ac 70 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 a0 00 00 00 00 95 00 ac 70 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 a0 00 00 00 00 95 00 ac 70 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 a0 00 00 00 00 95 00 ac 70 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      5841         -
-# 2  Short offline       Completed without error       00%      1395         -
+# 1  Extended offline    Completed without error       00%      7686         -
+# 2  Extended offline    Interrupted (host reset)      90%      7686         -
+# 3  Extended offline    Completed without error       00%      5841         -
+# 4  Short offline       Completed without error       00%      1395         -
 
 Selective Self-tests/Logging not supported
 
@@ -157,14 +158,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             309  ---  Lifetime Power-On Resets
-0x01  0x010  4            7642  ---  Power-on Hours
-0x01  0x018  6       259005677  ---  Logical Sectors Written
-0x01  0x020  6       288800547  ---  Number of Write Commands
-0x01  0x028  6       824346286  ---  Logical Sectors Read
-0x01  0x030  6       302774744  ---  Number of Read Commands
+0x01  0x008  4             563  ---  Lifetime Power-On Resets
+0x01  0x010  4            8979  ---  Power-on Hours
+0x01  0x018  6       381869618  ---  Logical Sectors Written
+0x01  0x020  6       349849527  ---  Number of Write Commands
+0x01  0x028  6      3726257023  ---  Logical Sectors Read
+0x01  0x030  6       333139446  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              32  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              37  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -175,6 +176,8 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            1  R_ERR response for non-data FIS
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+
+
 

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.0-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SSD 240GB
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Apr  4 11:02:55 2023 BST
+Local Time is:    Tue May 20 13:19:22 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,7 +61,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
   9 Power_On_Hours          -O--CK   100   100   050    -    6
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    27
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    66
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    141
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    20
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    55
 194 Temperature_Celsius     -O---K   100   100   050    -    40
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
@@ -85,8 +85,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    2281
-242 Total_LBAs_Read         ----CK   100   100   050    -    1161
+241 Total_LBAs_Written      ----CK   100   100   050    -    2895
+242 Total_LBAs_Read         ----CK   100   100   050    -    1424
 245 Unknown_Attribute       -O--CK   100   100   050    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -125,12 +125,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              27  ---  Lifetime Power-On Resets
+0x01  0x008  4              66  ---  Lifetime Power-On Resets
 0x01  0x010  4               6  ---  Power-on Hours
-0x01  0x018  6       149500244  ---  Logical Sectors Written
-0x01  0x020  6          553336  ---  Number of Write Commands
-0x01  0x028  6        76093882  ---  Logical Sectors Read
-0x01  0x030  6         1261060  ---  Number of Read Commands
+0x01  0x018  6       189758662  ---  Logical Sectors Written
+0x01  0x020  6          626894  ---  Number of Write Commands
+0x01  0x028  6        93362801  ---  Logical Sectors Read
+0x01  0x030  6         1464232  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -143,6 +143,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            1  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            0  R_ERR response for non-data FIS
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 

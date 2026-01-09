@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.88] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.12.10-76061203-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Apple SD/SM/TS...E/F/G SSDs
@@ -11,10 +11,10 @@ User Capacity:    1,000,555,581,440 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5387
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed May  1 12:44:04 2024 EDT
+Local Time is:    Thu Sep  4 09:19:40 2025 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -61,14 +61,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-RC-   200   200   000    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    65770
- 12 Power_Cycle_Count       -O--CK   083   083   000    -    17046
+  9 Power_On_Hours          -O--CK   085   085   000    -    71852
+ 12 Power_Cycle_Count       -O--CK   082   082   000    -    17263
 169 Unknown_Apple_Attrib    PO--C-   253   253   010    -    7667892370432
-173 Wear_Leveling_Count     -O--CK   174   174   100    -    2126060781883
-174 Host_Reads_MiB          -O---K   099   099   000    -    99183880
-175 Host_Writes_MiB         -O---K   099   099   000    -    434637919
-192 Power-Off_Retract_Count -O--C-   099   099   000    -    240
-194 Temperature_Celsius     -O---K   057   057   000    -    43 (Min/Max 13/91)
+173 Wear_Leveling_Count     -O--CK   133   133   100    -    8040311817164
+174 Host_Reads_MiB          -O---K   099   099   000    -    101216195
+175 Host_Writes_MiB         -O---K   099   099   000    -    438202280
+192 Power-Off_Retract_Count -O--C-   099   099   000    -    267
+194 Temperature_Celsius     -O---K   045   045   000    -    55 (Min/Max 13/91)
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-RC-   200   200   000    -    0
 240 Unknown_SSD_Attribute   -O---K   100   100   000    -    0
@@ -92,8 +92,8 @@ Address    Access  R/W   Size  Description
 0x09           SL  R/W      1  Selective self-test log
 0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x18       GPL     R/W  32768  Command Duration Limits log
-0x20       GPL     R/O      7  Streaming performance log
+0x18       GPL     -    32768  Reserved
+0x20       GPL     R/O      7  Streaming performance log [OBS-8]
 0x30       GPL     R/O  32768  IDENTIFY DEVICE data log
 0x3c           SL  -      128  Reserved
 0x48       GPL     -    32768  Reserved
@@ -133,12 +133,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4           17046  ---  Lifetime Power-On Resets
-0x01  0x010  4           65770  ---  Power-on Hours
-0x01  0x018  6    890138460058  ---  Logical Sectors Written
-0x01  0x020  6      2897132515  ---  Number of Write Commands
-0x01  0x028  6    203128587849  ---  Logical Sectors Read
-0x01  0x030  6      1683331068  ---  Number of Read Commands
+0x01  0x008  4           17263  ---  Lifetime Power-On Resets
+0x01  0x010  4           71852  ---  Power-on Hours
+0x01  0x018  6    897438270251  ---  Logical Sectors Written
+0x01  0x020  6      3022963802  ---  Number of Write Commands
+0x01  0x028  6    207290769190  ---  Logical Sectors Read
+0x01  0x030  6      1710116217  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -157,7 +157,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
-
-
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 

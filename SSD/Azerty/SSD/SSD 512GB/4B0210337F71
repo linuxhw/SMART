@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.46-generic-2rosa2021.1-x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.47-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct  1 06:31:33 2023 MSK
+Local Time is:    Mon Jan  6 05:02:06 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -61,15 +61,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    220
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    142
+  9 Power_On_Hours          -O--CK   100   100   050    -    2388
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1079
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    12
-164 Unknown_Attribute       -O--CK   100   100   050    -    1704
+164 Unknown_Attribute       -O--CK   100   100   050    -    1952
 165 Unknown_Attribute       -O--CK   100   100   050    -    11
 166 Unknown_Attribute       -O--CK   100   100   050    -    1
-167 Unknown_Attribute       -O--CK   100   100   050    -    3
+167 Unknown_Attribute       -O--CK   100   100   050    -    4
 168 Unknown_Attribute       -O--CK   100   100   050    -    5050
 169 Unknown_Attribute       -O--CK   100   100   050    -    100
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
@@ -78,7 +78,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    6
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    92
 194 Temperature_Celsius     -O---K   100   100   050    -    40
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
@@ -86,9 +86,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    16432
-242 Total_LBAs_Read         ----CK   100   100   050    -    1653
-245 Unknown_Attribute       -O--CK   100   100   050    -    16200
+241 Total_LBAs_Written      ----CK   100   100   050    -    20067
+242 Total_LBAs_Read         ----CK   100   100   050    -    10793
+245 Unknown_Attribute       -O--CK   100   100   050    -    20448
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,8 +118,10 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       219         -
-# 2  Extended offline    Completed without error       00%        73         -
+# 1  Short offline       Completed without error       00%      2287         -
+# 2  Short offline       Completed without error       00%      1563         -
+# 3  Short offline       Completed without error       00%       219         -
+# 4  Extended offline    Completed without error       00%        73         -
 
 Selective Self-tests/Logging not supported
 
@@ -139,12 +141,12 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             142  ---  Lifetime Power-On Resets
-0x01  0x010  4             220  ---  Power-on Hours
-0x01  0x018  6      1076932243  ---  Logical Sectors Written
-0x01  0x020  6          512192  ---  Number of Write Commands
-0x01  0x028  6       108344043  ---  Logical Sectors Read
-0x01  0x030  6          699840  ---  Number of Read Commands
+0x01  0x008  4            1079  ---  Lifetime Power-On Resets
+0x01  0x010  4            2388  ---  Power-on Hours
+0x01  0x018  6      1315117627  ---  Logical Sectors Written
+0x01  0x020  6          649828  ---  Number of Write Commands
+0x01  0x028  6       707395527  ---  Logical Sectors Read
+0x01  0x030  6         4543003  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -158,7 +160,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 
 
 

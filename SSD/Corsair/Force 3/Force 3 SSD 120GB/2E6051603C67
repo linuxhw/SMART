@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.7.7-200.fc39.x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.11-200.fc41.x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,16 +13,16 @@ Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Mon Mar 11 23:10:18 2024 CET
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Apr 20 17:56:33 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -63,28 +63,28 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   120   050    -    0/0
+  1 Raw_Read_Error_Rate     POSR--   092   092   050    -    0/4864134
   5 Retired_Block_Count     PO--CK   100   100   003    -    4
-  9 Power_On_Hours_and_Msec -O--CK   060   060   000    -    35758h+33m+36.530s
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6786
+  9 Power_On_Hours_and_Msec -O--CK   058   058   000    -    36792h+53m+58.810s
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    7108
 171 Program_Fail_Count      -O--CK   000   000   000    -    2
 172 Erase_Fail_Count        -O--CK   000   000   000    -    2
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    460
-177 Wear_Range_Delta        ------   000   000   000    -    7
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    461
+177 Wear_Range_Delta        ------   000   000   000    -    6
 181 Program_Fail_Count      -O--CK   000   000   000    -    2
 182 Erase_Fail_Count        -O--CK   000   000   000    -    2
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   030   030   000    -    30 (Min/Max 30/30)
-195 ECC_Uncorr_Error_Count  --SRC-   100   100   000    -    0/0
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/4864134
 196 Reallocated_Event_Count PO--CK   100   100   003    -    4
-201 Unc_Soft_Read_Err_Rate  --SRC-   100   100   000    -    0/0
-204 Soft_ECC_Correct_Rate   --SRC-   100   100   000    -    0/0
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/4864134
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/4864134
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   095   095   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    30127
-234 SandForce_Internal      -O--CK   000   000   000    -    26274
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    26274
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    42329
+233 SandForce_Internal      ------   000   000   000    -    31457
+234 SandForce_Internal      -O--CK   000   000   000    -    27684
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    27684
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    44269
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -156,8 +156,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

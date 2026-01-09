@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database
 ATA Version is:   ACS-3, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 14 14:01:18 2024 CST
+Local Time is:    Sun Mar 23 21:46:58 2025 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,34 +62,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    248
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    170
+  9 Power_On_Hours          -O--CK   100   100   000    -    1030
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    325
 160 Uncorrectable_Error_Cnt -O--CK   100   100   050    -    0
 161 Valid_Spare_Block_Cnt   -O--CK   100   100   050    -    100
 163 Initial_Bad_Block_Count -O--CK   100   100   000    -    42
-164 Total_Erase_Count       -O--CK   100   100   000    -    3025
-165 Max_Erase_Count         -O--CK   100   100   000    -    8
-166 Min_Erase_Count         -O--CK   100   100   000    -    0
-167 Average_Erase_Count     -O--CK   100   100   000    -    5
-148 Total_SLC_Erase_Ct      -O--CK   100   100   000    -    9077
-149 Max_SLC_Erase_Ct        -O--CK   100   100   000    -    24
-150 Min_SLC_Erase_Ct        -O--CK   100   100   000    -    1
-151 Average_SLC_Erase_Ct    -O--CK   100   100   000    -    16
+164 Total_Erase_Count       -O--CK   100   100   000    -    5785
+165 Max_Erase_Count         -O--CK   100   100   000    -    14
+166 Min_Erase_Count         -O--CK   100   100   000    -    4
+167 Average_Erase_Count     -O--CK   100   100   000    -    10
+148 Total_SLC_Erase_Ct      -O--CK   100   100   000    -    17355
+149 Max_SLC_Erase_Ct        -O--CK   100   100   000    -    44
+150 Min_SLC_Erase_Ct        -O--CK   100   100   000    -    13
+151 Average_SLC_Erase_Ct    -O--CK   100   100   000    -    31
 159 DRAM_1_Bit_Error_Count  -O--CK   100   100   000    -    0
-168 Max_Erase_Count_of_Spec -O--CK   100   100   000    -    24
+168 Max_Erase_Count_of_Spec -O--CK   100   100   000    -    44
 169 Remaining_Lifetime_Perc -O--CK   100   100   000    -    100
 177 Wear_Leveling_Count     -O--CK   100   100   000    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    48
-194 Temperature_Celsius     -O--CK   100   100   000    -    30
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    50
+194 Temperature_Celsius     -O--CK   100   100   000    -    33
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 232 Available_Reservd_Space -O--CK   100   100   000    -    100
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    38702
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    36409
-245 TLC_Writes_32MiB        -O--CK   100   100   000    -    51425
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    62470
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    62136
+245 TLC_Writes_32MiB        -O--CK   100   100   000    -    90480
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,7 +119,14 @@ SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       966         -
+# 2  Short offline       Completed without error       00%       957         -
+# 3  Short offline       Completed without error       00%       879         -
+# 4  Short offline       Completed without error       00%       867         -
+# 5  Extended offline    Completed without error       00%       862         -
+# 6  Short offline       Completed without error       00%       839         -
+# 7  Short offline       Completed without error       00%       733         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -138,21 +145,21 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             170  ---  Lifetime Power-On Resets
-0x01  0x010  4             248  ---  Power-on Hours
-0x01  0x018  6      2536402953  ---  Logical Sectors Written
-0x01  0x020  6        33261093  ---  Number of Write Commands
-0x01  0x028  6      2386104169  ---  Logical Sectors Read
-0x01  0x030  6        33073049  ---  Number of Read Commands
-0x01  0x038  6       893437603  ---  Date and Time TimeStamp
+0x01  0x008  4             325  ---  Lifetime Power-On Resets
+0x01  0x010  4            1030  ---  Power-on Hours
+0x01  0x018  6      4094067211  ---  Logical Sectors Written
+0x01  0x020  6        58646958  ---  Number of Write Commands
+0x01  0x028  6      4072207536  ---  Logical Sectors Read
+0x01  0x030  6        58199408  ---  Number of Read Commands
+0x01  0x038  6      3710568762  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             883  ---  Number of Hardware Resets
+0x06  0x008  4            1539  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
