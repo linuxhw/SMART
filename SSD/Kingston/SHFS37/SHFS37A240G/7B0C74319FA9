@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Aug 19 12:46:54 2025 MSK
+Local Time is:    Sat Sep  6 12:47:13 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,9 +63,9 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    3/4730227
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   024   024   000    -    67101h+04m+31.680s
+  9 Power_On_Hours_and_Msec -O--CK   023   023   000    -    67532h+38m+21.520s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    88
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -76,17 +76,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 189 Airflow_Temperature_Cel ------   032   053   000    -    32 (Min/Max 17/53)
 194 Temperature_Celsius     -O---K   032   053   000    -    32 (Min/Max 17/53)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/0
+195 ECC_Uncorr_Error_Count  --SRC-   097   097   000    -    3/4730227
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
+201 Unc_Soft_Read_Err_Rate  --SRC-   097   097   000    -    3/4730227
+204 Soft_ECC_Correct_Rate   --SRC-   097   097   000    -    3/4730227
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           ------   094   094   011    -    85899345921
-233 SandForce_Internal      -O--CK   000   000   000    -    66166
-234 SandForce_Internal      -O--CK   000   000   000    -    22187
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    22187
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    8719
-244 Unknown_Attribute       ------   095   095   010    -    12976295
+233 SandForce_Internal      -O--CK   000   000   000    -    66729
+234 SandForce_Internal      -O--CK   000   000   000    -    22373
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    22373
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    8720
+244 Unknown_Attribute       ------   095   095   010    -    12976297
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -140,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (333)
+Temperature History Size (Index):    478 (44)
 
 SCT Error Recovery Control command not supported
 
@@ -148,15 +148,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              88  ---  Lifetime Power-On Resets
-0x01  0x010  4           67101  ---  Power-on Hours
-0x01  0x018  6     46531157433  ---  Logical Sectors Written
-0x01  0x028  6     18285148357  ---  Logical Sectors Read
+0x01  0x010  4           67532  ---  Power-on Hours
+0x01  0x018  6     46920307034  ---  Logical Sectors Written
+0x01  0x028  6     18287809260  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
-0x05  0x010  1              32  ---  Average Short Term Temperature
+0x05  0x010  1              31  ---  Average Short Term Temperature
 0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              53  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature

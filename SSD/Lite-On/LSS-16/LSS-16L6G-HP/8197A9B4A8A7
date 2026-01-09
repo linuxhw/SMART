@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-427.42.1.el9_4.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-30-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     LITEONIT LSS-16L6G-HP
@@ -10,10 +10,10 @@ User Capacity:    16,013,942,784 bytes [16.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov  8 16:57:01 2024 CET
+Local Time is:    Fri Jan 17 23:40:19 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,17 +65,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   000    -    16384 (0 11)
-  9 Power_On_Hours          -O--CK   100   100   000    -    8700857 (0 0 4)
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    10278
+  9 Power_On_Hours          -O--CK   100   100   000    -    8704167 (0 0 4)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    10391
 170 Unknown_Attribute       PO--CK   100   100   000    -    25
 171 Unknown_Attribute       -O--CK   100   100   000    -    4
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   100   100   000    -    4038921
-174 Unknown_Attribute       -O--CK   100   100   000    -    4022
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    16
-184 End-to-End_Error        PO--CK   001   001   097    NOW  1749615010
+173 Unknown_Attribute       PO--CK   100   100   000    -    4055269
+174 Unknown_Attribute       -O--CK   100   100   000    -    4064
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    18
+184 End-to-End_Error        PO--CK   001   001   097    NOW  2145714597
 187 Reported_Uncorrect      -O--CK   100   100   000    -    41
-188 Command_Timeout         -O--CK   100   100   000    -    3749
+188 Command_Timeout         -O--CK   100   100   000    -    4656
 196 Reallocated_Event_Count -O--CK   100   100   000    -    45
 198 Offline_Uncorrectable   ----CK   100   100   000    -    32
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    2709
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 0 inconsistent with error log pointer 4
+Warning: ATA error count 0 inconsistent with error log pointer 2
 
 ATA Error Count: 0
 	CR = Command Register [HEX]
@@ -125,33 +125,33 @@ Error 0 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  bc 00 e1 c8 b5 39 00
+  04 f0 00 00 00 00 08
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  00 bc e1 c8 9b 39 00 6c   1d+13:25:42.016  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 3b e1 c8 44 32 00 6d      02:19:48.608  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 3b e1 c8 27 32 00 6d   4d+15:59:37.472  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 3b e1 c8 09 32 00 6d   4d+15:59:37.472  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 03 00 00 00 00   4d+15:59:37.472  NOP [Abort queued commands]
+  f0 03 00 00 08 00 08 fa  39d+00:09:54.231  [VENDOR SPECIFIC]
+  f0 03 00 00 08 00 08 e9  39d+00:09:54.231  [VENDOR SPECIFIC]
+  f0 03 00 00 08 00 08 d7  39d+00:09:54.231  [VENDOR SPECIFIC]
+  f0 03 00 00 08 00 08 c5  39d+00:09:54.231  [VENDOR SPECIFIC]
+  f0 00 00 00 08 00 08 00  39d+00:09:54.231  [VENDOR SPECIFIC]
 
-Error -1 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error -1 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  c8 00 ed 31 00 00 00
+  00 15 00 00 08 f0 37
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  00 c8 cf 31 00 00 00 e1  11d+12:56:45.320  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c8 b1 31 00 00 00 e1  11d+12:56:39.296  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c8 94 31 00 00 00 e1  11d+12:55:45.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c8 76 31 00 00 00 e1  11d+12:55:45.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 00 00 00 00 00 00  11d+12:55:45.928  NOP [Reserved subcommand] [OBS-ACS-2]
+  15 00 08 00 08 f0 37 00      17:15:14.017  RECALIBRATE [RET-4]
+  00 00 08 00 00 00 00 00      17:08:54.912  NOP [Abort queued commands]
+  00 00 08 00 00 00 00 00      17:03:27.232  NOP [Abort queued commands]
+  00 00 08 00 00 00 00 00      16:55:48.480  NOP [Abort queued commands]
+  00 00 08 00 00 00 00 00      16:48:09.728  NOP [Abort queued commands]
 
 Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -159,33 +159,33 @@ Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  31 30 00 00 00 00 08  Device Fault at LBA = 0x08000000 = 134217728
+  f0 07 37 15 e1 c8 0c
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  30 31 00 00 00 00 08 4b  39d+00:10:04.012  WRITE SECTOR(S)
-  00 31 00 00 00 00 80 0f  39d+00:10:04.012  NOP [Reserved subcommand] [OBS-ACS-2]
-  18 30 00 00 00 00 08 ee  39d+00:10:04.009  RECALIBRATE [RET-4]
-  18 30 00 00 00 00 08 cc  39d+00:10:04.009  RECALIBRATE [RET-4]
-  18 00 00 00 00 00 08 00  39d+00:10:04.009  RECALIBRATE [RET-4]
+  06 f0 37 15 e1 c8 fa 08      00:08:44.288  DATA SET MANAGEMENT
+  06 f0 37 15 e1 c8 e8 08      00:08:44.288  DATA SET MANAGEMENT
+  06 f0 37 15 e1 c8 d9 08      00:08:44.288  DATA SET MANAGEMENT
+  06 f0 37 15 e1 c8 bf 08      00:08:44.288  DATA SET MANAGEMENT
+  00 00 00 00 00 03 00 00      00:08:44.288  NOP [Abort queued commands]
 
-Error -3 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
+Error -3 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 3b 00 00 08 18 69  Device Fault; Error:  at LBA = 0x09180800 = 152569856
+  15 00 e1 c8 ad 06 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  3b 00 00 00 08 18 69 00   9d+10:53:46.593  WRITE STREAM
-  3b 00 00 00 80 00 69 00   9d+10:10:04.928  WRITE STREAM
-  3b 00 00 00 08 18 67 00   9d+08:52:32.097  WRITE STREAM
-  3b 00 00 00 08 18 67 00   9d+08:15:23.873  WRITE STREAM
-  3b 00 00 00 08 18 67 00   9d+07:39:21.185  WRITE STREAM
+  00 15 e1 c8 99 06 00 37  46d+14:37:36.136  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 15 e1 c8 87 06 00 37  46d+14:37:36.136  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 15 e1 c8 75 06 00 37  46d+14:37:36.136  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 15 e1 c8 63 06 00 37  46d+14:37:36.136  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 03 00 00 00 00  46d+14:37:36.136  NOP [Abort queued commands]
 
 Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -193,16 +193,16 @@ Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  18 2f 67 3b e1 c8 da  Device Fault; Error: IDNF
+  c8 00 6b 04 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2f 10 67 3b e1 c8 b8 08      00:00:00.000  READ LOG EXT
-  3a 08 6c bc e1 c8 0d 08      00:00:00.000  WRITE STREAM DMA
-  39 08 6c bc e1 c8 ef 08      00:00:00.000  WRITE MULTIPLE EXT
-  39 08 6c bc e1 c8 d2 08      00:00:00.000  WRITE MULTIPLE EXT
-  00 00 00 00 00 03 00 00      00:00:00.000  NOP [Abort queued commands]
+  00 c8 59 04 00 00 08 e1   4d+02:53:07.464  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 c8 48 04 00 00 08 e1   4d+02:53:07.464  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 c8 39 04 00 00 08 e1   4d+02:53:07.464  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 c8 20 04 00 00 08 e1   4d+02:53:07.464  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 03 00 00 00 00 08 00   4d+02:53:07.464  NOP [Reserved subcommand] [OBS-ACS-2]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -247,7 +247,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.8.0-57-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-27-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SSDPR-CX400-512-G2
@@ -10,10 +10,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Apr 18 23:34:38 2025 CEST
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Mon Aug  4 12:30:14 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    475
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    232
+  9 Power_On_Hours          -O--C-   100   100   000    -    1431
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    991
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   000    -    98
-173 Unknown_Attribute       -O--C-   100   100   000    -    131075
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    32
+173 Unknown_Attribute       -O--C-   100   100   000    -    524297
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    330
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
 231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    99
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1318
+241 Total_LBAs_Written      -O--C-   100   100   000    -    4470
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,8 +99,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%        28         -
-# 2  Short offline       Completed without error       00%         9         -
+# 1  Short offline       Completed without error       00%      1055         -
+# 2  Short offline       Completed without error       00%      1041         -
+# 3  Short offline       Completed without error       00%      1026         -
+# 4  Short offline       Completed without error       00%       814         -
+# 5  Short offline       Completed without error       00%        28         -
+# 6  Short offline       Completed without error       00%         9         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -119,10 +123,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             232  ---  Lifetime Power-On Resets
-0x01  0x010  4             475  ---  Power-on Hours
-0x01  0x018  6      2765412426  ---  Logical Sectors Written
-0x01  0x028  6      1023332425  ---  Logical Sectors Read
+0x01  0x008  4             991  ---  Lifetime Power-On Resets
+0x01  0x010  4            1431  ---  Power-on Hours
+0x01  0x018  6      9374979704  ---  Logical Sectors Written
+0x01  0x028  6      5296387668  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -130,7 +134,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1112  ---  Number of Hardware Resets
+0x06  0x008  4            4962  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -148,8 +152,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           20  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

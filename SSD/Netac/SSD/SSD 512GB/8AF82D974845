@@ -13,11 +13,11 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 23 15:16:56 2023 +06
+Local Time is:    Wed Aug 23 22:59:38 2023 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,12 +60,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    9078
+  9 Power_On_Hours          -O--CK   100   100   050    -    9086
  12 Power_Cycle_Count       -O--CK   100   100   050    -    1937
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    6
-164 Unknown_Attribute       -O--CK   100   100   050    -    31363
+164 Unknown_Attribute       -O--CK   100   100   050    -    31374
 165 Unknown_Attribute       -O--CK   100   100   050    -    151
 166 Unknown_Attribute       -O--CK   100   100   050    -    150
 167 Unknown_Attribute       -O--CK   100   100   050    -    150
@@ -85,9 +85,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    1126670
-242 Total_LBAs_Read         ----CK   100   100   050    -    837532
-245 Unknown_Attribute       -O--CK   100   100   050    -    1056411
+241 Total_LBAs_Written      ----CK   100   100   050    -    1127010
+242 Total_LBAs_Read         ----CK   100   100   050    -    838178
+245 Unknown_Attribute       -O--CK   100   100   050    -    1057302
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,11 +126,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1937  ---  Lifetime Power-On Resets
-0x01  0x010  4            9078  ---  Power-on Hours
-0x01  0x018  6       823010875  ---  Logical Sectors Written
-0x01  0x020  6       934548848  ---  Number of Write Commands
-0x01  0x028  6      3348903211  ---  Logical Sectors Read
-0x01  0x030  6       699621068  ---  Number of Read Commands
+0x01  0x010  4            9086  ---  Power-on Hours
+0x01  0x018  6       845301230  ---  Logical Sectors Written
+0x01  0x020  6       935270150  ---  Number of Write Commands
+0x01  0x028  6      3391254867  ---  Logical Sectors Read
+0x01  0x030  6       700610756  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              15  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -144,7 +144,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           25  Device-to-host register FISes sent due to a COMRESET
-
-
+0x000a  4           70  Device-to-host register FISes sent due to a COMRESET
 

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-35-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-63-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     HFS064G3AMNB-2200A
@@ -9,14 +9,14 @@ User Capacity:    64,023,257,088 bytes [64.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu May 22 18:59:50 2025 PDT
+Local Time is:    Tue Jul  8 19:11:52 2025 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -59,15 +59,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    5332
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    1830
-100 Unknown_Attribute       -O--CK   100   100   000    -    4526509
+  9 Power_On_Hours          -O--CK   094   094   000    -    5343
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1843
+100 Unknown_Attribute       -O--CK   100   100   000    -    4532572
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    149
+174 Unknown_Attribute       ----CK   100   100   000    -    150
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    4467984
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    4474048
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    3
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    5
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    1083
@@ -77,15 +77,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    321
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   032   000   000    -    32 (Min/Max 10/41)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    25819683
+194 Temperature_Celsius     -O----   031   000   000    -    31 (Min/Max 10/41)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    25976701
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   078   ---    -    0
 231 Unknown_SSD_Attribute   PO--CK   099   099   ---    -    2
-234 Unknown_Attribute       -O--CK   100   100   ---    -    17400
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    4337
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    3952
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    31202
+234 Unknown_Attribute       -O--CK   100   100   ---    -    17437
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    4369
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    3976
+250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    31234
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 13415 (device log contains only the most recent 20 errors)
+Device Error Count: 13914 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,7 +124,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13415 [14] occurred at disk power-on lifetime: 5332 hours (222 days + 4 hours)
+Error 13914 [13] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -135,13 +135,13 @@ Error 13415 [14] occurred at disk power-on lifetime: 5332 hours (222 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 03 ab 8a 80 40 40     01:24:23.850  READ DMA EXT
-  25 00 00 00 40 00 00 03 ab 8a 40 40 40     01:24:23.850  READ DMA EXT
-  25 00 00 00 40 00 00 03 ab 8a 00 40 40     01:24:23.850  READ DMA EXT
-  25 00 00 00 40 00 00 03 ab 89 c0 40 40     01:24:23.850  READ DMA EXT
-  25 00 00 00 40 00 00 03 ab 89 80 40 40     01:24:23.850  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9e 00 40 40     00:28:02.090  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d c0 40 40     00:28:02.090  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 80 40 40     00:28:02.090  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 40 40 40     00:28:02.090  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 00 40 40     00:28:02.080  READ DMA EXT
 
-Error 13414 [13] occurred at disk power-on lifetime: 5332 hours (222 days + 4 hours)
+Error 13913 [12] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -152,13 +152,13 @@ Error 13414 [13] occurred at disk power-on lifetime: 5332 hours (222 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     01:24:15.790  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     01:24:15.790  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:24:15.780  IDENTIFY DEVICE
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     01:24:15.780  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     01:24:15.780  SECURITY FREEZE LOCK
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:27:57.420  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.420  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.400  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:27:57.400  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.400  SECURITY FREEZE LOCK
 
-Error 13413 [12] occurred at disk power-on lifetime: 5332 hours (222 days + 4 hours)
+Error 13912 [11] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -169,13 +169,13 @@ Error 13413 [12] occurred at disk power-on lifetime: 5332 hours (222 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     01:24:15.780  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     01:24:15.780  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:24:15.750  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:24:14.820  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:24:14.820  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:27:57.400  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.400  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.380  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.040  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:27:57.040  IDENTIFY DEVICE
 
-Error 13412 [11] occurred at disk power-on lifetime: 5332 hours (222 days + 4 hours)
+Error 13911 [10] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -186,13 +186,13 @@ Error 13412 [11] occurred at disk power-on lifetime: 5332 hours (222 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     01:24:09.880  FLUSH CACHE
-  e7 00 00 00 00 00 00 00 00 00 00 00 00     01:24:09.810  FLUSH CACHE
-  60 00 08 00 c8 00 00 02 d3 13 b0 40 40     01:24:09.810  READ FPDMA QUEUED
-  60 00 08 00 b8 00 00 03 4c 08 b0 40 40     01:24:09.800  READ FPDMA QUEUED
-  60 00 f0 00 b0 00 00 03 48 09 18 40 40     01:24:09.800  READ FPDMA QUEUED
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:27:47.580  FLUSH CACHE
+  60 00 08 00 70 00 00 07 11 13 50 40 40     00:27:46.990  READ FPDMA QUEUED
+  60 00 08 00 60 00 00 07 11 13 48 40 40     00:27:46.990  READ FPDMA QUEUED
+  60 00 08 00 58 00 00 07 11 0b e8 40 40     00:27:46.990  READ FPDMA QUEUED
+  60 00 08 00 50 00 00 04 91 7e 30 40 40     00:27:46.990  READ FPDMA QUEUED
 
-Error 13411 [10] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hours)
+Error 13910 [9] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -203,13 +203,13 @@ Error 13411 [10] occurred at disk power-on lifetime: 5331 hours (222 days + 3 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 01 d5 0a 80 40 40     00:39:19.390  READ DMA EXT
-  25 00 00 00 40 00 00 01 d5 0a 40 40 40     00:39:19.390  READ DMA EXT
-  25 00 00 00 40 00 00 01 d5 0a 00 40 40     00:39:19.390  READ DMA EXT
-  25 00 00 00 40 00 00 01 d5 09 c0 40 40     00:39:19.390  READ DMA EXT
-  25 00 00 00 40 00 00 01 d5 09 80 40 40     00:39:19.390  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9e 00 40 40     00:00:09.620  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d c0 40 40     00:00:09.620  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 80 40 40     00:00:09.620  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 40 40 40     00:00:09.620  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 00 40 40     00:00:09.620  READ DMA EXT
 
-Error 13410 [9] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hours)
+Error 13909 [8] occurred at disk power-on lifetime: 5342 hours (222 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -220,13 +220,30 @@ Error 13410 [9] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:39:11.370  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:39:11.370  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:39:11.360  IDENTIFY DEVICE
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:39:11.360  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:39:11.360  SECURITY FREEZE LOCK
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:05.200  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.200  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.190  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:05.190  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.190  SECURITY FREEZE LOCK
 
-Error 13409 [8] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hours)
+Error 13908 [7] occurred at disk power-on lifetime: 5341 hours (222 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 01 34 9e 00 40 40     00:00:10.080  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d c0 40 40     00:00:10.080  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 80 40 40     00:00:10.080  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 40 40 40     00:00:10.080  READ DMA EXT
+  25 00 00 00 40 00 00 01 34 9d 00 40 40     00:00:10.080  READ DMA EXT
+
+Error 13907 [6] occurred at disk power-on lifetime: 5341 hours (222 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -237,28 +254,11 @@ Error 13409 [8] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:39:11.360  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:39:11.360  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:39:11.340  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:39:10.400  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:39:10.400  IDENTIFY DEVICE
-
-Error 13408 [7] occurred at disk power-on lifetime: 5331 hours (222 days + 3 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:39:05.470  FLUSH CACHE
-  e7 00 00 00 00 00 00 00 00 00 00 00 00     00:39:05.400  FLUSH CACHE
-  60 00 08 00 80 00 00 02 d3 13 b0 40 40     00:39:05.390  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 03 4c 08 b0 40 40     00:39:05.380  READ FPDMA QUEUED
-  60 00 f0 00 70 00 00 03 48 09 18 40 40     00:39:05.380  READ FPDMA QUEUED
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:05.650  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.650  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.640  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:05.640  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.640  SECURITY FREEZE LOCK
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -283,5 +283,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 
