@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.0-124-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-48-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     TEAM T253X2512G
@@ -9,10 +9,11 @@ User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Oct 30 15:22:39 2024 EDT
+Local Time is:    Wed Nov 13 06:47:53 2024 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,15 +60,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    34894
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    164
+  9 Power_On_Hours          -O--CK   100   100   050    -    35180
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    191
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    24
-164 Unknown_Attribute       -O--CK   100   100   050    -    305952
-165 Unknown_Attribute       -O--CK   100   100   050    -    1405
+164 Unknown_Attribute       -O--CK   100   100   050    -    313361
+165 Unknown_Attribute       -O--CK   100   100   050    -    1437
 166 Unknown_Attribute       -O--CK   100   100   050    -    6
-167 Unknown_Attribute       -O--CK   100   100   050    -    210
+167 Unknown_Attribute       -O--CK   100   100   050    -    215
 168 Unknown_Attribute       -O--CK   100   100   050    -    5050
 169 Unknown_Attribute       -O--CK   100   100   050    -    96
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
@@ -76,16 +77,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    75
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    93
 194 Temperature_Celsius     -O---K   100   100   050    -    0
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    687204
-242 Total_LBAs_Read         ----CK   100   100   050    -    213702
-245 Unknown_Attribute       -O--CK   100   100   050    -    677675
+241 Total_LBAs_Written      ----CK   100   100   050    -    704774
+242 Total_LBAs_Read         ----CK   100   100   050    -    229536
+245 Unknown_Attribute       -O--CK   100   100   050    -    699575
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,6 +112,8 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 Invalid Error Log index = 0x0000 (reserved = 0x00)
+Device Error Count: 4 (possibly also invalid)
+
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -121,12 +124,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             164  ---  Lifetime Power-On Resets
-0x01  0x010  4           34894  ---  Power-on Hours
-0x01  0x018  6      2086981334  ---  Logical Sectors Written
-0x01  0x020  6            9531  ---  Number of Write Commands
-0x01  0x028  6      1120316667  ---  Logical Sectors Read
-0x01  0x030  6           42356  ---  Number of Read Commands
+0x01  0x008  4             191  ---  Lifetime Power-On Resets
+0x01  0x010  4           35180  ---  Power-on Hours
+0x01  0x018  6      3238443979  ---  Logical Sectors Written
+0x01  0x020  6           32738  ---  Number of Write Commands
+0x01  0x028  6      2158010315  ---  Logical Sectors Read
+0x01  0x030  6           46161  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

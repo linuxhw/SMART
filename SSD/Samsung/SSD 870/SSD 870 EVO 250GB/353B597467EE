@@ -11,7 +11,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jun  1 06:48:10 2023 CEST
+Local Time is:    Wed Oct 18 05:22:44 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,7 +19,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -61,19 +61,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1683
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1368
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    17
+  9 Power_On_Hours          -O--CK   099   099   000    -    2347
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1685
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    20
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   065   054   000    -    35
+190 Airflow_Temperature_Cel -O--CK   073   051   000    -    27
 195 Hardware_ECC_Recovered  -O-RC-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-235 Unknown_Attribute       -O--C-   099   099   000    -    2
-241 Total_LBAs_Written      -O--CK   099   099   000    -    8655491752
+235 Unknown_Attribute       -O--C-   099   099   000    -    4
+241 Total_LBAs_Written      -O--CK   099   099   000    -    10673224489
 252 Unknown_Attribute       -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -109,7 +109,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      1673         -
+# 1  Extended offline    Aborted by host               80%      2343         -
+# 2  Extended offline    Completed without error       00%      2254         -
+# 3  Extended offline    Interrupted (host reset)      70%      2232         -
+# 4  Extended offline    Aborted by host               40%      2120         -
+# 5  Extended offline    Aborted by host               20%      2068         -
+# 6  Extended offline    Completed without error       00%      2034         -
+# 7  Extended offline    Completed without error       00%      1867         -
+# 8  Extended offline    Aborted by host               90%      1793         -
+# 9  Extended offline    Completed without error       00%      1673         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,9 +134,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     31/40 Celsius
-Lifetime    Min/Max Temperature:     21/46 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     40/40 Celsius
+Lifetime    Min/Max Temperature:     21/49 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -138,7 +146,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -147,23 +155,23 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1368  ---  Lifetime Power-On Resets
-0x01  0x010  4            1683  ---  Power-on Hours
-0x01  0x018  6      8655491752  ---  Logical Sectors Written
-0x01  0x020  6       114080023  ---  Number of Write Commands
-0x01  0x028  6     11220907388  ---  Logical Sectors Read
-0x01  0x030  6       120774628  ---  Number of Read Commands
-0x01  0x038  6         2372000  ---  Date and Time TimeStamp
+0x01  0x008  4            1685  ---  Lifetime Power-On Resets
+0x01  0x010  4            2347  ---  Power-on Hours
+0x01  0x018  6     10673224489  ---  Logical Sectors Written
+0x01  0x020  6       131225212  ---  Number of Write Commands
+0x01  0x028  6     13030865247  ---  Logical Sectors Read
+0x01  0x030  6       135534511  ---  Number of Read Commands
+0x01  0x038  6           71000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  ---  Current Temperature
-0x05  0x020  1              46  ---  Highest Temperature
+0x05  0x008  1              27  ---  Current Temperature
+0x05  0x020  1              49  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4299  ---  Number of Hardware Resets
+0x06  0x008  4            5549  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -184,8 +192,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

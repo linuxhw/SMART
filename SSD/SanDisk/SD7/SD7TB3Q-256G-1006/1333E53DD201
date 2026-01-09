@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.17.0-1026-oem] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.0-1009-lowlatency] (Guix)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SanDisk SD7TB3Q-256G-1006
@@ -11,19 +11,19 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 24 12:03:29 2023 CEST
+Local Time is:    Sun Sep 24 08:42:26 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -66,18 +66,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   252   252   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   252   252   005    -    0
-  9 Power_On_Hours          -O--CK   002   002   ---    -    43331
- 12 Power_Cycle_Count       -O--CK   252   252   ---    -    1745
+  9 Power_On_Hours          -O--CK   002   002   ---    -    44067
+ 12 Power_Cycle_Count       -O--CK   252   252   ---    -    1746
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O---K   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       PO--CK   086   086   005    -    1919891013633
+173 Unknown_Attribute       PO--CK   085   085   005    -    1945661079553
 174 Unknown_Attribute       -O--CK   252   252   ---    -    236
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   073   073   ---    -    406
-190 Airflow_Temperature_Cel -O---K   063   031   045    Past 37
+188 Command_Timeout         -O--CK   100   073   ---    -    406
+190 Airflow_Temperature_Cel -O---K   061   031   045    Past 39
 196 Reallocated_Event_Count -O--CK   252   252   ---    -    0
 199 UDMA_CRC_Error_Count    -O---K   100   100   ---    -    0
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
@@ -133,21 +133,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     30/49 Celsius
-Lifetime    Min/Max Temperature:     30/49 Celsius
-Specified Max Operating Temperature:    37 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     33/48 Celsius
+Lifetime    Min/Max Temperature:     33/48 Celsius
+Specified Max Operating Temperature:    39 Celsius
 Under/Over Temperature Limit Count:   0/0
-Vendor specific:
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-01 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -10/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (250)
+Temperature History Size (Index):    256 (9)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,13 +153,13 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1745  ---  Lifetime Power-On Resets
-0x01  0x018  6  25344181003798  ---  Logical Sectors Written
-0x01  0x020  6       513263676  ---  Number of Write Commands
-0x01  0x028  6  20275195326134  ---  Logical Sectors Read
-0x01  0x030  6       301441271  ---  Number of Read Commands
+0x01  0x008  4            1746  ---  Lifetime Power-On Resets
+0x01  0x018  6  25425011349956  ---  Logical Sectors Written
+0x01  0x020  6       515700965  ---  Number of Write Commands
+0x01  0x028  6  20339787478439  ---  Logical Sectors Read
+0x01  0x030  6       303912191  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              14  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              15  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -174,7 +171,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           30  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 
 
 
