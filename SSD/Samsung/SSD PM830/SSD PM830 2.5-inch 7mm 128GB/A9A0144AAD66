@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.7.6-hardened1-1-hardened] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.9-4-cachyos-bore] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,10 +14,10 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Feb 27 07:34:51 2024 CET
+Local Time is:    Fri May 10 09:34:07 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     253 (intermediate), recommended: 128
+AAM level is:     254 (maximum performance), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -29,9 +29,9 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x83)	Offline data collection activity
-					is in a Reserved state.
-					Auto Offline Data Collection: Enabled.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -60,11 +60,11 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   090   090   000    -    49180
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1385
+  9 Power_On_Hours          -O--CK   090   090   000    -    50467
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1612
 175 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--C-   059   059   010    -    1488
+177 Wear_Leveling_Count     PO--C-   049   049   010    -    1861
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   093   093   010    -    140
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   093   093   010    -    250
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   093   093   010    -    3782
@@ -76,8 +76,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   253   253   000    -    483
 232 Available_Reservd_Space PO--C-   093   093   000    -    1876
-241 Total_LBAs_Written      -O--CK   099   099   000    -    104083559133
-242 Total_LBAs_Read         -O--CK   099   099   000    -    70425868559
+241 Total_LBAs_Written      -O--CK   099   099   000    -    110893537015
+242 Total_LBAs_Read         -O--CK   099   099   000    -    78342635136
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,13 +104,20 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     49074         -
-# 2  Short offline       Completed without error       00%     49054         -
-# 3  Short offline       Completed without error       00%     49054         -
-# 4  Short offline       Completed without error       00%     48712         -
-# 5  Short offline       Completed without error       00%     48712         -
-# 6  Short offline       Completed without error       00%     47375         -
-# 7  Short offline       Completed without error       00%     46217         -
+# 1  Short offline       Completed without error       00%     50317         -
+# 2  Short offline       Completed without error       00%     50293         -
+# 3  Short offline       Completed without error       00%     50269         -
+# 4  Extended offline    Completed without error       00%     49398         -
+# 5  Short offline       Completed without error       00%     49398         -
+# 6  Short offline       Completed without error       00%     49375         -
+# 7  Short offline       Completed without error       00%     49366         -
+# 8  Short offline       Completed without error       00%     49074         -
+# 9  Short offline       Completed without error       00%     49054         -
+#10  Short offline       Completed without error       00%     49054         -
+#11  Short offline       Completed without error       00%     48712         -
+#12  Short offline       Completed without error       00%     48712         -
+#13  Short offline       Completed without error       00%     47375         -
+#14  Short offline       Completed without error       00%     46217         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,7 +147,7 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2         6619  Device-to-host register FISes sent due to a COMRESET
+0x000a  2         7655  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC

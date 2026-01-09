@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.5-desktop-1omv2590] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Mar 14 13:03:57 2025 GMT
+Local Time is:    Thu Sep 18 18:38:42 2025 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,19 +65,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   071   071   010    -    341
-  9 Power_On_Hours          -O--CK   097   097   000    -    10797
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1337
-177 Wear_Leveling_Count     PO--C-   098   098   000    -    35
+  9 Power_On_Hours          -O--CK   097   097   000    -    12303
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1469
+177 Wear_Leveling_Count     PO--C-   098   098   000    -    38
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   071   071   010    -    341
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   071   071   010    -    341
 187 Uncorrectable_Error_Cnt -O--CK   099   099   000    -    1157
-190 Airflow_Temperature_Cel -O--CK   073   048   000    -    27
+190 Airflow_Temperature_Cel -O--CK   063   048   000    -    37
 195 ECC_Error_Rate          -O-RC-   199   199   000    -    1157
-199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    28
-241 Total_LBAs_Written      -O--CK   099   099   000    -    57667176253
+199 CRC_Error_Count         -OSRCK   099   099   000    -    2
+235 POR_Recovery_Count      -O--C-   099   099   000    -    44
+241 Total_LBAs_Written      -O--CK   099   099   000    -    63026802075
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -210,7 +210,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
+Current Temperature:                    37 Celsius
 Power Cycle Min/Max Temperature:     40/40 Celsius
 Lifetime    Min/Max Temperature:     18/52 Celsius
 Specified Max Operating Temperature:    70 Celsius
@@ -222,7 +222,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (94)
+Temperature History Size (Index):    128 (3)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -231,25 +231,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1337  ---  Lifetime Power-On Resets
-0x01  0x010  4           10797  ---  Power-on Hours
-0x01  0x018  6     57667176253  ---  Logical Sectors Written
-0x01  0x020  6       682262145  ---  Number of Write Commands
-0x01  0x028  6     58943459096  ---  Logical Sectors Read
-0x01  0x030  6       911954819  ---  Number of Read Commands
-0x01  0x038  6          965000  ---  Date and Time TimeStamp
+0x01  0x008  4            1469  ---  Lifetime Power-On Resets
+0x01  0x010  4           12303  ---  Power-on Hours
+0x01  0x018  6     63026802075  ---  Logical Sectors Written
+0x01  0x020  6       770321017  ---  Number of Write Commands
+0x01  0x028  6     62334758354  ---  Logical Sectors Read
+0x01  0x030  6       943412120  ---  Number of Read Commands
+0x01  0x038  6         1710000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4            1157  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              24  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              28  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
+0x05  0x008  1              37  ---  Current Temperature
 0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3217  ---  Number of Hardware Resets
+0x06  0x008  4            3713  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4               2  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

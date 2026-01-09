@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Oct 31 12:37:31 2023 EST
+Local Time is:    Tue Oct 31 14:04:49 2023 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    4962
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    13543
+  9 Power_On_Hours          -O--CK   100   100   ---    -    4963
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    13544
 170 Unknown_Attribute       -O--CK   100   100   ---    -    0
 171 Unknown_Attribute       -O--CK   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
@@ -71,13 +71,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   010    -    100
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   068   064   ---    -    32 (Min/Max 8/64)
+194 Temperature_Celsius     -O---K   064   064   ---    -    36 (Min/Max 8/64)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-233 Media_Wearout_Indicator PO--CK   090   100   001    -    15072265
-234 Unknown_Attribute       -O--CK   100   100   ---    -    12984
-241 Total_LBAs_Written      ----CK   253   253   ---    -    9811
-242 Total_LBAs_Read         ----CK   253   253   ---    -    1003
-249 Unknown_Attribute       -O--CK   100   100   ---    -    4684
+233 Media_Wearout_Indicator PO--CK   090   100   001    -    15070029
+234 Unknown_Attribute       -O--CK   100   100   ---    -    13003
+241 Total_LBAs_Written      ----CK   253   253   ---    -    9828
+242 Total_LBAs_Read         ----CK   253   253   ---    -    1004
+249 Unknown_Attribute       -O--CK   100   100   ---    -    4700
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,12 +116,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4           13543  ---  Lifetime Power-On Resets
+0x01  0x008  4           13544  ---  Lifetime Power-On Resets
 0x01  0x010  4               2  ---  Power-on Hours
-0x01  0x018  6     20575401092  ---  Logical Sectors Written
-0x01  0x020  6       501881213  ---  Number of Write Commands
-0x01  0x028  6      2104812352  ---  Logical Sectors Read
-0x01  0x030  6        41541789  ---  Number of Read Commands
+0x01  0x018  6     20612895584  ---  Logical Sectors Written
+0x01  0x020  6       502292103  ---  Number of Write Commands
+0x01  0x028  6      2105605716  ---  Logical Sectors Read
+0x01  0x030  6        41551717  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               6  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -135,5 +135,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           24  Device-to-host register FISes sent due to a COMRESET
 

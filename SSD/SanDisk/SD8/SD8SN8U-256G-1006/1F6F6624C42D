@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.7-2-cachyos-lto] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.8-arch1-1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,11 +15,11 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Sep  1 19:49:50 2024 +0530
+Local Time is:    Tue Mar 25 13:52:08 2025 +0530
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -64,30 +64,30 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    25196
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    26476
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    29880
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    3091
+  9 Power_On_Hours          -O--CK   100   100   ---    -    32672
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    4201
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write/Erase_Count   -O--CK   074   074   005    -    184
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    566
+173 Avg_Write/Erase_Count   -O--CK   062   062   005    -    272
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    1079
 176 Erase_Fail_Count_Chip   -O---K   100   100   ---    -    2176
 181 Program_Fail_Cnt_Total  -O---K   100   100   ---    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   ---    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    30166
-194 Temperature_Celsius     -O---K   045   071   ---    -    45 (Min/Max 9/71)
+188 Command_Timeout         -O--CK   100   100   ---    -    31533
+194 Temperature_Celsius     -O---K   048   072   ---    -    48 (Min/Max 9/72)
 198 Offline_Uncorrectable   ----CK   100   100   ---    -    0
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-201 Lifetime_Remaining%     PO---K   074   074   005    -    111669149880
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    11276 11276 6684
-241 Total_Writes_GiB        -O--CK   100   100   ---    -    2475629
-242 Total_Reads_GiB         -O--CK   100   100   ---    -    2659493
-243 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    7373753
+201 Lifetime_Remaining%     PO---K   062   062   005    -    163208757520
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    14944 14944 9813
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    2871921
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    3107827
+243 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    10306848
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
-249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    45751
+249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    67791
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,7 +119,9 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     29734         -
+# 1  Extended offline    Completed without error       00%     30901         -
+# 2  Short offline       Aborted by host               00%     29880         -
+# 3  Short offline       Completed without error       00%     29734         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -135,10 +137,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     44/46 Celsius
-Lifetime    Min/Max Temperature:     44/46 Celsius
-Specified Max Operating Temperature:    44 Celsius
+Current Temperature:                    49 Celsius
+Power Cycle Min/Max Temperature:     36/52 Celsius
+Lifetime    Min/Max Temperature:     36/52 Celsius
+Specified Max Operating Temperature:    49 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -149,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (224)
+Temperature History Size (Index):    256 (131)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -158,15 +160,15 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3091  ---  Lifetime Power-On Resets
-0x01  0x010  4            4541  ---  Power-on Hours
+0x01  0x008  4            4201  ---  Lifetime Power-On Resets
+0x01  0x010  4            5162  ---  Power-on Hours
 0x01  0x018  6               0  ---  Logical Sectors Written
-0x01  0x020  6     81121420370  ---  Number of Write Commands
-0x01  0x028  6     87146271133  ---  Logical Sectors Read
+0x01  0x020  6     94107120856  ---  Number of Write Commands
+0x01  0x028  6    101837296035  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             512  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             624  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              69  ---  Current Temperature
 0x05  0x020  1              69  ---  Highest Temperature
@@ -175,11 +177,11 @@ Page  Offset Size        Value Flags Description
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            8837  ---  Number of Hardware Resets
-0x06  0x010  4          135532  ---  Number of ASR Events
+0x06  0x008  4           10859  ---  Number of Hardware Resets
+0x06  0x010  4          136758  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              26  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              38  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -191,7 +193,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
-
-
+0x000a  4           30  Device-to-host register FISes sent due to a COMRESET
 

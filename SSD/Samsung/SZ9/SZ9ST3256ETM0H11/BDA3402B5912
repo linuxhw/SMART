@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-desktop-2omv2590] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar 27 17:12:55 2025 -03
+Local Time is:    Sat Oct 11 21:32:13 2025 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,19 +65,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   076   076   001    -    15829
- 11 Unknown_SSD_Attribute   -O---K   099   099   001    -    207
- 12 Power_Cycle_Count       -O--CK   095   095   001    -    4587
+  9 Power_On_Hours          -O--CK   073   073   001    -    17418
+ 11 Unknown_SSD_Attribute   -O---K   099   099   001    -    229
+ 12 Power_Cycle_Count       -O--CK   095   095   001    -    5040
 170 Unknown_Attribute       PO--C-   099   099   010    -    2185
 171 Unknown_Attribute       -O---K   100   100   010    -    0
 172 Unknown_Attribute       -O--CK   100   100   010    -    0
-173 Unknown_Attribute       PO--C-   092   092   005    -    1619591244
-174 Unknown_Attribute       -O--CK   099   099   001    -    207
+173 Unknown_Attribute       PO--C-   091   091   005    -    1804861528
+174 Unknown_Attribute       -O--CK   099   099   001    -    229
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   063   001    -    36 (Min/Max 36/37)
+190 Airflow_Temperature_Cel -O---K   076   076   001    -    24 (Min/Max 21/24)
 196 Reallocated_Event_Count -O--CK   100   100   001    -    0
 198 Offline_Uncorrectable   ----CK   100   100   001    -    0
 199 UDMA_CRC_Error_Count    -O---K   100   100   001    -    0
@@ -129,17 +129,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
+Current Temperature:                    24 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/94300
+Under/Over Temperature Limit Count:   0/104259
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (3)
+Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,15 +148,15 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            4587  ---  Lifetime Power-On Resets
+0x01  0x008  4            5040  ---  Lifetime Power-On Resets
 0x01  0x010  4               0  ---  Power-on Hours
-0x01  0x018  6     28446275990  ---  Logical Sectors Written
-0x01  0x020  6       509583772  ---  Number of Write Commands
-0x01  0x028  6     47226550156  ---  Logical Sectors Read
-0x01  0x030  6       674411328  ---  Number of Read Commands
+0x01  0x018  6     29387942932  ---  Logical Sectors Written
+0x01  0x020  6       526118904  ---  Number of Write Commands
+0x01  0x028  6     48913425543  ---  Logical Sectors Read
+0x01  0x030  6       711082605  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           12809  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4           14858  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
@@ -179,8 +179,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
