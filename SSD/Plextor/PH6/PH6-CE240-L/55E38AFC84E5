@@ -12,8 +12,8 @@ Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database
 ATA Version is:   ACS-2 (minor revision not indicated)
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 23 00:29:10 2024 JST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Fri May  9 14:45:17 2025 JST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,14 +61,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    10032
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    3757
+  9 Power_On_Hours          -O--C-   100   100   000    -    11618
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    4053
 170 Unknown_Attribute       PO----   100   100   010    -    1101
-173 Unknown_Attribute       -O--C-   100   100   000    -    14287141
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    1012
+173 Unknown_Attribute       -O--C-   100   100   000    -    15597878
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    1086
 231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    93
-233 Media_Wearout_Indicator PO-R--   100   100   000    -    43222
-241 Total_LBAs_Written      -O--C-   100   100   000    -    41390
+233 Media_Wearout_Indicator PO-R--   100   100   000    -    47607
+241 Total_LBAs_Written      -O--C-   100   100   000    -    45695
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -133,15 +133,15 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3757  ---  Lifetime Power-On Resets
-0x01  0x010  4           10032  ---  Power-on Hours
-0x01  0x018  6     86802140028  ---  Logical Sectors Written
-0x01  0x020  6       687676513  ---  Number of Write Commands
-0x01  0x028  6     81680248385  ---  Logical Sectors Read
-0x01  0x030  6       779230849  ---  Number of Read Commands
+0x01  0x008  4            4053  ---  Lifetime Power-On Resets
+0x01  0x010  4           11618  ---  Power-on Hours
+0x01  0x018  6     95829921478  ---  Logical Sectors Written
+0x01  0x020  6       796088502  ---  Number of Write Commands
+0x01  0x028  6     90816286807  ---  Logical Sectors Read
+0x01  0x030  6       880097180  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              26  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              27  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              30  ---  Current Temperature
 0x05  0x010  1              30  ---  Average Short Term Temperature
@@ -157,10 +157,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           23737  ---  Number of Hardware Resets
+0x06  0x008  4           26026  ---  Number of Hardware Resets
 0x06  0x018  4             932  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -175,8 +175,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.9-200.fc41.x86_64] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.16.7-200.fc42.x86_64] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5852
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Apr 14 22:46:01 2025 CEST
+Local Time is:    Mon Oct  6 22:36:30 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,6 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    13106
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    3771
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    14073
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3980
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    38
 170 Bad_Blk_Ct_Lat/Erl      PO----   100   100   010    -    0/150
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    106 (Average 77)
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    120
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    109 (Average 77)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    154
 194 Temperature_Celsius     PO---K   070   070   030    -    30 (Min/Max 30/30)
-218 CRC_Error_Count         PO-R--   100   100   050    -    0
+218 CRC_Error_Count         PO-R--   100   100   050    -    23
 231 SSD_Life_Left           PO--C-   100   100   000    -    93
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    27047
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    27232
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,15 +118,15 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3771  ---  Lifetime Power-On Resets
-0x01  0x010  4           13106  ---  Power-on Hours
-0x01  0x018  6     56723556259  ---  Logical Sectors Written
-0x01  0x020  6       983524359  ---  Number of Write Commands
-0x01  0x028  6     69156281616  ---  Logical Sectors Read
-0x01  0x030  6      1080635929  ---  Number of Read Commands
+0x01  0x008  4            3980  ---  Lifetime Power-On Resets
+0x01  0x010  4           14073  ---  Power-on Hours
+0x01  0x018  6     57111165218  ---  Logical Sectors Written
+0x01  0x020  6       988262292  ---  Number of Write Commands
+0x01  0x028  6     69824278000  ---  Logical Sectors Read
+0x01  0x030  6      1091340625  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
@@ -143,8 +142,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3485  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4            4226  ---  Number of Hardware Resets
+0x06  0x018  4              23  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -161,8 +160,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          659  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4         1495  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

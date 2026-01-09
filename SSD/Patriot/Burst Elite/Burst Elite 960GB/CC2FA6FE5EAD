@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jun  6 12:04:57 2024 CEST
+Local Time is:    Fri Jan 31 11:06:06 2025 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,21 +61,21 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    128
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    34
+  9 Power_On_Hours          -O--C-   100   100   000    -    163
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    79
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
+168 Unknown_Attribute       -O--C-   100   100   000    -    755914244096
 169 Unknown_Attribute       PO--C-   100   100   010    -    262152
-173 Unknown_Attribute       -O--C-   200   200   000    -    8590262275
+173 Unknown_Attribute       -O--C-   200   200   000    -    8590327811
 175 Program_Fail_Count_Chip -O---K   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    220
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    26
-194 Temperature_Celsius     -O---K   041   041   000    -    41 (Min/Max 29/58)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    59
+194 Temperature_Celsius     -O---K   040   040   000    -    40 (Min/Max 27/58)
 231 Temperature_Celsius     PO---K   100   100   005    -    0
-233 Media_Wearout_Indicator PO---K   100   100   000    -    722
-234 Unknown_Attribute       -O--CK   100   100   005    -    132587
-241 Total_LBAs_Written      -O--CK   100   100   000    -    415
-242 Total_LBAs_Read         -O--CK   100   100   000    -    45
+233 Media_Wearout_Indicator PO---K   100   100   000    -    832
+234 Unknown_Attribute       -O--CK   100   100   005    -    160067
+241 Total_LBAs_Written      -O--CK   100   100   000    -    476
+242 Total_LBAs_Read         -O--CK   100   100   000    -    78
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,7 +102,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 1767 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1767 [230] occurred at disk power-on lifetime: 161 hours (6 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 10 00 00 00 13 d5 80 e0 00  Error: ICRC, ABRT 16 sectors at LBA = 0x0013d580 = 1299840
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 13 d5 68 e0 80     00:04:21.100  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 13 d5 10 e0 80     00:04:21.100  WRITE DMA EXT
+  35 00 00 00 08 00 00 02 c6 4e d0 e0 80     00:04:21.100  WRITE DMA EXT
+  35 00 00 00 18 00 00 00 34 41 88 e0 80     00:04:21.100  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 13 d5 90 e0 80     00:04:21.100  WRITE DMA EXT
+
+Error 1766 [229] occurred at disk power-on lifetime: 161 hours (6 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 20 00 00 00 14 74 30 e0 00  Error: ICRC, ABRT 32 sectors at LBA = 0x00147430 = 1340464
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 20 00 00 00 14 74 10 e0 80     00:04:20.800  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 14 73 f0 e0 80     00:04:20.800  WRITE DMA EXT
+  35 00 00 00 20 00 00 02 99 82 f0 e0 80     00:04:20.800  WRITE DMA EXT
+  35 00 00 00 20 00 00 02 55 8c 28 e0 80     00:04:20.800  WRITE DMA EXT
+  35 00 00 00 08 00 00 02 c6 4e d0 e0 80     00:04:20.800  WRITE DMA EXT
+
+Error 1765 [228] occurred at disk power-on lifetime: 161 hours (6 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 20 00 00 00 36 b7 e8 e0 00  Error: ICRC, ABRT 32 sectors at LBA = 0x0036b7e8 = 3586024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 20 00 00 00 36 b7 c8 e0 80     00:04:20.300  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 36 b7 a8 e0 80     00:04:20.300  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 36 b7 88 e0 80     00:04:20.300  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 36 b7 68 e0 80     00:04:20.300  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 36 b7 48 e0 80     00:04:20.300  WRITE DMA EXT
+
+Error 1764 [227] occurred at disk power-on lifetime: 161 hours (6 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 20 00 00 00 16 73 d0 e0 00  Error: ICRC, ABRT 32 sectors at LBA = 0x001673d0 = 1471440
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 20 00 00 00 14 73 d0 e0 80     00:04:02.300  WRITE DMA EXT
+  35 00 00 00 20 00 00 00 13 d4 b0 e0 80     00:04:02.300  WRITE DMA EXT
+  35 00 00 00 08 00 00 02 d5 11 50 e0 80     00:04:02.300  WRITE DMA EXT
+  35 00 00 00 08 00 00 02 d5 11 48 e0 80     00:04:02.300  WRITE DMA EXT
+  35 00 00 00 08 00 00 02 d5 11 48 e0 80     00:04:02.300  WRITE DMA EXT
+
+Error 1763 [226] occurred at disk power-on lifetime: 159 hours (6 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 4c 00 00 03 61 8b 28 e0 00  Error: ICRC, ABRT 76 sectors at LBA = 0x03618b28 = 56724264
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 4c 00 00 03 61 8b 28 e0 80     00:32:38.900  WRITE DMA EXT
+  35 00 00 00 18 00 00 00 c1 a1 a8 e0 80     00:32:38.900  WRITE DMA EXT
+  25 00 00 00 20 00 00 00 61 f0 78 e0 80     00:32:38.800  READ DMA EXT
+  35 00 00 00 08 00 00 2d 99 ed fe e0 80     00:32:38.700  WRITE DMA EXT
+  ea 00 00 08 00 99 ee 06 00 00 00 a0 80     00:32:38.700  FLUSH CACHE EXT
+
+Error 1762 [225] occurred at disk power-on lifetime: 159 hours (6 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 1c 00 00 00 b7 89 0f e0 00  Error: ICRC, ABRT 28 sectors at LBA = 0x00b7890f = 12028175
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 40 00 00 00 40 fa a0 e0 80     00:32:29.600  WRITE DMA EXT
+  35 00 00 00 04 00 00 00 6c 30 50 e0 80     00:32:29.600  WRITE DMA EXT
+  35 00 00 00 40 00 00 00 40 ef 48 e0 80     00:32:29.600  WRITE DMA EXT
+  35 00 00 00 07 00 00 00 6a e9 80 e0 80     00:32:29.600  WRITE DMA EXT
+  35 00 00 00 40 00 00 00 16 47 50 e0 80     00:32:29.600  WRITE DMA EXT
+
+Error 1761 [224] occurred at disk power-on lifetime: 159 hours (6 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 40 00 00 03 2c a3 f2 e0 00  Error: ICRC, ABRT 64 sectors at LBA = 0x032ca3f2 = 53257202
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 80 00 00 02 b4 39 08 e0 80     00:32:27.200  WRITE DMA EXT
+  35 00 00 00 10 00 00 0c 84 0b ee e0 80     00:32:27.200  WRITE DMA EXT
+  35 00 00 00 08 00 00 0c 84 0b ae e0 80     00:32:27.200  WRITE DMA EXT
+  35 00 00 00 08 00 00 0c 84 0b 76 e0 80     00:32:27.200  WRITE DMA EXT
+  35 00 00 00 08 00 00 0c 84 0b 36 e0 80     00:32:27.200  WRITE DMA EXT
+
+Error 1760 [223] occurred at disk power-on lifetime: 159 hours (6 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 80 00 00 01 8d c5 58 e0 00  Error: ICRC, ABRT 128 sectors at LBA = 0x018dc558 = 26068312
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 80 00 00 01 8d c5 58 e0 80     00:32:16.000  WRITE DMA EXT
+  35 00 00 00 80 00 00 02 c2 da 08 e0 80     00:32:15.300  WRITE DMA EXT
+  35 00 00 00 80 00 00 00 ea 56 10 e0 80     00:32:15.300  WRITE DMA EXT
+  35 00 00 00 80 00 00 00 ea 57 20 e0 80     00:32:15.300  WRITE DMA EXT
+  35 00 00 00 80 00 00 00 ea a7 f0 e0 80     00:32:15.300  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -122,7 +272,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:      ?/47 Celsius
+Power Cycle Min/Max Temperature:      ?/45 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -131,20 +281,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (379)
+Temperature History Size (Index):    478 (113)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              34  ---  Lifetime Power-On Resets
-0x01  0x010  4             128  ---  Power-on Hours
-0x01  0x018  6       871321692  ---  Logical Sectors Written
-0x01  0x020  6         4751336  ---  Number of Write Commands
-0x01  0x028  6        95372224  ---  Logical Sectors Read
-0x01  0x030  6         1512015  ---  Number of Read Commands
-0x01  0x038  6    116418316192  ---  Date and Time TimeStamp
+0x01  0x008  4              79  ---  Lifetime Power-On Resets
+0x01  0x010  4             163  ---  Power-on Hours
+0x01  0x018  6       998435921  ---  Logical Sectors Written
+0x01  0x020  6         6369287  ---  Number of Write Commands
+0x01  0x028  6       165484766  ---  Logical Sectors Read
+0x01  0x030  6         2945397  ---  Number of Read Commands
+0x01  0x038  6    146615808464  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -155,14 +305,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
+0x0001  2          231  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

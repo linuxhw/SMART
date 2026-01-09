@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.8.12-2-pve] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-29-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 27 08:36:52 2024 CET
+Local Time is:    Tue Sep 16 00:49:05 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,13 +24,10 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Unavailable
-Write SCT (Get) Feature Control Command failed: ATA return descriptor not supported by controller firmware
-Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
-SMART Status not supported: ATA return descriptor not supported by controller firmware
 SMART overall-health self-assessment test result: PASSED
-Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -68,19 +65,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    4865
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1486
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    10
+  9 Power_On_Hours          -O--CK   098   098   000    -    9008
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    4553
+177 Wear_Leveling_Count     PO--C-   098   098   000    -    29
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   099   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   072   046   000    -    28
+190 Airflow_Temperature_Cel -O--CK   069   046   000    -    31
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
-199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    288
-241 Total_LBAs_Written      -O--CK   099   099   000    -    16505207684
+199 CRC_Error_Count         -OSRCK   096   096   000    -    3696
+235 POR_Recovery_Count      -O--C-   099   099   000    -    2046
+241 Total_LBAs_Written      -O--CK   099   099   000    -    56360077277
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,13 +111,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Completed without error       00%      4807         -
-# 2  Extended offline    Interrupted (host reset)      80%      4793         -
-# 3  Short offline       Completed without error       00%      4791         -
-# 4  Short offline       Completed without error       00%      4758         -
-# 5  Offline             Completed without error       00%      4728         -
-# 6  Short offline       Completed without error       00%      4705         -
-# 7  Short offline       Completed without error       00%      4705         -
+# 1  Short offline       Completed without error       00%      7615         -
+# 2  Short offline       Completed without error       00%      6176         -
+# 3  Short offline       Aborted by host               50%      6176         -
+# 4  Short offline       Completed without error       00%      5827         -
+# 5  Extended offline    Interrupted (host reset)      90%      5764         -
+# 6  Extended offline    Aborted by host               90%      5764         -
+# 7  Short offline       Completed without error       00%      5722         -
+# 8  Short offline       Completed without error       00%      5604         -
+# 9  Extended offline    Interrupted (host reset)      80%      5600         -
+#10  Short offline       Completed without error       00%      5597         -
+#11  Short offline       Completed without error       00%      5588         -
+#12  Short offline       Completed without error       00%      5586         -
+#13  Short offline       Completed without error       00%      5583         -
+#14  Short offline       Completed without error       00%      5572         -
+#15  Short offline       Completed without error       00%      5570         -
+#16  Short offline       Completed without error       00%      5492         -
+#17  Short offline       Completed without error       00%      5470         -
+#18  Offline             Completed without error       00%      5383         -
+#19  Short offline       Completed without error       00%      5255         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -137,16 +146,21 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     27/27 Celsius
-Lifetime    Min/Max Temperature:     21/54 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:      ?/32 Celsius
+Lifetime    Min/Max Temperature:     17/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-Write SCT Data Table failed: SMART WRITE LOG SECTOR may cause problems, try with -T permissive to force
-Read SCT Temperature History failed
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        10 minutes
+Min/Max recommended Temperature:      0/70 Celsius
+Min/Max Temperature Limit:            0/70 Celsius
+Temperature History Size (Index):    128 (80)
 
-Write SCT (Get) Error Recovery Control Command failed: ATA return descriptor not supported by controller firmware
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -162,14 +176,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          988  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

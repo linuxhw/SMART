@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.9-arch1-1] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.11-200.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     OCZ/Toshiba Trion SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug  9 17:43:19 2021 CEST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Wed Feb 12 16:01:19 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,14 +62,14 @@ recommended polling time: 	 (   3) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    6127
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1563
+  9 Power_On_Hours          -O--C-   100   100   000    -    14004
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3904
 167 SSD_Protect_Mode        -O---K   100   100   000    -    0
-168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    0
+168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    12
 169 Bad_Block_Count         PO----   100   100   010    -    0
-173 Erase_Count             -O--C-   199   199   000    -    0
-192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    518
-194 Temperature_Celsius     PO---K   071   054   030    -    29 (Min/Max 11/46)
+173 Erase_Count             -O--C-   197   197   000    -    0
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    1155
+194 Temperature_Celsius     PO---K   081   053   030    -    19 (Min/Max 11/47)
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,13 +100,21 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      6058         -
-# 2  Short offline       Completed without error       00%      5992         -
-# 3  Short offline       Completed without error       00%      5992         -
-# 4  Short offline       Completed without error       00%      5992         -
-# 5  Short offline       Completed without error       00%      5992         -
-# 6  Short offline       Completed without error       00%      5612         -
-# 7  Extended offline    Completed without error       00%      5580         -
+# 1  Extended offline    Completed without error       00%     13898         -
+# 2  Extended offline    Completed without error       00%     12108         -
+# 3  Extended offline    Completed without error       00%      8648         -
+# 4  Short offline       Completed without error       00%      8607         -
+# 5  Extended offline    Completed without error       00%      8607         -
+# 6  Extended offline    Completed without error       00%      8606         -
+# 7  Short offline       Completed without error       00%      8153         -
+# 8  Short offline       Completed without error       00%      7330         -
+# 9  Short offline       Completed without error       00%      6058         -
+#10  Short offline       Completed without error       00%      5992         -
+#11  Short offline       Completed without error       00%      5992         -
+#12  Short offline       Completed without error       00%      5992         -
+#13  Short offline       Completed without error       00%      5992         -
+#14  Short offline       Completed without error       00%      5612         -
+#15  Extended offline    Completed without error       00%      5580         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -124,13 +132,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1563  ---  Lifetime Power-On Resets
-0x01  0x010  4            6127  ---  Power-on Hours
-0x01  0x018  6      4743443574  ---  Logical Sectors Written
-0x01  0x020  6        46579600  ---  Number of Write Commands
-0x01  0x028  6      7516938044  ---  Logical Sectors Read
-0x01  0x030  6       129209579  ---  Number of Read Commands
-0x01  0x038  6     22059911298  ---  Date and Time TimeStamp
+0x01  0x008  4            3904  ---  Lifetime Power-On Resets
+0x01  0x010  4           14004  ---  Power-on Hours
+0x01  0x018  6     19104643423  ---  Logical Sectors Written
+0x01  0x020  6       262910117  ---  Number of Write Commands
+0x01  0x028  6     36554669132  ---  Logical Sectors Read
+0x01  0x030  6       617039608  ---  Number of Read Commands
+0x01  0x038  6   1739095280423  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             816  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -149,10 +157,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           22309  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4           52009  ---  Number of Hardware Resets
+0x06  0x018  4               8  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -161,15 +169,15 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
+0x0001  2            4  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0004  2            8  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4      8140264  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4        23766  Device-to-host register FISes sent due to a COMRESET
-0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0009  4    226595494  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4        55685  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            8  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.6-300.fc37.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.11-200.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven OEM SSDs
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Nov  7 16:48:16 2022 EST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Wed Feb 26 14:38:21 2025 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -61,13 +61,13 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   9 Power_On_Hours          -O--C-   100   100   000    -    20000
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1766
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    1
-170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/150
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    496 (Average 378)
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    193
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2016
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    3
+170 Bad_Blk_Ct_Lat/Erl      PO----   100   100   010    -    0/150
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    507 (Average 400)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    241
 218 CRC_Error_Count         PO-R--   100   100   050    -    39567
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    14315
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    16582
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -141,8 +141,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          171  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

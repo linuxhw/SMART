@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-116-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-37-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     OCZ/Toshiba Trion SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jul 21 15:59:19 2024 CEST
+Local Time is:    Fri Jul 18 17:16:57 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,14 +62,14 @@ recommended polling time: 	 (   3) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    15681
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    10672
+  9 Power_On_Hours          -O--C-   100   100   000    -    17696
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    11825
 167 SSD_Protect_Mode        -O---K   100   100   000    -    0
 168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    0
 169 Bad_Block_Count         PO----   100   100   010    -    0
 173 Erase_Count             -O--C-   192   192   000    -    0
-192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    631
-194 Temperature_Celsius     PO---K   067   046   030    -    33 (Min/Max 20/54)
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    637
+194 Temperature_Celsius     PO---K   071   046   030    -    29 (Min/Max 20/54)
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,10 +100,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      7978         -
-# 2  Short offline       Completed without error       00%      5429         -
-# 3  Short offline       Completed without error       00%      4058         -
-# 4  Short offline       Completed without error       00%      1905         -
+# 1  Short offline       Completed without error       00%     17108         -
+# 2  Short offline       Completed without error       00%     16705         -
+# 3  Short offline       Completed without error       00%      7978         -
+# 4  Short offline       Completed without error       00%      5429         -
+# 5  Short offline       Completed without error       00%      4058         -
+# 6  Short offline       Completed without error       00%      1905         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,13 +123,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4           10672  ---  Lifetime Power-On Resets
-0x01  0x010  4           15681  ---  Power-on Hours
-0x01  0x018  6     18551871249  ---  Logical Sectors Written
-0x01  0x020  6       348359582  ---  Number of Write Commands
-0x01  0x028  6     54864764364  ---  Logical Sectors Read
-0x01  0x030  6       975316196  ---  Number of Read Commands
-0x01  0x038  6     56454110110  ---  Date and Time TimeStamp
+0x01  0x008  4           11825  ---  Lifetime Power-On Resets
+0x01  0x010  4           17696  ---  Power-on Hours
+0x01  0x018  6     19991331422  ---  Logical Sectors Written
+0x01  0x020  6       375431653  ---  Number of Write Commands
+0x01  0x028  6     58857962063  ---  Logical Sectors Read
+0x01  0x030  6      1038267398  ---  Number of Read Commands
+0x01  0x038  6     63708300540  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4            2509  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -146,7 +148,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           19453  ---  Number of Hardware Resets
+0x06  0x008  4           22499  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
@@ -164,8 +166,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4     72656752  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4        29535  Device-to-host register FISes sent due to a COMRESET
+0x0009  4     76858706  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4        33733  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.141-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
@@ -10,10 +10,11 @@ Firmware Version: 2.22
 User Capacity:    60,022,480,896 bytes [60.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jul 10 20:06:58 2021 MSK
+Local Time is:    Wed Aug 13 21:06:42 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,28 +63,28 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   120   050    -    0/0
-  5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    20045h+17m+46.720s
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4357
+  1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0/2877358
+  5 Retired_Block_Count     PO--CK   100   100   003    -    32
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    26734h+33m+47.440s
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6270
 171 Program_Fail_Count      -O--CK   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    844
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    1583
 177 Wear_Range_Delta        ------   000   000   000    -    5
 181 Program_Fail_Count      -O--CK   000   000   000    -    0
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   030   030   000    -    30 (Min/Max 30/30)
-195 ECC_Uncorr_Error_Count  --SRC-   100   100   000    -    0/0
-196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   100   100   000    -    0/0
-204 Soft_ECC_Correct_Rate   --SRC-   100   100   000    -    0/0
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/2877358
+196 Reallocated_Event_Count PO--CK   100   100   003    -    32
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/2877358
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/2877358
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           PO--C-   088   088   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    31262
-234 SandForce_Internal      -O--CK   000   000   000    -    22116
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    22116
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    22304
+231 SSD_Life_Left           PO--C-   081   081   010    -    0
+233 SandForce_Internal      ------   000   000   000    -    44521
+234 SandForce_Internal      -O--CK   000   000   000    -    33529
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    33529
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    36243
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +107,8 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+SMART Error Log Version: 0
+No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -149,12 +151,13 @@ Power Cycle Min/Max Temperature:     30/30 Celsius
 Lifetime    Min/Max Temperature:     30/30 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         0 minutes
-Temperature Logging Interval:        0 minutes
-Min/Max recommended Temperature:      ?/ ? Celsius
-Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    478 (1)
+SCT Temperature History Version:     0 (Unknown, should be 2)
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        10 minutes
+Min/Max recommended Temperature:      0/ 0 Celsius
+Min/Max Temperature Limit:            0/ 0 Celsius
+Temperature History Size (Index):    0 (1)
+Temperature History is empty
 
 SCT Error Recovery Control command not supported
 
@@ -170,8 +173,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
@@ -180,6 +183,4 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
-
-
 

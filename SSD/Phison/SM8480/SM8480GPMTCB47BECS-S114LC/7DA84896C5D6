@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-26-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.12.30] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     Phison SM8480GPMTCB47BECS-S114LC
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.5/5706
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov  6 10:12:23 2024 -03
+Local Time is:    Mon Jun  9 19:51:24 2025 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,6 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1185
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1500
+  9 Power_On_Hours          -O--C-   100   100   000    -    1975
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2471
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   000    -    203
-173 Unknown_Attribute       -O--C-   100   100   000    -    720913
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    39
+173 Unknown_Attribute       -O--C-   100   100   000    -    1900580
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    91
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    98
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1829
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    97
+241 Total_LBAs_Written      -O--C-   100   100   000    -    4833
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +98,8 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      1952         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -118,10 +118,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1500  ---  Lifetime Power-On Resets
-0x01  0x010  4            1185  ---  Power-on Hours
-0x01  0x018  6      3836964208  ---  Logical Sectors Written
-0x01  0x028  6     11208754635  ---  Logical Sectors Read
+0x01  0x008  4            2471  ---  Lifetime Power-On Resets
+0x01  0x010  4            1975  ---  Power-on Hours
+0x01  0x018  6     10137258409  ---  Logical Sectors Written
+0x01  0x028  6     28899960822  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -131,7 +131,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -146,8 +146,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           27  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

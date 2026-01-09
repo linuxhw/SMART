@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.8-300.fc37.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-0.rc2.20250212gt09fbf3d5.323.vanilla.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SSD2SC120G1SA754D117-820
@@ -10,10 +10,10 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov 16 18:53:08 2022 EST
+Local Time is:    Thu Feb 13 20:36:13 2025 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -62,26 +62,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    3443
- 12 Power_Cycle_Count       ------   100   100   000    -    636
+  9 Power_On_Hours          ------   100   100   000    -    3856
+ 12 Power_Cycle_Count       ------   100   100   000    -    970
 171 Unknown_Attribute       ------   100   100   000    -    0
 172 Unknown_Attribute       ------   100   100   000    -    0
-174 Unknown_Attribute       PO----   000   000   000    -    79
-177 Wear_Leveling_Count     ------   000   000   000    -    546
+174 Unknown_Attribute       PO----   000   000   000    -    120
+177 Wear_Leveling_Count     ------   000   000   000    -    674
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-194 Temperature_Celsius     ------   029   100   000    -    29
-195 Hardware_ECC_Recovered  ------   100   100   000    -    194625
+194 Temperature_Celsius     ------   028   100   000    -    28
+195 Hardware_ECC_Recovered  ------   100   100   000    -    242370
 196 Reallocated_Event_Count ------   098   098   003    -    0
 201 Unknown_SSD_Attribute   ------   100   100   000    -    0
 204 Soft_ECC_Correction     ------   100   100   000    -    0
 230 Unknown_SSD_Attribute   ------   100   100   000    -    104
-231 Unknown_SSD_Attribute   ------   096   100   010    -    29
-233 Media_Wearout_Indicator ------   000   000   000    -    132
-234 Unknown_Attribute       ------   000   000   000    -    193
-241 Total_LBAs_Written      PO----   000   000   000    -    14721
-242 Total_LBAs_Read         PO----   000   000   000    -    37449
+231 Unknown_SSD_Attribute   ------   093   100   010    -    28
+233 Media_Wearout_Indicator ------   000   000   000    -    147
+234 Unknown_Attribute       ------   000   000   000    -    271
+241 Total_LBAs_Written      PO----   000   000   000    -    22054
+242 Total_LBAs_Read         PO----   000   000   000    -    39216
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,27 +108,7 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Reserved (0x34)     Completed: handling damage??  150%         4         3350527476491
-# 2  Conveyance offline  Completed without error       00%      5264         -
-# 3  Vendor (0x9b)       Completed without error       80%         3         -
-# 4  Vendor (0xa3)       Interrupted (host reset)      130%         3         -
-# 5  Conveyance offline  Completed without error       00%     10254         -
-# 6  Offline             Interrupted (host reset)      70%         3         -
-# 7  Selective offline   Completed without error       00%      9496         -
-# 8  Reserved (0x34)     Completed: handling damage??  150%         4         3456844694308
-# 9  Conveyance offline  Completed without error       00%     36660         -
-#10  Vendor (0x50)       Interrupted (host reset)      30%         3         -
-#11  Conveyance offline  Completed without error       00%      8599         -
-#12  Reserved (0x1c)     Aborted by host               140%         3         -
-#13  Reserved (0x05)     Completed without error       00%      7484         -
-#14  Vendor (0x44)       Aborted by host               80%         5         -
-#15  Conveyance offline  Completed without error       00%      6064         -
-#16  Vendor (0xa8)       Aborted by host               80%         3         -
-#17  Conveyance offline  Completed without error       00%      5413         -
-#18  Reserved (0x20)     Aborted by host               10%         3         -
-#19  Selective offline   Completed without error       00%      3304         -
-
+Invalid Self-test Log index = 0x8031 (reserved = 0x00)
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
@@ -145,23 +125,23 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             636  ---  Lifetime Power-On Resets
-0x01  0x010  4            3443  ---  Power-on Hours
-0x01  0x018  6       808246518  ---  Logical Sectors Written
-0x01  0x020  6       510277084  ---  Number of Write Commands
-0x01  0x028  6      1227719219  ---  Logical Sectors Read
-0x01  0x030  6       941575278  ---  Number of Read Commands
+0x01  0x008  4             970  ---  Lifetime Power-On Resets
+0x01  0x010  4            3856  ---  Power-on Hours
+0x01  0x018  6      3301705463  ---  Logical Sectors Written
+0x01  0x020  6       639079125  ---  Number of Write Commands
+0x01  0x028  6       638785969  ---  Logical Sectors Read
+0x01  0x030  6       983580159  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             105  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             161  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4501  ---  Number of Hardware Resets
-0x06  0x018  4             132  ---  Number of Interface CRC Errors
+0x06  0x008  4            7647  ---  Number of Hardware Resets
+0x06  0x018  4             147  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
