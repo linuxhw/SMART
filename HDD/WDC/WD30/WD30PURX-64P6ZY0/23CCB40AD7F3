@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-20-amd64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-28-amd64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Apr 15 15:37:13 2024 BST
+Local Time is:    Sat Jan 18 23:55:25 2025 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,17 +65,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   192   174   021    -    5383
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1101
+  3 Spin_Up_Time            POS--K   223   174   021    -    3808
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1146
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   039   039   000    -    44817
+  9 Power_On_Hours          -O--CK   034   033   000    -    48628
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    929
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    387
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1661
-194 Temperature_Celsius     -O---K   109   098   000    -    41
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    974
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    415
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1680
+194 Temperature_Celsius     -O---K   118   098   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 229 (device log contains only the most recent 24 errors)
+Device Error Count: 232 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -127,6 +127,57 @@ Device Error Count: 229 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 232 [15] occurred at disk power-on lifetime: 45480 hours (1895 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 f5 f7 3e ad 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08 27d+14:10:28.236  FLUSH CACHE EXT
+  61 00 40 00 60 00 00 e9 ef 8d 40 40 08 27d+14:10:28.236  WRITE FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08 27d+14:10:28.235  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08 27d+14:10:28.235  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08 27d+14:10:28.235  IDENTIFY DEVICE
+
+Error 231 [14] occurred at disk power-on lifetime: 45480 hours (1895 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 e9 ef 8d 40 40 00  Error: IDNF at LBA = 0xe9ef8d40 = 3924790592
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 40 00 48 00 00 e9 ef 8d 40 40 08 27d+14:10:21.197  WRITE FPDMA QUEUED
+  61 00 08 00 30 00 00 b1 dc 29 00 40 08 27d+14:10:10.455  WRITE FPDMA QUEUED
+  61 00 08 00 28 00 00 76 dc 50 40 40 08 27d+14:10:10.455  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08 27d+14:10:08.937  FLUSH CACHE EXT
+  61 00 08 00 38 00 00 e9 ef 8d 38 40 08 27d+14:10:08.937  WRITE FPDMA QUEUED
+
+Error 230 [13] occurred at disk power-on lifetime: 45443 hours (1893 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 b2 3a 99 60 a0 00  Error: IDNF at LBA = 0xb23a9960 = 2990184800
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 10 00 a8 00 00 b2 3a 99 60 40 08 26d+01:06:17.148  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08 26d+01:06:11.913  FLUSH CACHE EXT
+  61 00 08 00 60 00 00 e9 e9 d5 d0 40 08 26d+01:06:11.913  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08 26d+01:06:11.881  FLUSH CACHE EXT
+  61 00 10 00 50 00 00 e9 e9 d5 c0 40 08 26d+01:06:11.881  WRITE FPDMA QUEUED
 
 Error 229 [12] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -213,57 +264,6 @@ Error 225 [8] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hou
   35 00 00 00 08 00 01 1a c9 a5 f8 e0 08     00:21:37.622  WRITE DMA EXT
   35 00 00 00 08 00 00 a9 5c 2a 80 e0 08     00:21:37.622  WRITE DMA EXT
 
-Error 224 [7] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 08 00 00 76 dc 28 00 e0 00  Error: IDNF 8 sectors at LBA = 0x76dc2800 = 1994139648
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 08 00 00 76 dc 28 00 e0 08     00:21:30.560  WRITE DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:26.690  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 e9 e0 2d c8 e0 08     00:21:26.690  WRITE DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:25.422  FLUSH CACHE EXT
-  35 00 00 00 18 00 00 e9 e0 2d b0 e0 08     00:21:25.422  WRITE DMA EXT
-
-Error 223 [6] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 f5 f7 3e ad 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:12.402  FLUSH CACHE EXT
-  35 00 00 00 18 00 00 e9 e0 2d 90 e0 08     00:21:12.402  WRITE DMA EXT
-  35 00 00 00 08 00 00 a4 dc 08 00 e0 08     00:21:06.781  WRITE DMA EXT
-  35 00 00 00 18 00 00 a6 d8 4a 38 e0 08     00:21:06.781  WRITE DMA EXT
-  35 00 00 00 28 00 00 a6 d8 4a 08 e0 08     00:21:06.781  WRITE DMA EXT
-
-Error 222 [5] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 20 00 00 e9 e0 2d 48 e0 00  Error: IDNF 32 sectors at LBA = 0xe9e02d48 = 3923782984
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 20 00 00 e9 e0 2d 48 e0 08     00:20:41.236  WRITE DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:20:36.194  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 e9 e0 2d 40 e0 08     00:20:36.193  WRITE DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:20:36.093  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 a4 dc 08 00 e0 08     00:20:36.093  WRITE DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%     41975         -
@@ -282,8 +282,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     25/41 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     32/32 Celsius
 Lifetime    Min/Max Temperature:      2/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -295,7 +295,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (350)
+Temperature History Size (Index):    478 (72)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -315,12 +315,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        83554  Vendor specific
+0x8000  4          264  Vendor specific
 
 
 

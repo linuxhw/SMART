@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.1-arch1-1] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.17.7-arch1-2] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Black
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 05.01D05
 User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec  9 11:53:56 2024 CET
+Local Time is:    Sat Nov 15 15:11:27 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,6 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,22 +61,22 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    3
-  3 Spin_Up_Time            POS--K   253   253   021    -    8733
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15097
+  1 Raw_Read_Error_Rate     POSR-K   199   199   051    -    6140
+  3 Spin_Up_Time            POS--K   253   253   021    -    6841
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15240
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   021   021   000    -    58166
+  9 Power_On_Hours          -O--CK   011   011   000    -    65499
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3817
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1093
-193 Load_Cycle_Count        -O--CK   196   196   000    -    14003
-194 Temperature_Celsius     -O---K   106   093   000    -    46
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3945
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1118
+193 Load_Cycle_Count        -O--CK   196   196   000    -    14121
+194 Temperature_Celsius     -O---K   108   092   000    -    44
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    1
 198 Offline_Uncorrectable   ----CK   200   200   000    -    1
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    4
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    1
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,7 +109,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 6122 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6122 [1] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 98 00 a3 00 73 55 60 40 00  1d+13:21:56.855  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:56.718  IDENTIFY DEVICE
+  60 00 08 00 90 00 a3 00 73 55 60 40 00  1d+13:21:52.547  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:51.567  IDENTIFY DEVICE
+  60 00 08 00 88 00 a3 00 73 55 60 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+
+Error 6121 [0] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 90 00 a3 00 73 55 60 40 00  1d+13:21:52.547  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:51.567  IDENTIFY DEVICE
+  60 00 08 00 88 00 a3 00 73 55 60 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+  60 00 08 00 80 00 a3 00 73 55 40 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+  60 00 08 00 78 00 a3 00 73 55 38 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+
+Error 6120 [23] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 88 00 a3 00 73 55 60 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+  60 00 08 00 80 00 a3 00 73 55 40 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+  60 00 08 00 78 00 a3 00 73 55 38 40 00  1d+13:21:47.236  READ FPDMA QUEUED
+  60 00 08 00 70 00 a3 00 73 55 30 40 00  1d+13:21:47.235  READ FPDMA QUEUED
+  60 00 08 00 68 00 a3 00 73 55 28 40 00  1d+13:21:47.235  READ FPDMA QUEUED
+
+Error 6119 [22] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 80 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 80 00 48 00 a3 00 72 55 e8 40 00  1d+13:21:41.906  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:41.239  IDENTIFY DEVICE
+  60 00 80 00 40 00 a3 00 72 55 e8 40 00  1d+13:21:36.597  READ FPDMA QUEUED
+  60 00 80 00 38 00 a3 00 73 55 68 40 00  1d+13:21:36.580  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:36.086  IDENTIFY DEVICE
+
+Error 6118 [21] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 80 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 80 00 40 00 a3 00 72 55 e8 40 00  1d+13:21:36.597  READ FPDMA QUEUED
+  60 00 80 00 38 00 a3 00 73 55 68 40 00  1d+13:21:36.580  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:36.086  IDENTIFY DEVICE
+  60 00 08 00 30 00 a3 00 73 55 60 40 00  1d+13:21:31.259  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:30.931  IDENTIFY DEVICE
+
+Error 6117 [20] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 30 00 a3 00 73 55 60 40 00  1d+13:21:31.259  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:30.931  IDENTIFY DEVICE
+  60 00 08 00 28 00 a3 00 73 55 60 40 00  1d+13:21:25.940  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:25.770  IDENTIFY DEVICE
+  60 00 08 00 20 00 a3 00 73 55 60 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+
+Error 6116 [19] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 28 00 a3 00 73 55 60 40 00  1d+13:21:25.940  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00  1d+13:21:25.770  IDENTIFY DEVICE
+  60 00 08 00 20 00 a3 00 73 55 60 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 18 00 a3 00 73 55 58 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 10 00 a3 00 73 55 50 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+
+Error 6115 [18] occurred at disk power-on lifetime: 64720 hours (2696 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 08 00 a3 00 73 55 62 40 00  Error: AMNF at LBA = 0xa300735562 = 700087227746
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 20 00 a3 00 73 55 60 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 18 00 a3 00 73 55 58 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 10 00 a3 00 73 55 50 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 08 00 a3 00 73 55 48 40 00  1d+13:21:21.628  READ FPDMA QUEUED
+  60 00 08 00 f8 00 a3 00 73 55 40 40 00  1d+13:21:21.609  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -130,9 +279,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
-Power Cycle Min/Max Temperature:     22/46 Celsius
-Lifetime    Min/Max Temperature:     22/59 Celsius
+Current Temperature:                    44 Celsius
+Power Cycle Min/Max Temperature:     39/48 Celsius
+Lifetime    Min/Max Temperature:     39/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -140,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (461)
+Temperature History Size (Index):    478 (228)
 
 SCT Error Recovery Control command not supported
 
@@ -157,7 +306,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        82803  Vendor specific
+0x8000  4       496985  Vendor specific
+
+
 

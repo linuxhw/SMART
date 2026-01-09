@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 15 10:06:49 2025 CET
+Local Time is:    Thu Dec 18 11:05:41 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -31,9 +31,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 249)	Self-test routine in progress...
+					90% of test remaining.
 Total time to complete Offline 
 data collection: 		(48540) seconds.
 Offline data collection
@@ -64,25 +63,25 @@ SCT capabilities: 	       (0x70bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   152   140   021    -    11391
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1051
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    4
+  3 Spin_Up_Time            POS--K   153   140   021    -    11350
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1053
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    17886
+  9 Power_On_Hours          -O--CK   076   076   000    -    17924
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1051
- 16 Total_LBAs_Read         -O---K   002   198   000    -    128917689985
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1053
+ 16 Total_LBAs_Read         -O---K   002   198   000    -    144445101737
 183 Runtime_Bad_Block       -O--CK   090   090   000    -    10
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    18
-193 Load_Cycle_Count        -O--CK   197   197   000    -    10227
-194 Temperature_Celsius     -O---K   128   094   000    -    24
+193 Load_Cycle_Count        -O--CK   197   197   000    -    10229
+194 Temperature_Celsius     -O---K   118   094   000    -    34
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    2
+197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    1
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    2
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    1
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,17 +115,77 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 17895 hours (745 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 b4 7d 77 fa 40 00  Error: UNC at LBA = 0x1b47d77fa = 7323088890
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 28 00 01 b4 7d 77 f8 40 08     09:27:05.343  READ FPDMA QUEUED
+  60 00 08 00 20 00 01 b4 7d 77 f0 40 08     09:27:05.343  READ FPDMA QUEUED
+  60 00 08 00 18 00 01 b4 7d 77 e8 40 08     09:27:05.343  READ FPDMA QUEUED
+  60 00 08 00 10 00 01 b4 7d 77 e0 40 08     09:27:05.343  READ FPDMA QUEUED
+  60 00 08 00 08 00 01 b4 7d 77 d8 40 08     09:27:05.343  READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 17895 hours (745 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 b4 7d 77 fa 40 00  Error: UNC at LBA = 0x1b47d77fa = 7323088890
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 88 00 01 b4 7d 77 c8 40 08     09:27:02.204  READ FPDMA QUEUED
+  60 01 00 00 80 00 01 b4 7d 76 c8 40 08     09:27:02.203  READ FPDMA QUEUED
+  60 01 00 00 78 00 01 b4 7d 75 c8 40 08     09:27:02.202  READ FPDMA QUEUED
+  60 01 00 00 70 00 01 b4 7d 74 c8 40 08     09:27:02.200  READ FPDMA QUEUED
+  60 01 00 00 68 00 01 b4 7d 73 c8 40 08     09:27:02.199  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     14010         -
-# 2  Extended offline    Completed without error       00%     13772         -
-# 3  Extended offline    Completed without error       00%      3102         -
-# 4  Extended offline    Completed without error       00%      1893         -
-# 5  Extended offline    Completed without error       00%      1264         -
-# 6  Extended offline    Completed without error       00%       175         -
-# 7  Extended offline    Completed without error       00%        13         -
+# 1  Extended offline    Self-test routine in progress 90%     17924         -
+# 2  Extended offline    Completed without error       00%     17919         -
+# 3  Extended offline    Completed: read failure       90%     17899         7323088889
+# 4  Extended offline    Completed: read failure       90%     17887         7323088890
+# 5  Extended offline    Completed: read failure       90%     17887         7323088890
+# 6  Extended offline    Completed: read failure       90%     17886         7323088890
+# 7  Extended offline    Completed: read failure       90%     17886         7323088889
+# 8  Extended offline    Completed: read failure       90%     17886         7323088890
+# 9  Extended offline    Completed: read failure       90%     17886         7323088889
+#10  Extended offline    Completed: read failure       90%     17886         7323088890
+#11  Extended offline    Completed: read failure       90%     17886         7323088889
+#12  Extended offline    Completed without error       00%     14010         -
+#13  Extended offline    Completed without error       00%     13772         -
+#14  Extended offline    Completed without error       00%      3102         -
+#15  Extended offline    Completed without error       00%      1893         -
+#16  Extended offline    Completed without error       00%      1264         -
+#17  Extended offline    Completed without error       00%       175         -
+#18  Extended offline    Completed without error       00%        13         -
+9 of 9 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -141,9 +200,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     17/24 Celsius
+Device State:                        DST executing in background (3)
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     17/34 Celsius
 Lifetime    Min/Max Temperature:      0/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -155,7 +214,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (435)
+Temperature History Size (Index):    478 (366)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -175,13 +234,13 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           37  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           43  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          793  Vendor specific
+0x8000  4         2116  Vendor specific
 
 
 

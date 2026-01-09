@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-30-amd64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-37-amd64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,20 +12,23 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb  2 20:57:27 2025 +05
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Tue Jun 17 14:19:24 2025 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Enabled
+Write SCT (Get) Feature Control Command failed: Operation not supported
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -65,18 +68,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   164   163   021    -    6775
-  4 Start_Stop_Count        -O--CK   100   100   000    -    116
+  3 Spin_Up_Time            POS--K   168   163   021    -    6558
+  4 Start_Stop_Count        -O--CK   100   100   000    -    121
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   012   012   000    -    64853
+  9 Power_On_Hours          -O--CK   007   007   000    -    68079
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    116
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    121
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    114
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    119
 193 Load_Cycle_Count        -O--CK   200   200   000    -    47
-194 Temperature_Celsius     -O---K   129   104   000    -    21
+194 Temperature_Celsius     -O---K   133   104   000    -    17
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -114,10 +117,178 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 112 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 112 [15] occurred at disk power-on lifetime: 2536 hours (105 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:07.984  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00  2d+00:47:07.969  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00  2d+00:47:07.955  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:07.624  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:07.622  IDENTIFY DEVICE
+
+Error 111 [14] occurred at disk power-on lifetime: 2536 hours (105 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:04.873  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00  2d+00:47:04.858  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00  2d+00:47:04.844  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:04.511  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+00:47:04.510  IDENTIFY DEVICE
+
+Error 110 [13] occurred at disk power-on lifetime: 2512 hours (104 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:07.462  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00  1d+00:48:07.447  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00  1d+00:48:07.433  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:07.108  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:07.108  IDENTIFY DEVICE
+
+Error 109 [12] occurred at disk power-on lifetime: 2512 hours (104 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:04.730  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00  1d+00:48:04.715  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00  1d+00:48:04.701  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:04.367  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+00:48:04.366  IDENTIFY DEVICE
+
+Error 108 [11] occurred at disk power-on lifetime: 2488 hours (103 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00     00:07:35.096  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:07:35.081  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00     00:07:35.068  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:34.737  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:34.737  IDENTIFY DEVICE
+
+Error 107 [10] occurred at disk power-on lifetime: 2488 hours (103 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00     00:07:32.171  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:07:32.156  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00     00:07:32.143  READ LOG EXT
+  60 00 08 00 50 00 00 00 00 00 00 40 00     00:07:31.999  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:31.573  IDENTIFY DEVICE
+
+Error 106 [9] occurred at disk power-on lifetime: 2467 hours (102 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:38.614  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00 27d+19:32:38.600  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00 27d+19:32:38.586  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:38.234  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:38.233  IDENTIFY DEVICE
+
+Error 105 [8] occurred at disk power-on lifetime: 2467 hours (102 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:35.417  SANITIZE DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 00 27d+19:32:35.403  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 00 40 00 27d+19:32:35.389  READ LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:35.062  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 27d+19:32:35.061  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      2532         -
+# 2  Short offline       Completed without error       00%      2508         -
+# 3  Extended offline    Completed without error       00%      2492         -
+# 4  Extended offline    Completed without error       00%      2181         -
+# 5  Short offline       Completed without error       00%      2127         -
+# 6  Short offline       Completed without error       00%      2104         -
+# 7  Short offline       Completed without error       00%      2080         -
+# 8  Short offline       Completed without error       00%      2056         -
+# 9  Short offline       Completed without error       00%      2032         -
+#10  Short offline       Completed without error       00%      2008         -
+#11  Extended offline    Completed without error       00%      2003         -
+#12  Short offline       Completed without error       00%      1960         -
+#13  Short offline       Completed without error       00%      1936         -
+#14  Short offline       Completed without error       00%      1912         -
+#15  Short offline       Completed without error       00%      1888         -
+#16  Short offline       Completed without error       00%      1864         -
+#17  Short offline       Completed without error       00%      1840         -
+#18  Extended offline    Completed without error       00%      1820         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -133,48 +304,43 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     19/23 Celsius
+Current Temperature:                    17 Celsius
+Power Cycle Min/Max Temperature:     17/27 Celsius
 Lifetime    Min/Max Temperature:      0/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:      0/60 Celsius
-Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (474)
+Write SCT Data Table failed: Operation not supported
+Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+Write SCT (Get) Error Recovery Control Command failed: Operation not supported
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             116  ---  Lifetime Power-On Resets
-0x01  0x010  4           64853  ---  Power-on Hours
-0x01  0x018  6    345549520511  ---  Logical Sectors Written
-0x01  0x020  6      1757991066  ---  Number of Write Commands
-0x01  0x028  6   2429323511402  ---  Logical Sectors Read
-0x01  0x030  6      6090377446  ---  Number of Read Commands
+0x01  0x008  4             121  ---  Lifetime Power-On Resets
+0x01  0x010  4           68079  ---  Power-on Hours
+0x01  0x018  6    353208604308  ---  Logical Sectors Written
+0x01  0x020  6      1760793907  ---  Number of Write Commands
+0x01  0x028  6   2489205194524  ---  Logical Sectors Read
+0x01  0x030  6      6212820763  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           64447  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           64446  ---  Head Flying Hours
-0x03  0x018  4             162  ---  Head Load Events
+0x03  0x008  4           67668  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           67667  ---  Head Flying Hours
+0x03  0x018  4             167  ---  Head Load Events
 0x03  0x020  4             200  N--  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4          262160  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          262163  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              21  ---  Current Temperature
-0x05  0x010  1              21  ---  Average Short Term Temperature
-0x05  0x018  1              23  ---  Average Long Term Temperature
+0x05  0x008  1              17  ---  Current Temperature
+0x05  0x010  1              18  ---  Average Short Term Temperature
+0x05  0x018  1              18  ---  Average Long Term Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              40  ---  Highest Average Short Term Temperature
@@ -186,8 +352,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             581  ---  Number of Hardware Resets
-0x06  0x010  4          311966  ---  Number of ASR Events
+0x06  0x008  4             610  ---  Number of Hardware Resets
+0x06  0x010  4          313927  ---  Number of ASR Events
 0x06  0x018  4              10  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -205,12 +371,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       642446  Vendor specific
+0x8000  4       199555  Vendor specific
 
 
 
