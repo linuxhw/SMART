@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-30-amd64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-31-amd64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Sun Jun 30 15:54:29 2024 CEST
+Local Time is:    Tue Aug 20 19:35:14 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -26,8 +26,8 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,18 +62,18 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   185   167   021    -    1708
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7160
+  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    3
+  3 Spin_Up_Time            PO----   170   166   021    -    2483
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7183
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   044   044   000    -    41348
+  9 Power_On_Hours          -O--CK   042   042   000    -    42560
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6214
-194 Temperature_Celsius     -O---K   100   086   000    -    43
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6237
+194 Temperature_Celsius     -O---K   101   086   000    -    42
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--C-   200   200   000    -    0
+197 Current_Pending_Sector  -O--C-   200   200   000    -    1
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
@@ -91,7 +91,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 1116 (device log contains only the most recent five errors)
+ATA Error Count: 1119 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -105,6 +105,57 @@ ATA Error Count: 1116 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1119 occurred at disk power-on lifetime: 42559 hours (1773 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 04 64 42 89 e0  Error: UNC 4 sectors at LBA = 0x00894264 = 8995428
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 60 42 89 00 58      00:01:54.295  READ DMA
+  ca 00 40 78 20 84 04 58      00:01:54.295  WRITE DMA
+  f8 00 00 00 00 00 00 58      00:01:54.290  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 58      00:01:54.285  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 58      00:01:54.285  SET FEATURES [Set transfer mode]
+
+Error 1118 occurred at disk power-on lifetime: 42559 hours (1773 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 04 64 42 89 e0  Error: UNC 4 sectors at LBA = 0x00894264 = 8995428
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 60 42 89 00 58      00:01:52.160  READ DMA
+  ca 00 80 58 22 83 00 58      00:01:52.160  WRITE DMA
+  ca 00 20 30 22 83 00 58      00:01:52.160  WRITE DMA
+  c8 00 08 58 42 89 00 58      00:01:52.160  READ DMA
+  ca 00 08 18 22 83 00 58      00:01:52.160  WRITE DMA
+
+Error 1117 occurred at disk power-on lifetime: 42559 hours (1773 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7c 64 42 89 e0  Error: UNC 124 sectors at LBA = 0x00894264 = 8995428
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 e0 41 89 00 58      00:01:49.900  READ DMA
+  ca 00 10 b8 17 83 00 58      00:01:49.900  WRITE DMA
+  e7 00 00 ef 1f 84 00 58      00:01:49.890  FLUSH CACHE
+  ca 00 08 e8 1f 84 04 58      00:01:49.890  WRITE DMA
+  e7 00 00 df 41 89 00 58      00:01:49.865  FLUSH CACHE
 
 Error 1116 occurred at disk power-on lifetime: 18338 hours (764 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -139,57 +190,6 @@ Error 1115 occurred at disk power-on lifetime: 18338 hours (764 days + 2 hours)
   c4 00 01 00 00 00 00 58      00:52:55.305  READ MULTIPLE
   c4 00 20 bc ee 59 01 58      00:52:55.295  READ MULTIPLE
   c4 00 08 e5 88 58 01 58      00:52:53.385  READ MULTIPLE
-
-Error 1114 occurred at disk power-on lifetime: 18338 hours (764 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 08 eb 88 58 e1  Error: UNC at LBA = 0x015888eb = 22579435
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c4 00 20 bc ee 59 01 58      00:52:55.295  READ MULTIPLE
-  c4 00 08 e5 88 58 01 58      00:52:53.385  READ MULTIPLE
-  c4 00 08 65 0a b9 01 58      00:52:53.385  READ MULTIPLE
-  c4 00 08 5d 0a b9 01 58      00:52:53.385  READ MULTIPLE
-  c4 00 08 55 0a b9 01 58      00:52:53.385  READ MULTIPLE
-
-Error 1113 occurred at disk power-on lifetime: 18338 hours (764 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 02 eb 88 58 e1  Error: UNC 2 sectors at LBA = 0x015888eb = 22579435
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 e5 88 58 01 58      00:49:39.750  READ DMA
-  c8 00 08 65 0a b9 01 58      00:49:39.750  READ DMA
-  c8 00 08 5d 0a b9 01 58      00:49:39.750  READ DMA
-  c8 00 08 55 0a b9 01 58      00:49:39.750  READ DMA
-  c8 00 08 4d 0a b9 01 58      00:49:39.745  READ DMA
-
-Error 1112 occurred at disk power-on lifetime: 18338 hours (764 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 02 eb 88 58 e1  Error: UNC 2 sectors at LBA = 0x015888eb = 22579435
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 e5 88 58 01 58      00:49:16.410  READ DMA
-  c8 00 01 00 00 00 00 58      00:49:16.410  READ DMA
-  ca 00 08 95 e7 b6 01 58      00:49:16.410  WRITE DMA
-  ca 00 10 15 28 5d 01 58      00:49:16.410  WRITE DMA
-  c8 00 08 e5 88 58 01 58      00:49:14.495  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.15.0-desktop-0.rc2.3omv2590] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug  6 18:18:55 2025 BST
+Local Time is:    Mon Oct 20 10:11:07 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,15 +22,15 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -66,22 +66,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   231   227   021    -    3450
-  4 Start_Stop_Count        -O--CK   100   100   000    -    564
+  3 Spin_Up_Time            POS--K   234   227   021    -    3283
+  4 Start_Stop_Count        -O--CK   100   100   000    -    729
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   081   081   000    -    14562
+  9 Power_On_Hours          -O--CK   078   078   000    -    16274
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    491
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    113
-193 Load_Cycle_Count        -O--CK   200   200   000    -    450
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    653
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    183
+193 Load_Cycle_Count        -O--CK   200   200   000    -    545
 194 Temperature_Celsius     -O---K   118   106   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   100   253   000    -    0
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -151,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (4)
+Temperature History Size (Index):    478 (390)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -160,29 +160,29 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             491  ---  Lifetime Power-On Resets
-0x01  0x010  4           14562  ---  Power-on Hours
-0x01  0x018  6     23711178355  ---  Logical Sectors Written
-0x01  0x020  6       144141283  ---  Number of Write Commands
-0x01  0x028  6    308051465702  ---  Logical Sectors Read
-0x01  0x030  6       296935176  ---  Number of Read Commands
-0x01  0x038  6       883592448  ---  Date and Time TimeStamp
+0x01  0x008  4             653  ---  Lifetime Power-On Resets
+0x01  0x010  4           16274  ---  Power-on Hours
+0x01  0x018  6     24271830472  ---  Logical Sectors Written
+0x01  0x020  6       156281409  ---  Number of Write Commands
+0x01  0x028  6    338167082460  ---  Logical Sectors Read
+0x01  0x030  6       326655695  ---  Number of Read Commands
+0x01  0x038  6      2751825152  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           14424  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           14420  ---  Head Flying Hours
-0x03  0x018  4             564  ---  Head Load Events
+0x03  0x008  4           16123  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           16117  ---  Head Flying Hours
+0x03  0x018  4             729  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               2  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4             113  ---  Number of High Priority Unload Events
+0x03  0x040  4             183  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              30  ---  Average Short Term Temperature
-0x05  0x018  1              32  ---  Average Long Term Temperature
+0x05  0x018  1              30  ---  Average Long Term Temperature
 0x05  0x020  1              44  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x030  1              41  ---  Highest Average Short Term Temperature
@@ -194,8 +194,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2301  ---  Number of Hardware Resets
-0x06  0x010  4            1712  ---  Number of ASR Events
+0x06  0x008  4            3182  ---  Number of Hardware Resets
+0x06  0x010  4            2127  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
 0xff  0x008  7               0  ---  Vendor Specific
@@ -218,13 +218,13 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         2595  Vendor specific
+0x8000  4         1675  Vendor specific
 
 
 
