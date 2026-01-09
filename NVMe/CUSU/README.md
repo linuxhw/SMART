@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| CUSU      | CV3500Q            | 512 GB | 3       | 97    | 10    | 0.07   |
-| CUSU      | CV3500             | 512 GB | 2       | 22    | 0     | 0.06   |
+| CUSU      | CV3500             | 512 GB | 2       | 30    | 0     | 0.08   |
+| CUSU      | CV3500Q            | 512 GB | 3       | 99    | 10    | 0.07   |

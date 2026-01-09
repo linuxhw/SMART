@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TOPMORE   | Aquarius           | 4 TB   | 2       | 216   | 0     | 0.59   |
-| TOPMORE   | TPCIE400 512GB SSD | 512 GB | 2       | 101   | 0     | 0.28   |
+| TOPMORE   | Aquarius           | 4 TB   | 2       | 236   | 0     | 0.65   |
+| TOPMORE   | TPCIE400 512GB SSD | 512 GB | 2       | 135   | 0     | 0.37   |

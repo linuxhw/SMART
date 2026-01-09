@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MiWhole   | CT300-2TB          | 2 TB   | 3       | 24    | 0     | 0.07   |
+| MiWhole   | CT300-2TB          | 2 TB   | 3       | 26    | 0     | 0.07   |

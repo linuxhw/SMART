@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TCSUNBOW  | X3                 | 240 GB | 8       | 371   | 0     | 1.02   |
+| TCSUNBOW  | X3                 | 240 GB | 8       | 412   | 0     | 1.13   |
 | TCSUNBOW  | X3                 | 1 TB   | 5       | 228   | 0     | 0.63   |
 | TCSUNBOW  | X3                 | 480 GB | 9       | 99    | 0     | 0.27   |
 | TCSUNBOW  | N4                 | 120 GB | 3       | 89    | 0     | 0.25   |

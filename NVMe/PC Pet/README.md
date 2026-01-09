@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| PC Pet    | PCPS512G3T         | 512 GB | 2       | 50    | 0     | 0.14   |
+| PC Pet    | PCPS512G3T         | 512 GB | 2       | 64    | 0     | 0.18   |

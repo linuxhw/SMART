@@ -18,6 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | T-CREATE  | TM8FFX001T         | 1 TB   | 2       | 101   | 0     | 0.28   |
-| T-CREATE  | TM8FFC001T         | 1 TB   | 2       | 27    | 0     | 0.07   |
+| T-CREATE  | TM8FFC001T         | 1 TB   | 2       | 32    | 0     | 0.09   |
 | T-CREATE  | TM8FFC002T         | 2 TB   | 2       | 22    | 0     | 0.06   |
 | T-CREATE  | TM8FPE002T         | 2 TB   | 2       | 15    | 0     | 0.04   |

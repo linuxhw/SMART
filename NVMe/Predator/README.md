@@ -19,13 +19,13 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Predator  | SSD GM3500         | 2 TB   | 2       | 299   | 0     | 0.82   |
 | Predator  | SSD GM3500         | 1 TB   | 2       | 160   | 0     | 0.44   |
-| Predator  | SSD GM7 M.2        | 2 TB   | 11      | 77    | 0     | 0.21   |
+| Predator  | SSD GM7 M.2        | 2 TB   | 11      | 112   | 0     | 0.31   |
 | Predator  | SSD GM7 M.2        | 512 GB | 2       | 73    | 0     | 0.20   |
 | Predator  | SSD GM7000         | 2 TB   | 17      | 65    | 1     | 0.18   |
 | Predator  | SSD GM7000         | 512 GB | 6       | 52    | 0     | 0.14   |
-| Predator  | SSD GM7000         | 1 TB   | 11      | 29    | 0     | 0.08   |
-| Predator  | SSD GM7000         | 4 TB   | 11      | 17    | 0     | 0.05   |
-| Predator  | SSD GM7 M.2        | 4 TB   | 2       | 11    | 0     | 0.03   |
+| Predator  | SSD GM7000         | 1 TB   | 11      | 42    | 0     | 0.12   |
+| Predator  | SSD GM7000         | 4 TB   | 11      | 29    | 0     | 0.08   |
+| Predator  | SSD GM7 M.2        | 4 TB   | 2       | 12    | 0     | 0.03   |
 | Predator  | SSD GM7            | 2 TB   | 2       | 1     | 0     | 0.00   |
 | Predator  | SSD GM6            | 1 TB   | 3       | 1     | 0     | 0.00   |
 | Predator  | SSD GM7            | 1 TB   | 2       | 0     | 0     | 0.00   |

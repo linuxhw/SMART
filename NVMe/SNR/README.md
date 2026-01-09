@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SNR       | ML480M             | 480 GB | 3       | 183   | 0     | 0.50   |
+| SNR       | ML480M             | 480 GB | 3       | 193   | 0     | 0.53   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| QUANXING  | N200               | 512 GB | 2       | 27    | 0     | 0.07   |
+| QUANXING  | N200               | 512 GB | 2       | 73    | 0     | 0.20   |

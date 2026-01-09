@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Star D... | PCIe SSD           | 480 GB | 22      | 92    | 0     | 0.25   |
+| Star D... | PCIe SSD           | 480 GB | 22      | 98    | 0     | 0.27   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| PELADN    | SSD                | 512 GB | 6       | 49    | 0     | 0.14   |
-| PELADN    | SSD                | 256 GB | 2       | 8     | 0     | 0.02   |
+| PELADN    | SSD                | 512 GB | 6       | 78    | 0     | 0.22   |
+| PELADN    | SSD                | 256 GB | 2       | 20    | 0     | 0.06   |

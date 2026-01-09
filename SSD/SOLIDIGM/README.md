@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SOLIDIGM  | SSDSC2KB960GZ      | 960 GB | 3       | 0     | 0     | 0.00   |
+| SOLIDIGM  | SSDSC2KB960GZ      | 960 GB | 4       | 1     | 0     | 0.01   |

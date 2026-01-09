@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EAGET     | SSD                | 256 GB | 2       | 214   | 0     | 0.59   |
+| EAGET     | SSD                | 256 GB | 2       | 215   | 0     | 0.59   |
 | EAGET     | SSD Device         | 1 TB   | 5       | 95    | 0     | 0.26   |

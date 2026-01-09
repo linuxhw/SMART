@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Wdxsky    | M720k-128G         | 128 GB | 2       | 25    | 0     | 0.07   |
-| Wdxsky    | W31-256G           | 256 GB | 2       | 0     | 0     | 0.00   |
+| Wdxsky    | W31-256G           | 256 GB | 2       | 22    | 0     | 0.06   |

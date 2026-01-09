@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Western   | WUH721816ALE6L4    | 16 TB  | 5       | 992   | 0     | 2.72   |
+| Western   | WUH721816ALE6L4    | 16 TB  | 5       | 1007  | 0     | 2.76   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Teclast   | BD 512GB SSD       | 512 GB | 3       | 49    | 0     | 0.14   |
+| Teclast   | BD 512GB SSD       | 512 GB | 3       | 55    | 0     | 0.15   |
 | Teclast   | 1TB SSD            | 1 TB   | 2       | 31    | 0     | 0.09   |

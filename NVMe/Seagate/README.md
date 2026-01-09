@@ -18,33 +18,33 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Seagate   | FireCuda 510 SS... | 500 GB | 4       | 583   | 0     | 1.60   |
-| Seagate   | FireCuda 510 SS... | 1 TB   | 11      | 423   | 0     | 1.16   |
-| Seagate   | FireCuda 510 SS... | 1 TB   | 16      | 372   | 0     | 1.02   |
-| Seagate   | BarraCuda Q5 ZP... | 2 TB   | 10      | 360   | 0     | 0.99   |
+| Seagate   | FireCuda 510 SS... | 1 TB   | 11      | 425   | 0     | 1.17   |
+| Seagate   | FireCuda 510 SS... | 1 TB   | 16      | 421   | 0     | 1.16   |
+| Seagate   | BarraCuda Q5 ZP... | 2 TB   | 10      | 369   | 0     | 1.01   |
 | Seagate   | BarraCuda 510 S... | 500 GB | 7       | 344   | 0     | 0.94   |
-| Seagate   | FireCuda 520 SS... | 500 GB | 32      | 310   | 0     | 0.85   |
+| Seagate   | FireCuda 520 SS... | 500 GB | 32      | 311   | 0     | 0.85   |
 | Seagate   | FireCuda 520 SS... | 2 TB   | 22      | 301   | 0     | 0.83   |
-| Seagate   | BarraCuda Q5 ZP... | 1 TB   | 18      | 273   | 0     | 0.75   |
-| Seagate   | FireCuda 530 ZP... | 4 TB   | 6       | 267   | 0     | 0.73   |
-| Seagate   | FireCuda 520 SS... | 1 TB   | 35      | 257   | 0     | 0.71   |
-| Seagate   | FireCuda 530 ZP... | 2 TB   | 34      | 250   | 0     | 0.69   |
-| Seagate   | ZP2000GM30004      | 2 TB   | 17      | 250   | 0     | 0.69   |
+| Seagate   | BarraCuda Q5 ZP... | 1 TB   | 18      | 288   | 0     | 0.79   |
+| Seagate   | FireCuda 530 ZP... | 4 TB   | 6       | 282   | 0     | 0.77   |
+| Seagate   | ZP2000GM30004      | 2 TB   | 17      | 270   | 0     | 0.74   |
+| Seagate   | FireCuda 530 ZP... | 2 TB   | 34      | 267   | 0     | 0.73   |
+| Seagate   | FireCuda 520 SS... | 1 TB   | 35      | 261   | 0     | 0.72   |
+| Seagate   | FireCuda 530 ZP... | 4 TB   | 28      | 246   | 0     | 0.67   |
 | Seagate   | FireCuda 510 SS... | 2 TB   | 8       | 239   | 0     | 0.66   |
-| Seagate   | FireCuda 530 ZP... | 4 TB   | 28      | 224   | 0     | 0.62   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 6       | 200   | 0     | 0.55   |
 | Seagate   | FireCuda 530 ZP... | 2 TB   | 9       | 189   | 0     | 0.52   |
 | Seagate   | BarraCuda 510 S... | 250 GB | 2       | 177   | 0     | 0.48   |
+| Seagate   | FireCuda 530 ZP... | 500 GB | 8       | 158   | 0     | 0.43   |
+| Seagate   | FireCuda 530 ZP... | 1 TB   | 33      | 157   | 0     | 0.43   |
+| Seagate   | BarraCuda Q5 ZP... | 500 GB | 12      | 133   | 0     | 0.36   |
 | Seagate   | BarraCuda 510 S... | 256 GB | 2       | 130   | 0     | 0.36   |
-| Seagate   | FireCuda 530 ZP... | 1 TB   | 33      | 128   | 0     | 0.35   |
+| Seagate   | FireCuda SE SSD... | 500 GB | 3       | 128   | 0     | 0.35   |
 | Seagate   | ZP2000GM30063      | 2 TB   | 4       | 126   | 0     | 0.35   |
-| Seagate   | FireCuda SE SSD... | 500 GB | 3       | 125   | 0     | 0.35   |
-| Seagate   | FireCuda 530 ZP... | 500 GB | 8       | 121   | 0     | 0.33   |
 | Seagate   | BarraCuda 510 S... | 1 TB   | 5       | 120   | 0     | 0.33   |
-| Seagate   | FireCuda 530 ZP... | 1 TB   | 9       | 112   | 0     | 0.31   |
+| Seagate   | FireCuda 530 ZP... | 1 TB   | 9       | 116   | 0     | 0.32   |
+| Seagate   | ZP1000GM30004      | 1 TB   | 2       | 110   | 0     | 0.30   |
 | Seagate   | BarraCuda 510 S... | 512 GB | 3       | 102   | 0     | 0.28   |
-| Seagate   | BarraCuda Q5 ZP... | 500 GB | 12      | 100   | 0     | 0.27   |
 | Seagate   | FireCuda 530 ZP... | 500 GB | 5       | 64    | 0     | 0.18   |
-| Seagate   | ZP1000GM30004      | 1 TB   | 2       | 62    | 0     | 0.17   |
 | Seagate   | Game Drive ZP10... | 1 TB   | 2       | 51    | 0     | 0.14   |
 | Seagate   | ZP1000GM30063      | 1 TB   | 3       | 25    | 0     | 0.07   |
 | Seagate   | ZP500GV30012       | 500 GB | 2       | 24    | 0     | 0.07   |

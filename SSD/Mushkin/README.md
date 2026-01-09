@@ -38,7 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDRE1TB        | 1 TB   | 18      | 260   | 1     | 0.71   |
 | Mushkin   | MKNSSDTR128GB-3DL  | 128 GB | 2       | 253   | 0     | 0.69   |
 | Mushkin   | MKNSSDS2120GB      | 120 GB | 3       | 246   | 0     | 0.67   |
-| Mushkin   | MKNSSDS2240GB      | 240 GB | 2       | 174   | 0     | 0.48   |
+| Mushkin   | MKNSSDS2240GB      | 240 GB | 2       | 203   | 0     | 0.56   |
 | Mushkin   | MKNSSDRE240GB-LT   | 240 GB | 2       | 172   | 0     | 0.47   |
 | Mushkin   | MKNSSDEC512GB      | 512 GB | 5       | 151   | 0     | 0.42   |
 | Mushkin   | MKNSSDEL240GB      | 240 GB | 2       | 112   | 0     | 0.31   |
@@ -46,12 +46,12 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDE3240GB      | 240 GB | 3       | 94    | 0     | 0.26   |
 | Mushkin   | MKNSSDEL512GB-D8   | 512 GB | 2       | 93    | 0     | 0.26   |
 | Mushkin   | MKNSSDRE500GB      | 500 GB | 5       | 92    | 0     | 0.25   |
+| Mushkin   | MKNSSDTR240GB      | 240 GB | 3       | 85    | 0     | 0.23   |
 | Mushkin   | MKNSSDEL512GB      | 512 GB | 3       | 84    | 0     | 0.23   |
 | Mushkin   | MKNSSDS21TB        | 1 TB   | 13      | 65    | 24    | 0.17   |
 | Mushkin   | MKNSSDRE2TB        | 2 TB   | 2       | 57    | 0     | 0.16   |
 | Mushkin   | MKNSSDE3480GB      | 480 GB | 6       | 125   | 1     | 0.14   |
 | Mushkin   | MKNSSDTR480GB      | 480 GB | 2       | 48    | 0     | 0.13   |
-| Mushkin   | MKNSSDTR240GB      | 240 GB | 3       | 22    | 0     | 0.06   |
 | Mushkin   | MKNSSDCG480GB      | 480 GB | 2       | 116   | 508   | 0.01   |
 | Mushkin   | MKNSSDCR480GB-7-A  | 480 GB | 3       | 0     | 677   | 0.00   |
 
@@ -69,4 +69,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Mushkin   | SandForce Driven SSDs  | 9      | 39      | 957   | 85    | 1.98   |
-| Mushkin   | Silicon Motion base... | 9      | 39      | 185   | 1     | 0.51   |
+| Mushkin   | Silicon Motion base... | 9      | 39      | 191   | 1     | 0.52   |

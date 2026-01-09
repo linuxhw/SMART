@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GenMac... | NVMe256G           | 256 GB | 2       | 123   | 0     | 0.34   |
+| GenMac... | NVMe256G           | 256 GB | 2       | 125   | 0     | 0.34   |

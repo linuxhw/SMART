@@ -26,8 +26,8 @@ MTBF - avg. MTBF in years per sample.
 | HPE       | MB0500EBNCR        | 500 GB | 5       | 2835  | 183   | 7.34   |
 | HPE       | MB8000GEQUU        | 8 TB   | 3       | 1926  | 0     | 5.28   |
 | HPE       | MM2000GEFRA        | 2 TB   | 4       | 1765  | 0     | 4.84   |
+| HPE       | MB4000GCWDC        | 4 TB   | 6       | 1477  | 1     | 3.73   |
 | HPE       | MB4000GEFNA        | 4 TB   | 2       | 2358  | 8     | 3.42   |
-| HPE       | MB4000GCWDC        | 4 TB   | 6       | 1346  | 1     | 3.37   |
 | HPE       | MM1000GBKAL        | 1 TB   | 14      | 2050  | 6     | 2.99   |
 | HPE       | MB8000GFECR        | 8 TB   | 2       | 796   | 0     | 2.18   |
 | HPE       | MM1000GFJTE        | 1 TB   | 3       | 780   | 0     | 2.14   |
@@ -50,7 +50,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | HPE       | WDC Enterprise         | 1      | 5       | 2835  | 183   | 7.34   |
-| HPE       | Seagate Constellati... | 1      | 6       | 1346  | 1     | 3.37   |
+| HPE       | Seagate Constellati... | 1      | 6       | 1477  | 1     | 3.73   |
 | HPE       | Seagate Constellati... | 1      | 14      | 2050  | 6     | 2.99   |
 | HPE       | Seagate Enterprise     | 1      | 2       | 796   | 0     | 2.18   |
 | HPE       | Proliant HardDrive     | 5      | 21      | 583   | 49    | 1.43   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| XPG       | SX950U             | 240 GB | 4       | 231   | 0     | 0.63   |
+| XPG       | SX950U             | 240 GB | 4       | 249   | 0     | 0.68   |

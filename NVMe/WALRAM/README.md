@@ -17,8 +17,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| WALRAM    | 256GB              | 256 GB | 4       | 145   | 0     | 0.40   |
+| WALRAM    | 256GB              | 256 GB | 4       | 159   | 0     | 0.44   |
 | WALRAM    | 1TB                | 1 TB   | 9       | 117   | 0     | 0.32   |
+| WALRAM    | 256G               | 256 GB | 3       | 109   | 0     | 0.30   |
 | WALRAM    | 512G               | 512 GB | 7       | 97    | 0     | 0.27   |
-| WALRAM    | 256G               | 256 GB | 3       | 57    | 0     | 0.16   |
 | WALRAM    | 512GB              | 512 GB | 2       | 0     | 0     | 0.00   |

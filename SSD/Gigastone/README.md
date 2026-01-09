@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Gigastone | SSD                | 512 GB | 3       | 31    | 0     | 0.09   |
+| Gigastone | SSD                | 512 GB | 3       | 56    | 0     | 0.15   |
 | Gigastone | SSD                | 128 GB | 2       | 21    | 0     | 0.06   |

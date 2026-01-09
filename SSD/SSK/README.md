@@ -19,4 +19,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | SSK       | Portable SSD       | 2 TB   | 2       | 81    | 0     | 0.22   |
 | SSK       | Portable SSD       | 1 TB   | 2       | 6     | 0     | 0.02   |
-| SSK       | Portable SSD       | 128 GB | 2       | 0     | 18    | 0.00   |
+| SSK       | Portable SSD       | 128 GB | 3       | 0     | 12    | 0.00   |

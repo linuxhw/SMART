@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | OWC       | Aura N             | 960 GB | 2       | 168   | 0     | 0.46   |
-| OWC       | Aura Pro IV        | 512 GB | 4       | 10    | 0     | 0.03   |
+| OWC       | Aura Pro IV        | 512 GB | 4       | 26    | 0     | 0.07   |

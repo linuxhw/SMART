@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| UDSS      | UD2CTAHT300-512G   | 512 GB | 3       | 58    | 0     | 0.16   |
+| UDSS      | UD2CTAHT300-512G   | 512 GB | 3       | 59    | 0     | 0.16   |
 | UDSS      | UD2CMAGQ10A-001T   | 1 TB   | 3       | 13    | 0     | 0.04   |

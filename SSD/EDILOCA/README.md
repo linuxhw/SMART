@@ -17,13 +17,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EDILOCA   | ES106              | 512 GB | 2       | 344   | 0     | 0.94   |
+| EDILOCA   | ES106              | 512 GB | 2       | 478   | 0     | 1.31   |
 | EDILOCA   | ES106              | 2 TB   | 2       | 220   | 31    | 0.43   |
 | EDILOCA   | EN206              | 512 GB | 3       | 105   | 0     | 0.29   |
-| EDILOCA   | EN206              | 1 TB   | 2       | 59    | 0     | 0.16   |
+| EDILOCA   | ES106              | 128 GB | 2       | 72    | 0     | 0.20   |
+| EDILOCA   | EN206              | 1 TB   | 2       | 61    | 0     | 0.17   |
 | EDILOCA   | ES106              | 500 GB | 2       | 231   | 7     | 0.14   |
-| EDILOCA   | ES106              | 128 GB | 2       | 40    | 0     | 0.11   |
 | EDILOCA   | EN206              | 256 GB | 3       | 35    | 0     | 0.10   |
-| EDILOCA   | ES106              | 1 TB   | 6       | 27    | 0     | 0.08   |
+| EDILOCA   | ES106              | 1 TB   | 6       | 28    | 0     | 0.08   |
 | EDILOCA   | ES106              | 256 GB | 4       | 12    | 0     | 0.04   |
 | EDILOCA   | EN206              | 2 TB   | 2       | 71    | 28    | 0.03   |

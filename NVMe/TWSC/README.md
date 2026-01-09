@@ -19,4 +19,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | TWSC      | TSC3AN1T0-F2T60S   | 1 TB   | 3       | 13    | 0     | 0.04   |
 | TWSC      | TSC3AN1T0-F6Q10S   | 1 TB   | 2       | 1     | 0     | 0.00   |
-| TWSC      | TSC3AN512-F2T70S   | 512 GB | 2       | 0     | 0     | 0.00   |
+| TWSC      | TSC3AN512-F2T70S   | 512 GB | 3       | 0     | 0     | 0.00   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HighRel   | 512GB SSD          | 512 GB | 12      | 21    | 0     | 0.06   |
+| HighRel   | 512GB SSD          | 512 GB | 12      | 23    | 0     | 0.06   |

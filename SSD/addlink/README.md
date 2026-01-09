@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| addlink   | SATA SSD           | 256 GB | 9       | 400   | 1     | 1.09   |
-| addlink   | SATA SSD           | 120 GB | 5       | 178   | 0     | 0.49   |
+| addlink   | SATA SSD           | 256 GB | 9       | 401   | 1     | 1.10   |
+| addlink   | SATA SSD           | 120 GB | 5       | 182   | 0     | 0.50   |
 | addlink   | SATA SSD           | 512 GB | 2       | 165   | 0     | 0.45   |
 | addlink   | SATA SSD           | 1 TB   | 5       | 150   | 0     | 0.41   |

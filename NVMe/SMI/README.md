@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SMI       | 2263XT             | 120 GB | 4       | 91    | 0     | 0.25   |
+| SMI       | 2263XT             | 120 GB | 4       | 138   | 0     | 0.38   |

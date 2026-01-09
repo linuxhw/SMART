@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| TMI       | 512GB M2 CRMP.4... | 512 GB | 2       | 52    | 0     | 0.14   |
 | TMI       | 512GB SATA CRMP... | 512 GB | 5       | 29    | 0     | 0.08   |
-| TMI       | 512GB M2 CRMP.4... | 512 GB | 2       | 6     | 0     | 0.02   |
 | TMI       | 256GB SATA CRMP... | 240 GB | 2       | 3     | 0     | 0.01   |

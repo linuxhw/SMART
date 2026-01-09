@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| QUANXING  | S101               | 512 GB | 3       | 52    | 0     | 0.14   |
+| QUANXING  | S101               | 512 GB | 3       | 55    | 0     | 0.15   |
 | QUANXING  | BG01               | 256 GB | 2       | 1     | 0     | 0.00   |

@@ -18,9 +18,9 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Nextorage | SSD NE1N1TB        | 1 TB   | 2       | 296   | 0     | 0.81   |
-| Nextorage | SSD NEM-PA1TB      | 1 TB   | 4       | 225   | 0     | 0.62   |
-| Nextorage | SSD NE1N4TB        | 4 TB   | 6       | 111   | 0     | 0.30   |
+| Nextorage | SSD NEM-PA1TB      | 1 TB   | 4       | 273   | 0     | 0.75   |
+| Nextorage | SSD NE1N4TB        | 4 TB   | 6       | 150   | 0     | 0.41   |
 | Nextorage | SSD NE1N2TB        | 2 TB   | 8       | 86    | 0     | 0.24   |
-| Nextorage | SSD NEM-PAB2TB     | 2 TB   | 2       | 37    | 0     | 0.10   |
+| Nextorage | SSD NEM-PAB2TB     | 2 TB   | 2       | 80    | 0     | 0.22   |
 | Nextorage | SSD NN4LE-2TB2CN   | 2 TB   | 2       | 37    | 0     | 0.10   |
-| Nextorage | SSD NEM-PAC4TB     | 4 TB   | 2       | 4     | 0     | 0.01   |
+| Nextorage | SSD NEM-PAC4TB     | 4 TB   | 2       | 20    | 0     | 0.06   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SunWind   | SWSSD256GS2T       | 256 GB | 2       | 52    | 0     | 0.15   |
+| SunWind   | SWSSD256GS2T       | 256 GB | 2       | 71    | 0     | 0.20   |
 | SunWind   | SWSSD512GS2T       | 512 GB | 2       | 62    | 2     | 0.05   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Innodisk  | M.2 (P80) 3TE6     | 120 GB | 6       | 22    | 3     | 0.05   |
+| Innodisk  | M.2 (P80) 3TE6     | 120 GB | 6       | 23    | 3     | 0.05   |

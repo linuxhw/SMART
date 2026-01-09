@@ -20,6 +20,6 @@ MTBF - avg. MTBF in years per sample.
 | Digma     | DGSM3001TS33T      | 1 TB   | 2       | 196   | 0     | 0.54   |
 | Digma     | DGSM3256GS33T      | 256 GB | 2       | 56    | 0     | 0.16   |
 | Digma     | DGSM3512GP53T      | 512 GB | 2       | 9     | 0     | 0.03   |
-| Digma     | DGSM4001TG23T      | 1 TB   | 3       | 6     | 0     | 0.02   |
+| Digma     | DGSM4001TG23T      | 1 TB   | 4       | 4     | 0     | 0.01   |
 | Digma     | DGSM4512GG23T      | 512 GB | 2       | 1     | 10    | 0.00   |
 | Digma     | DGSM3001TM23T      | 1 TB   | 2       | 1     | 0     | 0.00   |

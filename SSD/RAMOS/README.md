@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| RAMOS     | SSD                | 1 TB   | 2       | 32    | 0     | 0.09   |
+| RAMOS     | SSD                | 1 TB   | 2       | 36    | 0     | 0.10   |

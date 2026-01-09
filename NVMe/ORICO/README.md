@@ -17,11 +17,11 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ORICO     | J10                | 1 TB   | 7       | 72    | 0     | 0.20   |
+| ORICO     | J10                | 1 TB   | 7       | 77    | 0     | 0.21   |
 | ORICO     | 4TB                | 4 TB   | 4       | 44    | 0     | 0.12   |
 | ORICO     | V500               | 128 GB | 3       | 44    | 0     | 0.12   |
 | ORICO     | 256GB              | 256 GB | 2       | 37    | 0     | 0.10   |
+| ORICO     | 2TB                | 2 TB   | 8       | 27    | 0     | 0.08   |
 | ORICO     | 128GB              | 128 GB | 4       | 25    | 0     | 0.07   |
-| ORICO     | 2TB                | 2 TB   | 7       | 18    | 0     | 0.05   |
 | ORICO     | 512GB              | 512 GB | 4       | 45    | 19    | 0.01   |
 | ORICO     | 1TB                | 1 TB   | 9       | 2     | 0     | 0.01   |

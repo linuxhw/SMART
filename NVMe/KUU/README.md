@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KUU       | 512GB              | 512 GB | 2       | 41    | 0     | 0.11   |
+| KUU       | 512GB              | 512 GB | 2       | 42    | 0     | 0.12   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| PHIXERO   | 512GB              | 512 GB | 2       | 20    | 0     | 0.06   |
+| PHIXERO   | 512GB              | 512 GB | 2       | 24    | 0     | 0.07   |
 | PHIXERO   | 2TB                | 2 TB   | 2       | 3     | 0     | 0.01   |

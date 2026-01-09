@@ -22,11 +22,11 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS2280Q4           | 1 TB   | 2       | 252   | 0     | 0.69   |
 | Apacer    | Z280 120G          | 120 GB | 2       | 201   | 0     | 0.55   |
 | Apacer    | AS2280P4U          | 2 TB   | 3       | 188   | 0     | 0.52   |
-| Apacer    | AS2280P4           | 512 GB | 41      | 72    | 0     | 0.20   |
-| Apacer    | AS2280P4           | 256 GB | 85      | 74    | 6     | 0.19   |
-| Apacer    | AS2280P4U          | 256 GB | 5       | 64    | 0     | 0.18   |
+| Apacer    | AS2280P4           | 256 GB | 85      | 86    | 6     | 0.22   |
+| Apacer    | AS2280P4           | 512 GB | 41      | 79    | 0     | 0.22   |
+| Apacer    | AS2280P4U          | 256 GB | 5       | 66    | 0     | 0.18   |
 | Apacer    | AS2280P4           | 1 TB   | 13      | 41    | 0     | 0.11   |
-| Apacer    | AS2280P4U          | 1 TB   | 7       | 37    | 1     | 0.10   |
-| Apacer    | AS2280Q4           | 2 TB   | 7       | 35    | 0     | 0.10   |
-| Apacer    | AS2280P4U          | 512 GB | 8       | 38    | 65    | 0.03   |
+| Apacer    | AS2280P4U          | 1 TB   | 7       | 38    | 1     | 0.10   |
+| Apacer    | AS2280Q4           | 2 TB   | 7       | 36    | 0     | 0.10   |
+| Apacer    | AS2280P4U          | 512 GB | 8       | 62    | 65    | 0.10   |
 | Apacer    | AS2280Q4           | 1 TB   | 3       | 11    | 0     | 0.03   |

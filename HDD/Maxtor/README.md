@@ -28,17 +28,17 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 6L020J1            | 20 GB  | 3       | 1213  | 2     | 2.93   |
 | Maxtor    | STM3320620AS       | 320 GB | 3       | 1055  | 0     | 2.89   |
 | Maxtor    | 6H500F0            | 500 GB | 2       | 1037  | 0     | 2.84   |
-| Maxtor    | STM3250820A        | 250 GB | 10      | 800   | 131   | 1.89   |
+| Maxtor    | STM3250820A        | 250 GB | 10      | 805   | 131   | 1.91   |
 | Maxtor    | 7V250F0            | 256 GB | 4       | 973   | 2     | 1.81   |
 | Maxtor    | 6V300F0            | 304 GB | 9       | 710   | 5     | 1.76   |
 | Maxtor    | STM380215A         | 80 GB  | 11      | 808   | 171   | 1.68   |
-| Maxtor    | STM3160215A        | 160 GB | 23      | 780   | 281   | 1.67   |
+| Maxtor    | STM3160215A        | 160 GB | 23      | 787   | 281   | 1.67   |
 | Maxtor    | 6V080E0            | 80 GB  | 17      | 798   | 3     | 1.48   |
 | Maxtor    | 6V160E0            | 160 GB | 21      | 715   | 51    | 1.36   |
 | Maxtor    | 6V200E0            | 208 GB | 14      | 826   | 78    | 1.28   |
 | Maxtor    | STM3320820AS       | 320 GB | 35      | 998   | 329   | 1.27   |
-| Maxtor    | STM380215AS        | 80 GB  | 25      | 709   | 405   | 1.15   |
-| Maxtor    | STM3250310AS       | 250 GB | 120     | 901   | 375   | 1.07   |
+| Maxtor    | STM380215AS        | 80 GB  | 25      | 710   | 405   | 1.15   |
+| Maxtor    | STM3250310AS       | 250 GB | 120     | 908   | 375   | 1.07   |
 | Maxtor    | STM3320620A        | 320 GB | 3       | 592   | 43    | 1.06   |
 | Maxtor    | 7V300F0            | 304 GB | 3       | 1070  | 317   | 1.06   |
 | Maxtor    | STM3200820A        | 200 GB | 2       | 379   | 0     | 1.04   |
@@ -49,15 +49,15 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | STM3250820AS       | 250 GB | 22      | 770   | 199   | 0.89   |
 | Maxtor    | STM3160815AS       | 160 GB | 46      | 772   | 426   | 0.89   |
 | Maxtor    | 6V320F0            | 320 GB | 3       | 649   | 2     | 0.80   |
-| Maxtor    | STM3160215AS       | 160 GB | 62      | 843   | 729   | 0.79   |
+| Maxtor    | STM3160215AS       | 160 GB | 62      | 845   | 729   | 0.79   |
 | Maxtor    | STM3320820A        | 320 GB | 3       | 1041  | 338   | 0.78   |
 | Maxtor    | STM3500630AS       | 500 GB | 5       | 901   | 300   | 0.75   |
 | Maxtor    | STM380815AS        | 80 GB  | 29      | 671   | 640   | 0.73   |
-| Maxtor    | 6V250F0            | 250 GB | 6       | 452   | 1     | 0.67   |
+| Maxtor    | 6V250F0            | 250 GB | 6       | 463   | 1     | 0.68   |
 | Maxtor    | STM3802110A        | 80 GB  | 4       | 385   | 257   | 0.66   |
 | Maxtor    | 6L040J2            | 40 GB  | 4       | 1256  | 6     | 0.56   |
 | Maxtor    | 6G160E0            | 160 GB | 11      | 420   | 121   | 0.56   |
-| Maxtor    | STM380811AS        | 80 GB  | 7       | 435   | 349   | 0.51   |
+| Maxtor    | STM380811AS        | 80 GB  | 7       | 437   | 349   | 0.51   |
 | Maxtor    | 7L320S0            | 323 GB | 2       | 833   | 41    | 0.43   |
 | Maxtor    | STM3160811AS       | 160 GB | 8       | 626   | 203   | 0.30   |
 | Maxtor    | STM3160211AS       | 160 GB | 10      | 775   | 1136  | 0.26   |
@@ -74,12 +74,12 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 6L080M0            | 80 GB  | 7       | 28    | 146   | 0.05   |
 | Maxtor    | 6B250S0            | 250 GB | 4       | 37    | 300   | 0.05   |
 | Maxtor    | 6L100M0            | 100 GB | 3       | 19    | 0     | 0.05   |
-| Maxtor    | 6B200M0            | 200 GB | 9       | 31    | 24    | 0.05   |
+| Maxtor    | 6B200M0            | 200 GB | 9       | 33    | 24    | 0.05   |
 | Maxtor    | 6L080L0            | 82 GB  | 8       | 21    | 13    | 0.04   |
 | Maxtor    | 6L200M0            | 200 GB | 14      | 24    | 106   | 0.04   |
 | Maxtor    | 6L300R0            | 304 GB | 8       | 16    | 3     | 0.04   |
+| Maxtor    | 6L160M0            | 160 GB | 15      | 27    | 145   | 0.03   |
 | Maxtor    | 6L250S0            | 250 GB | 6       | 28    | 15    | 0.03   |
-| Maxtor    | 6L160M0            | 160 GB | 15      | 26    | 145   | 0.03   |
 | Maxtor    | 6L160P0            | 160 GB | 8       | 21    | 4     | 0.03   |
 | Maxtor    | 6B300S0            | 304 GB | 3       | 12    | 2     | 0.03   |
 | Maxtor    | 6L300S0            | 304 GB | 13      | 25    | 151   | 0.03   |
@@ -130,15 +130,15 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | DiamondMax 11          | 1      | 2       | 1037  | 0     | 2.84   |
 | Maxtor    | DiamondMax Plus D740X  | 2      | 7       | 1238  | 4     | 1.58   |
 | Maxtor    | MaXLine III (SATA/300) | 2      | 7       | 1014  | 137   | 1.49   |
-| Maxtor    | DiamondMax 10 (SATA... | 6      | 70      | 731   | 33    | 1.34   |
-| Maxtor    | DiamondMax 21          | 16     | 403     | 830   | 414   | 1.06   |
+| Maxtor    | DiamondMax 10 (SATA... | 6      | 70      | 732   | 33    | 1.34   |
+| Maxtor    | DiamondMax 21          | 16     | 403     | 833   | 414   | 1.07   |
 | Maxtor    | DiamondMax 17          | 2      | 16      | 431   | 146   | 0.69   |
 | Maxtor    | DiamondMax 20          | 6      | 38      | 616   | 605   | 0.53   |
 | Maxtor    | Fireball 3             | 5      | 17      | 167   | 31    | 0.19   |
 | Maxtor    | DiamondMax 22          | 3      | 64      | 722   | 337   | 0.08   |
 | Maxtor    | DiamondMax Plus 8      | 2      | 26      | 89    | 20    | 0.07   |
 | Maxtor    | DiamondMax D540X-4K    | 1      | 2       | 249   | 19    | 0.06   |
-| Maxtor    | DiamondMax 10 (ATA/... | 20     | 124     | 24    | 98    | 0.04   |
+| Maxtor    | DiamondMax 10 (ATA/... | 20     | 124     | 25    | 98    | 0.04   |
 | Maxtor    | MaXLine Plus II        | 1      | 5       | 24    | 26    | 0.02   |
 | Maxtor    | DiamondMax Plus 9      | 10     | 128     | 22    | 149   | 0.01   |
 | Maxtor    | MaXLine III (ATA/13... | 3      | 9       | 12    | 29    | 0.01   |

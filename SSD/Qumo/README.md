@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Qumo      | SSD                | 240 GB | 3       | 246   | 0     | 0.68   |
+| Qumo      | SSD                | 240 GB | 3       | 321   | 0     | 0.88   |
 | Qumo      | SSD                | 120 GB | 4       | 175   | 255   | 0.08   |

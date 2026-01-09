@@ -19,12 +19,12 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Timetec   | MS21               | 1 TB   | 2       | 313   | 0     | 0.86   |
 | Timetec   | SD08               | 512 GB | 4       | 228   | 12    | 0.60   |
-| Timetec   | 30TT253X2-512G     | 512 GB | 3       | 193   | 0     | 0.53   |
+| Timetec   | 30TT253X2-512G     | 512 GB | 3       | 195   | 0     | 0.54   |
 | Timetec   | SD09               | 1 TB   | 2       | 175   | 0     | 0.48   |
-| Timetec   | MS05               | 256 GB | 6       | 124   | 1     | 0.34   |
+| Timetec   | MS05               | 256 GB | 6       | 142   | 1     | 0.39   |
 | Timetec   | 30TT253X2-1T       | 1 TB   | 2       | 119   | 0     | 0.33   |
 | Timetec   | 35TTM8SSATA-512G   | 512 GB | 4       | 116   | 0     | 0.32   |
-| Timetec   | 30TT253X2-256G     | 256 GB | 2       | 70    | 0     | 0.19   |
+| Timetec   | 30TT253X2-256G     | 256 GB | 2       | 73    | 0     | 0.20   |
 | Timetec   | 35TTM8SSATA-256G   | 256 GB | 4       | 54    | 0     | 0.15   |
 | Timetec   | MS07               | 1 TB   | 2       | 42    | 0     | 0.12   |
 | Timetec   | SD07               | 256 GB | 2       | 20    | 0     | 0.06   |

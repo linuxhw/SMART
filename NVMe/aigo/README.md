@@ -18,5 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | aigo      | NVMe SSD P2000     | 256 GB | 2       | 366   | 0     | 1.00   |
-| aigo      | NVMe SSD P7000Z    | 2 TB   | 3       | 16    | 0     | 0.05   |
+| aigo      | NVMe SSD P7000Z    | 2 TB   | 3       | 22    | 0     | 0.06   |
 | aigo      | NVMe SSD P2000     | 128 GB | 2       | 9     | 0     | 0.02   |

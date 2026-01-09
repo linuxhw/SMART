@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Timetec   | 35TTFP6PCIE-1TB    | 1 TB   | 10      | 145   | 0     | 0.40   |
-| Timetec   | MS10               | 1 TB   | 3       | 2     | 0     | 0.01   |
+| Timetec   | MS10               | 1 TB   | 3       | 18    | 0     | 0.05   |

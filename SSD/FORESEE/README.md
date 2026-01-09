@@ -17,8 +17,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| FORESEE   | 128GB SSD          | 128 GB | 48      | 176   | 0     | 0.48   |
-| FORESEE   | 64GB SSD           | 64 GB  | 12      | 85    | 0     | 0.23   |
+| FORESEE   | 128GB SSD          | 128 GB | 48      | 177   | 0     | 0.49   |
+| FORESEE   | 64GB SSD           | 64 GB  | 12      | 120   | 0     | 0.33   |
 | FORESEE   | 32GB SSD           | 32 GB  | 2       | 47    | 0     | 0.13   |
 | FORESEE   | 256GB SSD          | 256 GB | 41      | 37    | 0     | 0.10   |
 | FORESEE   | S50AF512GB         | 512 GB | 8       | 28    | 0     | 0.08   |

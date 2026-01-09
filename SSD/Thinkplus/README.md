@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Thinkplus | SSD ST800 512G     | 512 GB | 2       | 23    | 0     | 0.06   |
+| Thinkplus | SSD ST800 512G     | 512 GB | 2       | 23    | 0     | 0.07   |

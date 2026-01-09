@@ -17,11 +17,11 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Kingch... | SSD                | 1 TB   | 8       | 268   | 1     | 0.72   |
-| Kingch... | SSD                | 256 GB | 11      | 123   | 143   | 0.28   |
+| Kingch... | SSD                | 1 TB   | 8       | 300   | 1     | 0.81   |
+| Kingch... | SSD                | 128 GB | 18      | 113   | 0     | 0.31   |
+| Kingch... | SSD                | 256 GB | 11      | 131   | 143   | 0.30   |
 | Kingch... | SSD                | 64 GB  | 4       | 96    | 0     | 0.26   |
-| Kingch... | SSD                | 128 GB | 18      | 93    | 0     | 0.26   |
-| Kingch... | SSD                | 120 GB | 3       | 85    | 0     | 0.23   |
-| Kingch... | SSD                | 512 GB | 6       | 60    | 0     | 0.17   |
-| Kingch... | SSD                | 2 TB   | 6       | 61    | 2     | 0.16   |
+| Kingch... | SSD                | 120 GB | 3       | 88    | 0     | 0.24   |
+| Kingch... | SSD                | 512 GB | 6       | 84    | 0     | 0.23   |
+| Kingch... | SSD                | 2 TB   | 6       | 66    | 2     | 0.17   |
 | Kingch... | SSD                | 360 GB | 2       | 15    | 0     | 0.04   |

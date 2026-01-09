@@ -19,7 +19,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Foxline   | FLSSD128X5SE       | 128 GB | 3       | 222   | 0     | 0.61   |
 | Foxline   | FLSSD256X5SE       | 256 GB | 10      | 173   | 0     | 0.48   |
-| Foxline   | FLSSD240X5SE       | 240 GB | 5       | 78    | 0     | 0.21   |
+| Foxline   | FLSSD240X5SE       | 240 GB | 5       | 82    | 0     | 0.23   |
 | Foxline   | FLSSD256X5         | 256 GB | 7       | 62    | 0     | 0.17   |
 | Foxline   | FLSSD512X5         | 512 GB | 4       | 61    | 0     | 0.17   |
 | Foxline   | FLSSD512X5SE       | 512 GB | 3       | 15    | 0     | 0.04   |

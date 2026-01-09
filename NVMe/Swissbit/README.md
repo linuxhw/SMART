@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Swissbit  | SFPC960GM1AR4MT... | 960 GB | 3       | 153   | 0     | 0.42   |
-| Swissbit  | SFEN060GB2EC2TO... | 64 GB  | 2       | 2     | 0     | 0.01   |
+| Swissbit  | SFEN060GB2EC2TO... | 64 GB  | 2       | 41    | 0     | 0.11   |
