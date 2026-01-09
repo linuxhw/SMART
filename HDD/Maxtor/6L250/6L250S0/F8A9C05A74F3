@@ -1,5 +1,5 @@
-smartctl 7.2 2021-09-14 r5237 [x86_64-linux-5.14.21-150400.24.41-default] (SUSE RPM)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.0-150600.23.30-default] (SUSE RPM)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Maxtor DiamondMax 10 (ATA/133 and SATA/150)
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: BANC1G10
 User Capacity:    251,000,193,024 bytes [251 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Tue Jan 31 00:05:58 2023 CET
+Local Time is:    Tue Jan 14 19:04:14 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -25,9 +25,9 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x05)	Offline data collection activity
-					was aborted by an interrupting command from host.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -57,28 +57,28 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   177   170   063    -    20576
-  4 Start_Stop_Count        -O--CK   251   251   000    -    4771
+  3 Spin_Up_Time            POS--K   182   170   063    -    15246
+  4 Start_Stop_Count        -O--CK   251   251   000    -    5157
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   247   235   187    -    45037
-  9 Power_On_Minutes        -O--CK   137   137   000    -    1022h+01m
+  8 Seek_Time_Performance   POS--K   249   235   187    -    65003
+  9 Power_On_Minutes        -O--CK   133   133   000    -    51h+52m
  10 Spin_Retry_Count        PO-R-K   253   205   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   241   241   000    -    4914
+ 12 Power_Cycle_Count       -O--CK   240   240   000    -    5287
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   035   253   000    -    31
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    4448
+194 Temperature_Celsius     -O--CK   035   253   000    -    30
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    3962
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    53546
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    8
+201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    2
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    1
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   205   000    -    0
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
+0x20       GPL,SL  R/O      1  Streaming performance log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
 
@@ -265,27 +265,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     40220         -
-# 2  Short offline       Completed without error       00%     40211         -
-# 3  Extended offline    Self-test routine in progress 30%     40210         -
-# 4  Extended offline    Aborted by host               20%     40097         -
-# 5  Extended offline    Completed without error       00%     39712         -
-# 6  Extended offline    Interrupted (host reset)      10%     39688         -
-# 7  Extended offline    Aborted by host               30%     39680         -
-# 8  Extended offline    Self-test routine in progress 30%     39661         -
-# 9  Extended offline    Completed without error       00%     39646         -
-#10  Extended offline    Completed without error       00%     39642         -
-#11  Short offline       Completed without error       00%     39623         -
-#12  Short offline       Completed without error       00%     39619         -
-#13  Extended offline    Interrupted (host reset)      40%     39618         -
-#14  Short offline       Completed without error       00%     39607         -
-#15  Extended offline    Completed without error       00%     39595         -
-#16  Extended offline    Completed without error       00%     39561         -
-#17  Short offline       Completed without error       00%     39548         -
-#18  Short offline       Completed without error       00%     39529         -
-#19  Extended offline    Completed without error       00%     39524         -
-#20  Extended offline    Interrupted (host reset)      30%     39486         -
-#21  Extended offline    Self-test routine in progress 20%     39383         -
+# 1  Short offline       Completed without error       00%     41557         -
+# 2  Short offline       Completed without error       00%     41545         -
+# 3  Short offline       Completed without error       00%     41539         -
+# 4  Short offline       Completed without error       00%     41533         -
+# 5  Short offline       Completed without error       00%     41524         -
+# 6  Short offline       Completed without error       00%     41521         -
+# 7  Short offline       Completed without error       00%     41507         -
+# 8  Short offline       Completed without error       00%     41497         -
+# 9  Short offline       Completed without error       00%     41485         -
+#10  Extended offline    Aborted by host               40%     41484         -
+#11  Short offline       Completed without error       00%     41478         -
+#12  Short offline       Completed without error       00%     41462         -
+#13  Short offline       Completed without error       00%     41458         -
+#14  Short offline       Completed without error       00%     41456         -
+#15  Short offline       Completed without error       00%     41443         -
+#16  Short offline       Completed without error       00%     41436         -
+#17  Short offline       Completed without error       00%     41429         -
+#18  Short offline       Completed without error       00%     41381         -
+#19  Short offline       Completed without error       00%     41341         -
+#20  Short offline       Completed without error       00%     41280         -
+#21  Short offline       Completed without error       00%     41270         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -301,8 +301,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     --/31 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     --/30 Celsius
 Lifetime    Min/Max Temperature:     --/61 Celsius
 
 SCT Temperature History Version:     2

@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 Transport Type:   Parallel, Unknown (0x00f)
-Local Time is:    Sat Aug 19 10:00:29 2023 EDT
+Local Time is:    Fri Sep  1 23:32:29 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -29,12 +29,13 @@ Drive failure expected in less than 24 hours. SAVE ALL DATA.
 See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
+Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
-					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      ( 128)	The previous self-test completed having
+					a test element that failed and the
+					device is suspected of having handling
+					damage.
 Total time to complete Offline 
 data collection: 		(   55) seconds.
 Offline data collection
@@ -63,27 +64,27 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    12
-  3 Spin_Up_Time            POS---   252   252   025    -    2062
-  4 Start_Stop_Count        -O--CK   100   100   000    -    997
-  5 Reallocated_Sector_Ct   PO--CK   005   005   010    NOW  891
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    6
+  3 Spin_Up_Time            POS---   252   252   025    -    2250
+  4 Start_Stop_Count        -O--CK   100   100   000    -    1000
+  5 Reallocated_Sector_Ct   PO--CK   001   001   010    NOW  963
   7 Seek_Error_Rate         -OSR--   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   071   071   000    -    15145
+  9 Power_On_Hours          -O--CK   070   070   000    -    15460
  10 Spin_Retry_Count        -O--CK   100   100   051    -    1
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    653
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    656
 191 G-Sense_Error_Rate      -O--CK   002   002   000    -    999999
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    317
-194 Temperature_Celsius     -O---K   118   094   000    -    40 (Min/Max 14/51)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    81
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    320
+194 Temperature_Celsius     -O---K   121   094   000    -    39 (Min/Max 14/51)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    43
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    20
-200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    2081
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    2314
 201 Soft_Read_Error_Rate    -O--CK   252   252   000    -    0
-223 Load_Retry_Count        -O--CK   100   100   000    -    921
-225 Load_Cycle_Count        -O--CK   082   082   000    -    184742
+223 Load_Retry_Count        -O--CK   100   100   000    -    924
+225 Load_Cycle_Count        -O--CK   082   082   000    -    184771
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -230,12 +231,18 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10011         -
+# 1  Extended offline    Completed: handling damage??  00%     15174         0
+# 2  Short offline       Completed: handling damage??  00%     15174         0
+# 3  Extended offline    Completed: handling damage??  00%     15173         0
+# 4  Extended offline    Completed: handling damage??  00%     15173         0
+# 5  Extended offline    Completed: handling damage??  00%     15145         0
+# 6  Short offline       Completed: handling damage??  00%     15145         0
+# 7  Short offline       Completed without error       00%     10011         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Completed_handling_damage?? [00% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -247,8 +254,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     39/41 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     35/42 Celsius
 Lifetime    Min/Max Temperature:     15/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -257,7 +264,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (13)
+Temperature History Size (Index):    128 (61)
 
 SCT Error Recovery Control:
            Read: Disabled

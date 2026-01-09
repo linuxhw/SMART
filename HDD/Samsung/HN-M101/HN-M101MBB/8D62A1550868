@@ -14,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Aug  4 21:28:09 2024 CEST
+Local Time is:    Sun Jul 13 15:58:41 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -63,28 +63,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    134
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    219
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   089   089   025    -    3469
-  4 Start_Stop_Count        -O--CK   077   077   000    -    23634
+  3 Spin_Up_Time            PO---K   089   089   025    -    3452
+  4 Start_Stop_Count        -O--CK   076   076   000    -    24475
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    12904
+  9 Power_On_Hours          -O--CK   100   100   000    -    14706
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   096   096   000    -    4097
- 12 Power_Cycle_Count       -O--CK   087   087   000    -    13937
-191 G-Sense_Error_Rate      -O---K   096   096   000    -    47206
+ 12 Power_Cycle_Count       -O--CK   086   086   000    -    14699
+191 G-Sense_Error_Rate      -O---K   096   096   000    -    48043
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   051   000    -    36 (Min/Max 13/50)
+194 Temperature_Celsius     -O----   064   051   000    -    31 (Min/Max 13/50)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   100   100   000    -    1
-198 Offline_Uncorrectable   ----CK   252   252   000    -    0
+197 Current_Pending_Sector  -O--CK   252   100   000    -    0
+198 Offline_Uncorrectable   ----CK   252   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    222
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1777
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1779
 223 Load_Retry_Count        -O--CK   096   096   000    -    4097
-225 Load_Cycle_Count        -O--CK   085   085   000    -    154679
+225 Load_Cycle_Count        -O--CK   085   085   000    -    158208
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 255 (device log contains only the most recent 8 errors)
+Device Error Count: 281 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,8 +126,8 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 255 [6] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 281 [0] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -137,31 +137,14 @@ Error 255 [6] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:01.031  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.031  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:01.031  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:01.031  IDENTIFY DEVICE
+  60 00 90 00 08 00 00 4f e5 3e 00 40 08     00:00:15.296  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.378  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     00:00:15.378  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:15.378  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:15.378  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 254 [5] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:01.026  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.026  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:01.026  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:01.026  IDENTIFY DEVICE
-
-Error 253 [4] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 280 [7] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -171,31 +154,14 @@ Error 253 [4] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:01.022  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.022  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:01.022  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:01.022  IDENTIFY DEVICE
+  60 00 90 00 08 00 00 4f e5 3e 00 40 08     00:00:15.291  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.374  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     00:00:15.374  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:15.374  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:15.374  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 252 [3] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:01.017  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.017  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:01.017  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:01.017  IDENTIFY DEVICE
-
-Error 251 [2] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 279 [6] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -205,31 +171,14 @@ Error 251 [2] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:01.012  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3d f8 40 08     00:00:01.012  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3d f0 40 08     00:00:01.012  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3d e8 40 08     00:00:01.012  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.287  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.369  READ FPDMA QUEUED
+  61 00 10 00 08 00 00 68 31 f7 80 40 08     00:00:15.335  WRITE FPDMA QUEUED
+  61 00 10 00 08 00 00 68 31 eb e8 40 08     00:00:15.335  WRITE FPDMA QUEUED
+  61 00 10 00 08 00 00 68 31 ce b0 40 08     00:00:15.335  WRITE FPDMA QUEUED
 
-Error 250 [1] occurred at disk power-on lifetime: 12338 hours (514 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 e0 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 4f e5 3d e0 40 08     00:00:01.007  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 4f e5 3d e0 40 08     00:00:01.008  READ FPDMA QUEUED
-  60 00 00 00 48 00 00 4f e5 3d 98 40 08     00:00:01.008  READ FPDMA QUEUED
-  60 00 00 00 80 00 00 4f e4 ec e8 40 08     00:00:01.008  READ FPDMA QUEUED
-  60 00 00 00 48 00 00 4f 7a 98 50 40 08     00:00:01.008  READ FPDMA QUEUED
-
-Error 249 [0] occurred at disk power-on lifetime: 11924 hours (496 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 278 [5] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -239,14 +188,14 @@ Error 249 [0] occurred at disk power-on lifetime: 11924 hours (496 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:04.060  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:04.115  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f 7a 98 90 40 08     00:00:04.115  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f 7a 98 88 40 08     00:00:04.115  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f 7a 98 80 40 08     00:00:04.115  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 4f e5 3e 00 40 08     00:00:15.262  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.315  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     00:00:15.315  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:15.315  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:15.315  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 248 [7] occurred at disk power-on lifetime: 11924 hours (496 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 277 [4] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -256,11 +205,62 @@ Error 248 [7] occurred at disk power-on lifetime: 11924 hours (496 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 4f e5 3e 00 40 08     00:00:04.060  READ FPDMA QUEUED
-  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:04.111  READ FPDMA QUEUED
-  61 00 00 00 08 00 00 51 ad d5 c8 40 08     00:00:04.111  WRITE FPDMA QUEUED
-  61 00 10 00 08 00 00 00 60 90 68 40 08     00:00:04.111  WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:04.111  SET FEATURES [Enable SATA feature]
+  60 00 da 00 08 00 00 4f e5 3e 00 40 08     00:00:15.262  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.311  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     00:00:15.311  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:15.311  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:15.311  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 276 [3] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 da 00 08 00 00 4f e5 3e 00 40 08     00:00:15.262  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.306  READ FPDMA QUEUED
+  61 00 da 00 08 00 00 00 60 12 b8 40 08     00:00:15.296  WRITE FPDMA QUEUED
+  61 00 da 00 08 00 00 68 31 eb e8 40 08     00:00:15.296  WRITE FPDMA QUEUED
+  61 00 10 00 08 00 00 68 31 ce b0 40 08     00:00:15.296  WRITE FPDMA QUEUED
+
+Error 275 [2] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 da 00 08 00 00 4f e5 3e 00 40 08     00:00:15.262  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.291  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     00:00:15.291  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:15.291  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:15.291  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 274 [1] occurred at disk power-on lifetime: 13982 hours (582 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 4f e5 3e 00 40 00  Error: UNC at LBA = 0x4fe53e00 = 1340423680
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 da 00 08 00 00 4f e5 3e 00 40 08     00:00:15.262  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3e 00 40 08     00:00:15.287  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3f f8 40 08     00:00:15.287  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3f f0 40 08     00:00:15.287  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 4f e5 3f e8 40 08     00:00:15.287  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -280,8 +280,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     29/36 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     30/33 Celsius
 Lifetime    Min/Max Temperature:     13/63 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -291,7 +291,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (32)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -311,8 +311,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

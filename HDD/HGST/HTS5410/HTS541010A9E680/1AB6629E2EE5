@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.27-generic-3rosa2021.1-x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.13-generic-4rosa13-x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 14 22:40:50 2024 CEST
+Local Time is:    Sat Mar  8 23:00:29 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,22 +65,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   198   198   040    -    127
-  3 Spin_Up_Time            POS---   252   252   033    -    0
-  4 Start_Stop_Count        -O--C-   056   056   000    -    69992
+  3 Spin_Up_Time            POS---   253   253   033    -    1
+  4 Start_Stop_Count        -O--C-   050   050   000    -    79130
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   112   112   040    -    35
-  9 Power_On_Hours          -O--C-   072   072   000    -    12271
+  9 Power_On_Hours          -O--C-   070   070   000    -    13412
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    10852
-191 G-Sense_Error_Rate      -O-R--   100   100   000    -    65536
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    365
-193 Load_Cycle_Count        -O--C-   068   068   000    -    328470
-194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 12/46)
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    11963
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    1
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    469
+193 Load_Cycle_Count        -O--C-   064   064   000    -    369946
+194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 12/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    1
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -106,29 +106,60 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 13110 hours (546 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 11 00 00 23 8e 70 ff 03 00  Error: ICRC, ABRT at LBA = 0x238e70ff = 596537599
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 40 00 d0 00 00 23 8e 70 d0 40 00     00:05:41.906  READ FPDMA QUEUED
+  61 00 18 00 c8 00 00 01 ee b2 e8 40 00     00:05:41.906  WRITE FPDMA QUEUED
+  61 00 08 00 c0 00 00 01 ee fd 48 40 00     00:05:41.906  WRITE FPDMA QUEUED
+  60 00 40 00 b8 00 00 23 8e 6f 68 40 00     00:05:41.904  READ FPDMA QUEUED
+  60 00 40 00 b0 00 00 23 8e 6d b8 40 00     00:05:41.902  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     11373         -
-# 2  Short offline       Completed without error       00%     11198         -
-# 3  Short offline       Completed without error       00%     11194         -
-# 4  Short offline       Completed without error       00%     11010         -
-# 5  Short offline       Completed without error       00%     11005         -
-# 6  Short offline       Completed without error       00%     11001         -
-# 7  Short offline       Completed without error       00%     10995         -
-# 8  Short offline       Completed without error       00%     10803         -
-# 9  Short offline       Completed without error       00%     10435         -
-#10  Short offline       Completed without error       00%     10433         -
-#11  Short offline       Completed without error       00%     10360         -
-#12  Short offline       Aborted by host               30%     10358         -
-#13  Short offline       Completed without error       00%     10355         -
-#14  Short offline       Completed without error       00%     10298         -
-#15  Short offline       Aborted by host               60%     10294         -
-#16  Short offline       Completed without error       00%     10269         -
-#17  Short offline       Completed without error       00%     10180         -
-#18  Short offline       Completed without error       00%     10165         -
-#19  Short offline       Aborted by host               30%     10135         -
+# 1  Short offline       Completed without error       00%     12739         -
+# 2  Short offline       Completed without error       00%     12573         -
+# 3  Short offline       Completed without error       00%     11373         -
+# 4  Short offline       Completed without error       00%     11198         -
+# 5  Short offline       Completed without error       00%     11194         -
+# 6  Short offline       Completed without error       00%     11010         -
+# 7  Short offline       Completed without error       00%     11005         -
+# 8  Short offline       Completed without error       00%     11001         -
+# 9  Short offline       Completed without error       00%     10995         -
+#10  Short offline       Completed without error       00%     10803         -
+#11  Short offline       Completed without error       00%     10435         -
+#12  Short offline       Completed without error       00%     10433         -
+#13  Short offline       Completed without error       00%     10360         -
+#14  Short offline       Aborted by host               30%     10358         -
+#15  Short offline       Completed without error       00%     10355         -
+#16  Short offline       Completed without error       00%     10298         -
+#17  Short offline       Aborted by host               60%     10294         -
+#18  Short offline       Completed without error       00%     10269         -
+#19  Short offline       Completed without error       00%     10180         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,8 +175,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     30/36 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     22/37 Celsius
 Lifetime    Min/Max Temperature:     12/46 Celsius
 Specified Max Operating Temperature:    30 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -155,7 +186,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (33)
+Temperature History Size (Index):    128 (7)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -174,8 +205,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2        63766  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

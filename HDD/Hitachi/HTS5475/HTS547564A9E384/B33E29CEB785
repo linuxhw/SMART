@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jun 11 22:54:17 2025 BST
+Local Time is:    Thu Jul 17 05:22:48 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,20 +68,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   197   197   040    -    150
-  3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   096   096   000    -    6591
-  5 Reallocated_Sector_Ct   PO--CK   001   001   005    NOW  1024
+  3 Spin_Up_Time            POS---   250   250   033    -    1
+  4 Start_Stop_Count        -O--C-   096   096   000    -    7030
+  5 Reallocated_Sector_Ct   PO--CK   001   001   005    NOW  1372
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   115   115   040    -    34
-  9 Power_On_Hours          -O--C-   093   093   000    -    3240
+  8 Seek_Time_Performance   P-S---   102   102   040    -    39
+  9 Power_On_Hours          -O--C-   092   092   000    -    3765
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    2587
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2726
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    341
-193 Load_Cycle_Count        -O--C-   095   095   000    -    59372
-194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 13/49)
-196 Reallocated_Event_Count -O--CK   056   056   000    -    1201
-197 Current_Pending_Sector  -O---K   001   001   000    -    11928
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    409
+193 Load_Cycle_Count        -O--C-   093   093   000    -    70116
+194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 13/49)
+196 Reallocated_Event_Count -O--CK   040   040   000    -    1551
+197 Current_Pending_Sector  -O---K   001   001   000    -    9136
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 3300 (device log contains only the most recent five errors)
+ATA Error Count: 3412 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -124,90 +124,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 3300 occurred at disk power-on lifetime: 3190 hours (132 days + 22 hours)
+Error 3412 occurred at disk power-on lifetime: 3604 hours (150 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 70 38 30 0b  Error: UNC 8 sectors at LBA = 0x0b303870 = 187709552
+  40 51 28 68 24 2d 0c  Error: UNC 40 sectors at LBA = 0x0c2d2468 = 204285032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 70 38 30 e0 00      23:06:53.883  READ DMA EXT
-  25 00 08 68 38 30 e0 00      23:06:53.883  READ DMA EXT
-  25 00 08 60 38 30 e0 00      23:06:53.883  READ DMA EXT
-  25 00 08 58 38 30 e0 00      23:06:53.882  READ DMA EXT
-  25 00 08 50 38 30 e0 00      23:06:53.882  READ DMA EXT
+  25 00 80 10 24 2d e0 00   1d+00:12:26.420  READ DMA EXT
+  25 00 35 e8 7f 6d e0 00   1d+00:12:26.386  READ DMA EXT
+  ef 03 46 00 00 00 a0 00   1d+00:12:26.385  SET FEATURES [Set transfer mode]
+  25 00 28 68 24 2d 0c 04   1d+00:12:26.354  READ DMA EXT
+  25 00 80 10 24 2d e0 00   1d+00:12:23.147  READ DMA EXT
 
-Error 3299 occurred at disk power-on lifetime: 3190 hours (132 days + 22 hours)
+Error 3411 occurred at disk power-on lifetime: 3604 hours (150 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 18 70 38 30 0b  Error: UNC 24 sectors at LBA = 0x0b303870 = 187709552
+  40 51 28 68 24 2d 0c  Error: UNC 40 sectors at LBA = 0x0c2d2468 = 204285032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 08 38 30 e0 00      23:06:50.602  READ DMA EXT
-  25 00 80 88 37 30 e0 00      23:06:50.591  READ DMA EXT
-  25 00 80 08 37 30 e0 00      23:06:50.589  READ DMA EXT
-  25 00 80 88 36 30 e0 00      23:06:50.587  READ DMA EXT
-  25 00 80 08 36 30 e0 00      23:06:50.586  READ DMA EXT
+  25 00 80 10 24 2d e0 00   1d+00:12:23.147  READ DMA EXT
+  25 00 3b a8 7f 6d e0 00   1d+00:12:23.123  READ DMA EXT
+  25 00 2c 78 7f 6d e0 00   1d+00:12:23.094  READ DMA EXT
+  25 00 2d 48 7f 6d e0 00   1d+00:12:23.055  READ DMA EXT
+  25 00 3b 08 7f 6d e0 00   1d+00:12:23.025  READ DMA EXT
 
-Error 3298 occurred at disk power-on lifetime: 3190 hours (132 days + 22 hours)
+Error 3410 occurred at disk power-on lifetime: 3604 hours (150 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 18 70 38 30 0b  Error: UNC 24 sectors at LBA = 0x0b303870 = 187709552
+  40 51 28 68 24 2d 0c  Error: UNC 40 sectors at LBA = 0x0c2d2468 = 204285032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 18 70 38 30 e0 00      23:00:21.173  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:21.165  SET FEATURES [Set transfer mode]
-  25 00 08 70 38 30 0b 04      23:00:21.139  READ DMA EXT
-  25 00 08 70 38 30 e0 00      23:00:17.956  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:17.949  SET FEATURES [Set transfer mode]
+  25 00 80 10 24 2d e0 00   1d+00:09:48.424  READ DMA EXT
+  35 00 08 f8 a8 8f e0 00   1d+00:09:48.401  WRITE DMA EXT
+  ef 03 46 00 00 00 a0 00   1d+00:09:48.400  SET FEATURES [Set transfer mode]
+  25 00 28 68 24 2d 0c 04   1d+00:09:48.374  READ DMA EXT
+  25 00 80 10 24 2d e0 00   1d+00:09:45.197  READ DMA EXT
 
-Error 3297 occurred at disk power-on lifetime: 3190 hours (132 days + 22 hours)
+Error 3409 occurred at disk power-on lifetime: 3604 hours (150 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 70 38 30 0b  Error: UNC 8 sectors at LBA = 0x0b303870 = 187709552
+  40 51 28 68 24 2d 0c  Error: UNC 40 sectors at LBA = 0x0c2d2468 = 204285032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 70 38 30 e0 00      23:00:17.956  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:17.949  SET FEATURES [Set transfer mode]
-  25 00 08 70 38 30 0b 04      23:00:17.923  READ DMA EXT
-  25 00 08 70 38 30 e0 00      23:00:14.746  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:14.745  SET FEATURES [Set transfer mode]
+  25 00 80 10 24 2d e0 00   1d+00:09:45.197  READ DMA EXT
+  35 00 08 f8 33 a5 e0 00   1d+00:09:45.187  WRITE DMA EXT
+  35 00 08 18 89 a4 e0 00   1d+00:09:45.183  WRITE DMA EXT
+  35 00 08 18 87 a4 e0 00   1d+00:09:45.177  WRITE DMA EXT
+  35 00 08 f8 95 a3 e0 00   1d+00:09:45.167  WRITE DMA EXT
 
-Error 3296 occurred at disk power-on lifetime: 3190 hours (132 days + 22 hours)
+Error 3408 occurred at disk power-on lifetime: 3540 hours (147 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 70 38 30 0b  Error: UNC 8 sectors at LBA = 0x0b303870 = 187709552
+  40 51 2d 20 ec 2b 0c  Error: UNC 45 sectors at LBA = 0x0c2bec20 = 204205088
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 70 38 30 e0 00      23:00:14.746  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:14.745  SET FEATURES [Set transfer mode]
-  25 00 18 70 38 30 0b 04      23:00:14.719  READ DMA EXT
-  25 00 18 70 38 30 e0 00      23:00:11.538  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      23:00:11.529  SET FEATURES [Set transfer mode]
+  25 00 80 cd eb 2b e0 00      21:19:39.772  READ DMA EXT
+  25 00 08 60 9d 2f e0 00      21:19:39.757  READ DMA EXT
+  35 00 08 98 76 8b e0 00      21:19:39.740  WRITE DMA EXT
+  25 00 01 4d ec 2b e0 00      21:19:39.715  READ DMA EXT
+  25 00 08 f8 9c 2f e0 00      21:19:39.703  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -229,10 +229,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     29/32 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     22/35 Celsius
 Lifetime    Min/Max Temperature:     13/49 Celsius
-Specified Max Operating Temperature:    33 Celsius
+Specified Max Operating Temperature:    32 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -240,7 +240,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (96)
 
 Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed

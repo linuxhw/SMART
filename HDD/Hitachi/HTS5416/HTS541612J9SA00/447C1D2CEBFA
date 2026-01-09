@@ -11,7 +11,7 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Thu Mar 13 10:49:13 2025 GMT
+Local Time is:    Tue Mar 25 20:58:29 2025 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -57,23 +57,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   106   106   040    -    4534
+  2 Throughput_Performance  P-S---   106   106   040    -    4535
   3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   098   098   000    -    4622
+  4 Start_Stop_Count        -O--C-   098   098   000    -    4674
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   122   122   040    -    39
-  9 Power_On_Hours          -O--C-   091   091   000    -    4054
+  9 Power_On_Hours          -O--C-   091   091   000    -    4071
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    3703
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3754
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    145424433
-193 Load_Cycle_Count        -O--C-   085   085   000    -    159147
-194 Temperature_Celsius     -O----   166   166   000    -    33 (Min/Max 10/86)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    145424458
+193 Load_Cycle_Count        -O--C-   084   084   000    -    160486
+194 Temperature_Celsius     -O----   157   157   000    -    35 (Min/Max 10/86)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
-197 Current_Pending_Sector  -O---K   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    1
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    15
+199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    16
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -97,7 +97,105 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 31 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 31 occurred at disk power-on lifetime: 4066 hours (169 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 20 60 cf 5d e7  Error: ICRC, ABRT 32 sectors at LBA = 0x075dcf60 = 123588448
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  35 03 80 00 cf 5d e0 00      00:01:38.300  WRITE DMA EXT
+  35 03 80 80 ce 5d e0 00      00:01:38.300  WRITE DMA EXT
+  35 03 80 00 ce 5d e0 00      00:01:38.300  WRITE DMA EXT
+  35 03 80 80 cd 5d e0 00      00:01:38.300  WRITE DMA EXT
+  35 03 80 00 cd 5d e0 00      00:01:38.300  WRITE DMA EXT
+
+Error 30 occurred at disk power-on lifetime: 4058 hours (169 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7d 13 ec d4 ea  Error: UNC 125 sectors at LBA = 0x0ad4ec13 = 181726227
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 10 ec d4 e0 00      00:50:34.300  READ DMA EXT
+  25 00 40 80 f2 d4 e0 00      00:50:34.300  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:30.200  READ DMA EXT
+  25 00 40 40 f2 d4 e0 00      00:50:30.200  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:26.200  READ DMA EXT
+
+Error 29 occurred at disk power-on lifetime: 4058 hours (169 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7d 13 ec d4 ea  Error: UNC 125 sectors at LBA = 0x0ad4ec13 = 181726227
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 10 ec d4 e0 00      00:50:30.200  READ DMA EXT
+  25 00 40 40 f2 d4 e0 00      00:50:30.200  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:26.200  READ DMA EXT
+  25 00 40 00 f2 d4 e0 00      00:50:26.200  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:22.100  READ DMA EXT
+
+Error 28 occurred at disk power-on lifetime: 4058 hours (169 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7d 13 ec d4 ea  Error: UNC 125 sectors at LBA = 0x0ad4ec13 = 181726227
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 10 ec d4 e0 00      00:50:26.200  READ DMA EXT
+  25 00 40 00 f2 d4 e0 00      00:50:26.200  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:22.100  READ DMA EXT
+  25 00 08 10 ec d4 e0 00      00:50:18.100  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:14.000  READ DMA EXT
+
+Error 27 occurred at disk power-on lifetime: 4058 hours (169 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7d 13 ec d4 ea  Error: UNC 125 sectors at LBA = 0x0ad4ec13 = 181726227
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 10 ec d4 e0 00      00:50:22.100  READ DMA EXT
+  25 00 08 10 ec d4 e0 00      00:50:18.100  READ DMA EXT
+  25 00 80 10 ec d4 e0 00      00:50:14.000  READ DMA EXT
+  25 00 08 10 ec d4 e0 00      00:50:10.000  READ DMA EXT
+  25 00 80 00 ec d4 e0 00      00:50:05.900  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

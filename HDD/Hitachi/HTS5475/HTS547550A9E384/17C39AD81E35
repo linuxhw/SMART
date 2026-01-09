@@ -1,5 +1,5 @@
-smartctl 6.5 2016-01-24 r4214 [i686-linux-4.10.0-38-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-58-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi/HGST Travelstar 5K750
@@ -11,16 +11,17 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Mar 20 11:47:24 2020 GMT
+Local Time is:    Sat Jul 12 20:52:10 2025 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Write SCT (Get) Feature Control Command failed: Read of ATA output registers not implemented [JMicron]
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
@@ -66,21 +67,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   166   166   033    -    1
-  4 Start_Stop_Count        -O--C-   100   100   000    -    527
+  4 Start_Stop_Count        -O--C-   099   099   000    -    2176
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   098   098   000    -    1071
+  9 Power_On_Hours          -O--C-   080   080   000    -    8838
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    517
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2166
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    28
-193 Load_Cycle_Count        -O--C-   099   099   000    -    19094
-194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 12/40)
+192 Power-Off_Retract_Count -O--CK   094   094   000    -    1349
+193 Load_Cycle_Count        -O--C-   094   094   000    -    62711
+194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 12/40)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    285
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -106,7 +107,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 909 (device log contains only the most recent five errors)
+ATA Error Count: 1194 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -121,90 +122,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 909 occurred at disk power-on lifetime: 712 hours (29 days + 16 hours)
+Error 1194 occurred at disk power-on lifetime: 8108 hours (337 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 11 90 46 07 00  Error: IDNF 17 sectors at LBA = 0x00074690 = 476816
+  84 51 30 50 00 00 00  Error: ICRC, ABRT 48 sectors at LBA = 0x00000050 = 80
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 1e 83 46 07 e0 00      00:09:28.521  READ DMA EXT
-  e1 00 00 00 00 00 a0 00      00:09:28.453  IDLE IMMEDIATE
-  25 00 01 82 46 07 e0 00      00:09:18.237  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      00:09:18.235  SET FEATURES [Set transfer mode]
-  25 00 01 81 46 07 00 04      00:09:18.214  READ DMA EXT
+  25 00 3f 41 00 00 e0 00      00:00:33.043  READ DMA EXT
+  ef 03 46 00 00 00 a0 00      00:00:33.034  SET FEATURES [Set transfer mode]
+  25 00 20 60 00 00 00 04      00:00:33.013  READ DMA EXT
+  25 00 3f 41 00 00 e0 00      00:00:32.997  READ DMA EXT
+  25 00 01 40 00 00 e0 00      00:00:32.994  READ DMA EXT
 
-Error 908 occurred at disk power-on lifetime: 712 hours (29 days + 16 hours)
+Error 1193 occurred at disk power-on lifetime: 8108 hours (337 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 01 81 46 07 00  Error: IDNF 1 sectors at LBA = 0x00074681 = 476801
+  84 51 20 60 00 00 00  Error: ICRC, ABRT 32 sectors at LBA = 0x00000060 = 96
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 01 81 46 07 e0 00      00:09:03.190  READ DMA EXT
-  25 00 01 5f 00 00 e0 00      00:08:56.714  READ DMA EXT
-  e1 00 00 00 00 00 a0 00      00:08:56.122  IDLE IMMEDIATE
-  25 00 01 40 00 00 e0 00      00:08:49.252  READ DMA EXT
-  25 00 01 3f 00 00 e0 00      00:08:47.327  READ DMA EXT
+  25 00 3f 41 00 00 e0 00      00:00:32.997  READ DMA EXT
+  25 00 01 40 00 00 e0 00      00:00:32.994  READ DMA EXT
+  25 00 01 3f 00 00 e0 00      00:00:32.985  READ DMA EXT
+  ef 03 00 00 00 00 00 04      00:00:32.865  SET FEATURES [Set transfer mode]
+  ef 03 46 00 00 00 a0 00      00:00:32.756  SET FEATURES [Set transfer mode]
 
-Error 907 occurred at disk power-on lifetime: 407 hours (16 days + 23 hours)
+Error 1192 occurred at disk power-on lifetime: 8108 hours (337 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 07 40 00 00 00  Error: IDNF 7 sectors at LBA = 0x00000040 = 64
+  84 51 30 10 00 00 00  Error: ICRC, ABRT 48 sectors at LBA = 0x00000010 = 16
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 3f 00 00 e0 00      00:00:50.271  READ DMA EXT
-  25 00 08 df 47 38 e0 00      00:00:50.226  READ DMA EXT
-  25 00 08 3f 47 38 e0 00      00:00:49.779  READ DMA EXT
-  ef 03 46 00 00 00 a0 00      00:00:49.770  SET FEATURES [Set transfer mode]
-  25 00 08 38 00 00 00 04      00:00:49.749  READ DMA EXT
+  25 00 3f 01 00 00 e0 00      00:00:32.721  READ DMA EXT
+  ef 03 46 00 00 00 a0 00      00:00:32.712  SET FEATURES [Set transfer mode]
+  25 00 20 20 00 00 00 04      00:00:32.691  READ DMA EXT
+  25 00 3f 01 00 00 e0 00      00:00:32.675  READ DMA EXT
+  25 00 01 00 00 00 e0 00      00:00:32.661  READ DMA EXT
 
-Error 906 occurred at disk power-on lifetime: 407 hours (16 days + 23 hours)
+Error 1191 occurred at disk power-on lifetime: 8108 hours (337 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 08 38 00 00 00  Error: IDNF 8 sectors at LBA = 0x00000038 = 56
+  84 51 20 20 00 00 00  Error: ICRC, ABRT 32 sectors at LBA = 0x00000020 = 32
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 38 00 00 e0 00      00:00:35.679  READ DMA EXT
-  e1 00 00 00 00 00 a0 00      00:00:35.083  IDLE IMMEDIATE
-  25 00 08 18 00 00 e0 00      00:00:27.954  READ DMA EXT
-  e1 00 00 00 00 00 a0 00      00:00:27.346  IDLE IMMEDIATE
-  25 00 08 00 08 00 e0 00      00:00:20.753  READ DMA EXT
+  25 00 3f 01 00 00 e0 00      00:00:32.675  READ DMA EXT
+  25 00 01 00 00 00 e0 00      00:00:32.661  READ DMA EXT
+  25 00 01 81 46 07 e0 00      00:00:32.648  READ DMA EXT
+  ef 03 00 00 00 00 00 04      00:00:32.528  SET FEATURES [Set transfer mode]
+  ef 03 46 00 00 00 a0 00      00:00:32.419  SET FEATURES [Set transfer mode]
 
-Error 905 occurred at disk power-on lifetime: 407 hours (16 days + 23 hours)
+Error 1190 occurred at disk power-on lifetime: 8108 hours (337 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 08 08 00 00 00  Error: IDNF 8 sectors at LBA = 0x00000008 = 8
+  84 51 30 90 46 07 00  Error: ICRC, ABRT 48 sectors at LBA = 0x00074690 = 476816
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 08 00 00 e0 00      00:00:07.310  READ DMA EXT
-  25 00 08 00 00 00 e0 00      00:00:07.304  READ DMA EXT
-  25 00 08 20 60 38 e0 00      00:00:07.292  READ DMA EXT
-  25 00 08 80 5f 38 e0 00      00:00:07.161  READ DMA EXT
-  25 00 08 00 00 00 e0 00      00:00:02.289  READ DMA EXT
+  25 00 3f 81 46 07 e0 00      00:00:32.384  READ DMA EXT
+  ef 03 46 00 00 00 a0 00      00:00:32.375  SET FEATURES [Set transfer mode]
+  25 00 30 90 46 07 00 04      00:00:32.355  READ DMA EXT
+  25 00 3f 81 46 07 e0 00      00:00:32.346  READ DMA EXT
+  25 00 01 80 46 07 e0 00      00:00:32.343  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -224,12 +225,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     18/28 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     22/31 Celsius
 Lifetime    Min/Max Temperature:     12/40 Celsius
-Lifetime    Average Temperature:        27 Celsius
+Specified Max Operating Temperature:    28 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -237,12 +237,14 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (111)
+Temperature History Size (Index):    128 (97)
 
 Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
 Read SATA Phy Event Counters failed

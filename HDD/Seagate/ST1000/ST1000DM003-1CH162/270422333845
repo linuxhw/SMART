@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.0-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.1-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,11 +14,11 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 14 03:52:46 2024 BST
+Local Time is:    Fri Mar 14 02:40:07 2025 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,20 +29,20 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
-					Auto Offline Data Collection: Enabled.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(  584) seconds.
 Offline data collection
-capabilities: 			 (0x7b) SMART execute Offline immediate.
+capabilities: 			 (0x73) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -62,30 +62,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   099   006    -    107065408
+  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    187682544
   3 Spin_Up_Time            PO----   097   095   000    -    0
-  4 Start_Stop_Count        -O--CK   090   090   020    -    10293
+  4 Start_Stop_Count        -O--CK   089   089   020    -    11878
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    8882225850
-  9 Power_On_Hours          -O--CK   087   087   000    -    11880
+  7 Seek_Error_Rate         POSR--   081   060   030    -    8884582060
+  9 Power_On_Hours          -O--CK   085   085   000    -    13450
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   084   084   020    -    17298
+ 12 Power_Cycle_Count       -O--CK   083   083   020    -    18411
 183 Runtime_Bad_Block       -O--CK   098   098   000    -    2
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   049   049   000    -    51
 188 Command_Timeout         -O--CK   100   099   000    -    0 0 35
-189 High_Fly_Writes         -O-RCK   081   081   000    -    19
-190 Airflow_Temperature_Cel -O---K   067   054   045    -    33 (Min/Max 23/33)
+189 High_Fly_Writes         -O-RCK   080   080   000    -    20
+190 Airflow_Temperature_Cel -O---K   069   054   045    -    31 (Min/Max 23/31)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    5507
-193 Load_Cycle_Count        -O--CK   071   071   000    -    58785
-194 Temperature_Celsius     -O---K   033   046   000    -    33 (0 15 0 0 0)
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    6080
+193 Load_Cycle_Count        -O--CK   068   068   000    -    65605
+194 Temperature_Celsius     -O---K   031   046   000    -    31 (0 15 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    86
-240 Head_Flying_Hours       ------   100   253   000    -    16814h+42m+56.275s
-241 Total_LBAs_Written      ------   100   253   000    -    61747019166
-242 Total_LBAs_Read         ------   100   253   000    -    130356276420
+240 Head_Flying_Hours       ------   100   253   000    -    18158h+42m+08.935s
+241 Total_LBAs_Written      ------   100   253   000    -    65190527539
+242 Total_LBAs_Read         ------   100   253   000    -    142657295982
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -310,8 +310,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     23/33 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     23/27 Celsius
 Lifetime    Min/Max Temperature:     15/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -325,7 +325,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           27  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -13,7 +13,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Aug 19 00:13:51 2023 PDT
+Local Time is:    Sun Aug 20 12:50:25 2023 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -70,7 +70,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    285
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    4876
+  9 Power_On_Hours          -O--CK   094   094   000    -    4913
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count PO--CK   100   100   051    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    283
@@ -79,10 +79,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   096   000    -    9
-190 Airflow_Temperature_Cel -O---K   070   045   045    Past 30
+190 Airflow_Temperature_Cel -O---K   069   045   045    Past 31
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    151
 193 Load_Cycle_Count        -O--CK   200   200   000    -    134
-194 Temperature_Celsius     -O---K   120   095   000    -    30
+194 Temperature_Celsius     -O---K   119   095   000    -    31
 196 Reallocated_Event_Count PO--CK   200   200   140    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
-0xb6       GPL     VS     611  Device vendor specific log
+0xb6       GPL     VS     615  Device vendor specific log
 0xb6       SL      VS       1  Device vendor specific log
 0xb7       GPL,SL  VS       1  Device vendor specific log
 0xbd       GPL,SL  VS       1  Device vendor specific log
@@ -276,12 +276,14 @@ Error 40853 [12] occurred at disk power-on lifetime: 4737 hours (197 days + 9 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%      4753         -
-# 2  Short offline       Completed without error       00%      4753         -
-# 3  Short offline       Completed without error       00%      3030         -
-# 4  Short offline       Completed without error       00%      3030         -
-# 5  Short offline       Completed without error       00%      1316         -
-# 6  Short offline       Completed without error       00%      1316         -
+# 1  Extended offline    Completed without error       00%      4893         -
+# 2  Short offline       Completed without error       00%      4889         -
+# 3  Conveyance offline  Completed without error       00%      4753         -
+# 4  Short offline       Completed without error       00%      4753         -
+# 5  Short offline       Completed without error       00%      3030         -
+# 6  Short offline       Completed without error       00%      3030         -
+# 7  Short offline       Completed without error       00%      1316         -
+# 8  Short offline       Completed without error       00%      1316         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,8 +299,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     26/31 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     26/35 Celsius
 Lifetime    Min/Max Temperature:     12/55 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -311,7 +313,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (221)
+Temperature History Size (Index):    478 (25)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -321,14 +323,14 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             283  ---  Lifetime Power-On Resets
-0x01  0x010  4            4876  ---  Power-on Hours
-0x01  0x018  6  29700930367245  ---  Logical Sectors Written
-0x01  0x020  6        84460722  ---  Number of Write Commands
-0x01  0x028  6     64962446564  ---  Logical Sectors Read
-0x01  0x030  6       163034445  ---  Number of Read Commands
+0x01  0x010  4            4913  ---  Power-on Hours
+0x01  0x018  6  29700930797237  ---  Logical Sectors Written
+0x01  0x020  6        84483024  ---  Number of Write Commands
+0x01  0x028  6     64971668739  ---  Logical Sectors Read
+0x01  0x030  6       163056355  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4789  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4787  ---  Head Flying Hours
+0x03  0x008  4            4825  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            4823  ---  Head Flying Hours
 0x03  0x018  4             286  ---  Head Load Events
 0x03  0x020  4             200  N--  Number of Reallocated Logical Sectors
 0x03  0x028  4              16  ---  Read Recovery Attempts
@@ -337,8 +339,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               9  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              29  ---  Average Short Term Temperature
+0x05  0x008  1              31  ---  Current Temperature
+0x05  0x010  1              31  ---  Average Short Term Temperature
 0x05  0x018  1              36  ---  Average Long Term Temperature
 0x05  0x020  1              55  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
@@ -375,7 +377,7 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        88922  Vendor specific
+0x8000  4       220587  Vendor specific
 
 
 

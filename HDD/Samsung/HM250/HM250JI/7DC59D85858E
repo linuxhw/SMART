@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Sat Aug 30 16:30:36 2025 -03
+Local Time is:    Wed Sep 24 14:20:51 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -20,11 +20,14 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Write SCT (Get) Feature Control Command failed: scsi error medium or hardware error (serious)
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
@@ -60,27 +63,27 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    1511
-  3 Spin_Up_Time            POS---   252   252   025    -    2750
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1511
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    1581
+  3 Spin_Up_Time            POS---   252   252   025    -    3125
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1572
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   252   252   000    -    32
+  9 Power_On_Hours          -O--CK   252   252   000    -    37
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1183
-191 G-Sense_Error_Rate      -O--CK   078   078   000    -    225584
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1143
-194 Temperature_Celsius     -O---K   133   100   000    -    35 (Min/Max 22/46)
-195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    144592
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1206
+191 G-Sense_Error_Rate      -O--CK   078   078   000    -    225585
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1155
+194 Temperature_Celsius     -O---K   139   100   000    -    33 (Min/Max 22/46)
+195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    146891
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--C-   252   099   000    -    0
+197 Current_Pending_Sector  -O--C-   100   099   000    -    1
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O--CK   252   252   000    -    0
-223 Load_Retry_Count        -O--CK   100   100   000    -    120
-225 Load_Cycle_Count        -O--CK   100   100   000    -    2241
+223 Load_Retry_Count        -O--CK   100   100   000    -    121
+225 Load_Cycle_Count        -O--CK   100   100   000    -    2279
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 13765 (device log contains only the most recent 8 errors)
+Device Error Count: 13766 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,11 +124,95 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-ATA_READ_LOG_EXT (addr=0x03:0x00, page=1, n=1) failed: scsi error badly formed scsi parameters
+Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
+Error 13766 [5] log entry is empty
+Error 13765 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 03 00 00 00 00 00 00 2f 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  09 00 3e 00 00 10 00 00 00 00 00 85 8f     04:39:37.216  [RESERVED]
+
+Error 13764 [3] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 11 0c 42 50 4f 00  Error: UNC 64 sectors at LBA = 0x1f0c4250 = 520897104
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 40 00 00 11 0c 42 50 4f 00     00:20:48.687  READ DMA EXT
+  25 00 ff 00 08 00 00 10 ff bc b0 4f 00     00:20:45.375  READ DMA EXT
+  35 00 ff 00 20 00 00 10 e9 d5 70 4f 00     00:20:45.375  WRITE DMA EXT
+  c8 00 ff 00 10 00 00 0f c3 5d 27 4f 00     00:20:45.375  READ DMA
+  c8 00 ff 00 78 00 00 0f 0b ea 08 4f 00     00:20:45.312  READ DMA
+
+Error 13763 [2] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 11 0c 42 50 4f 00  Error: UNC 64 sectors at LBA = 0x1f0c4250 = 520897104
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 40 00 00 11 0c 42 50 4f 00     00:20:45.125  READ DMA EXT
+  25 00 ff 00 08 00 00 10 ff bb c0 4f 00     00:20:41.187  READ DMA EXT
+  35 00 ff 00 10 00 00 10 eb 3c 90 4f 00     00:20:41.187  WRITE DMA EXT
+  35 00 ff 00 20 00 00 10 e9 d5 b0 4f 00     00:20:41.187  WRITE DMA EXT
+  c8 00 ff 00 08 00 00 0f c3 58 40 4f 00     00:20:41.187  READ DMA
+
+Error 13762 [1] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 11 0c 42 50 4f 00  Error: UNC 64 sectors at LBA = 0x1f0c4250 = 520897104
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 40 00 00 11 0c 42 50 4f 00     00:20:40.937  READ DMA EXT
+  25 00 ff 00 08 00 00 10 ff bc b8 4f 00     00:20:37.562  READ DMA EXT
+  c8 00 ff 00 10 00 00 0f c3 5d 27 4f 00     00:20:37.562  READ DMA
+  c8 00 ff 00 70 00 00 0f 1c 1a 40 4f 00     00:20:37.500  READ DMA
+  c8 00 ff 00 88 00 00 0f 1c 19 b8 4f 00     00:20:37.500  READ DMA
+
+Error 13761 [0] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 11 0c 42 50 4f 00  Error: UNC 64 sectors at LBA = 0x1f0c4250 = 520897104
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 40 00 00 11 0c 42 50 4f 00     00:20:37.187  READ DMA EXT
+  25 00 ff 00 08 00 00 10 ff bb c0 4f 00     00:20:34.375  READ DMA EXT
+  35 00 ff 00 30 00 00 10 eb 3a 00 4f 00     00:20:34.375  WRITE DMA EXT
+  c8 00 ff 00 08 00 00 0f c3 58 40 4f 00     00:20:34.375  READ DMA
+  c8 00 ff 00 88 00 00 0f 1c 15 60 4f 00     00:20:34.375  READ DMA
+
+Error 13760 [7] log entry is empty
+Error 13759 [6] log entry is empty
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
-SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Read SMART Self-test Log failed: scsi error medium or hardware error (serious)
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -142,21 +229,16 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     31/35 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     29/33 Celsius
 Lifetime    Min/Max Temperature:     23/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:     15/55 Celsius
-Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (68)
+Write SCT Data Table failed: scsi error medium or hardware error (serious)
+Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+Write SCT (Get) Error Recovery Control Command failed: scsi error medium or hardware error (serious)
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -165,7 +247,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

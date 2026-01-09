@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.4.4-arch1-1] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.6-arch1-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint F1 DT
@@ -9,9 +9,9 @@ LU WWN Device Id: 5 0000f0 ...
 Firmware Version: 1AA01112
 User Capacity:    640,135,028,736 bytes [640 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Wed Aug  9 22:26:31 2023 CEST
+Local Time is:    Wed Aug 28 18:32:49 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,27 +63,27 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   099   097   051    -    138
-  3 Spin_Up_Time            POS---   089   089   011    -    4310
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12218
+  3 Spin_Up_Time            POS---   086   086   011    -    5200
+  4 Start_Stop_Count        -O--CK   087   087   000    -    12932
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    11614
-  9 Power_On_Hours          -O--CK   095   095   000    -    24635
+  9 Power_On_Hours          -O--CK   094   094   000    -    28481
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    53
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6342
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    6932
  13 Read_Soft_Error_Rate    -OSR--   099   097   000    -    138
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    77
 184 End-to-End_Error        PO--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    547
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   044   000    -    31 (Min/Max 31/32)
-194 Temperature_Celsius     -O---K   068   039   000    -    32 (3 33 32 31 0)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2022
+190 Airflow_Temperature_Cel -O---K   064   044   000    -    36 (Min/Max 17/36)
+194 Temperature_Celsius     -O---K   063   039   000    -    37 (3 33 38 17 0)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2986
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   099   099   000    -    8049
+199 UDMA_CRC_Error_Count    -OSRCK   099   099   000    -    8586
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
                             ||||||_ K auto-keep
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 8461 (device log contains only the most recent 8 errors)
+Device Error Count: 8998 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,7 +126,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8461 [4] occurred at disk power-on lifetime: 24295 hours (1012 days + 7 hours)
+Error 8998 [5] occurred at disk power-on lifetime: 28481 hours (1186 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -137,13 +137,13 @@ Error 8461 [4] occurred at disk power-on lifetime: 24295 hours (1012 days + 7 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 10 01 00 00 00 00 00 08 00 40 00     08:16:10.330  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     08:16:10.330  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     08:16:10.330  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     08:16:10.330  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     08:16:10.330  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 01 00 00 00 00 00 08 00 40 00     08:53:48.670  READ FPDMA QUEUED
+  60 00 10 01 00 00 00 00 00 00 00 40 00     08:53:48.670  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     08:53:48.670  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     08:53:48.670  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     08:53:48.670  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 8460 [3] occurred at disk power-on lifetime: 22460 hours (935 days + 20 hours)
+Error 8997 [4] occurred at disk power-on lifetime: 28472 hours (1186 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -154,13 +154,13 @@ Error 8460 [3] occurred at disk power-on lifetime: 22460 hours (935 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 10 01 00 00 00 00 00 08 00 40 00     00:46:16.230  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     00:46:16.230  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:46:16.230  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:46:16.230  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:46:16.230  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 01 00 00 00 00 00 08 00 40 00     14:36:30.250  READ FPDMA QUEUED
+  60 00 10 01 00 00 00 00 00 00 00 40 00     14:36:30.250  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     14:36:30.250  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     14:36:30.250  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     14:36:30.250  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 8459 [2] occurred at disk power-on lifetime: 19645 hours (818 days + 13 hours)
+Error 8996 [3] occurred at disk power-on lifetime: 28467 hours (1186 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -171,13 +171,13 @@ Error 8459 [2] occurred at disk power-on lifetime: 19645 hours (818 days + 13 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     11:32:14.330  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     11:32:14.330  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     11:32:14.330  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     11:32:14.330  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     11:32:14.330  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 01 00 00 00 00 00 08 00 40 00     09:40:54.550  READ FPDMA QUEUED
+  60 00 10 01 00 00 00 00 00 00 00 40 00     09:40:54.550  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     09:40:54.550  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     09:40:54.550  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     09:40:54.550  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 8458 [1] occurred at disk power-on lifetime: 19634 hours (818 days + 2 hours)
+Error 8995 [2] occurred at disk power-on lifetime: 28467 hours (1186 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -188,13 +188,30 @@ Error 8458 [1] occurred at disk power-on lifetime: 19634 hours (818 days + 2 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     00:25:50.140  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     00:25:50.140  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:25:50.140  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:25:50.140  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:25:50.140  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 01 00 00 00 00 00 08 00 40 00     09:05:23.340  READ FPDMA QUEUED
+  60 00 10 01 00 00 00 00 00 00 00 40 00     09:05:23.340  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     09:05:23.340  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     09:05:23.340  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     09:05:23.340  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 8457 [0] occurred at disk power-on lifetime: 19619 hours (817 days + 11 hours)
+Error 8994 [1] occurred at disk power-on lifetime: 28467 hours (1186 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 00 00 00 00 4a 85 82 07 40 00   at LBA = 0x4a858207 = 1250263559
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 10 00 08 00 00 00 85 82 00 40 00     08:52:05.020  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     08:52:05.020  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     08:52:05.020  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     08:52:05.020  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     08:52:05.010  IDENTIFY DEVICE
+
+Error 8993 [0] occurred at disk power-on lifetime: 28458 hours (1185 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -205,62 +222,45 @@ Error 8457 [0] occurred at disk power-on lifetime: 19619 hours (817 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     02:30:49.400  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     02:30:49.400  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     02:30:49.400  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:30:49.400  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     02:30:49.400  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 01 00 00 00 00 00 08 00 40 00     07:37:22.530  READ FPDMA QUEUED
+  60 00 10 01 00 00 00 00 00 00 00 40 00     07:37:22.530  READ FPDMA QUEUED
+  ef 00 10 00 03 00 00 00 00 00 00 a0 08     07:37:22.530  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:37:22.530  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:37:22.520  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 8456 [7] occurred at disk power-on lifetime: 19604 hours (816 days + 20 hours)
+Error 8992 [7] occurred at disk power-on lifetime: 28450 hours (1185 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 40 00 00 00 00 00 00 00 ff 40 00   at LBA = 0x000000ff = 255
+  00 -- d0 00 01 00 00 00 00 00 00 e0 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     00:49:22.880  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     00:49:22.880  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:49:22.880  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:49:22.880  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:49:22.880  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  42 00 00 00 01 00 00 00 00 00 00 e0 00     07:56:48.210  READ VERIFY SECTOR(S) EXT
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00     07:56:48.210  SET FEATURES [Disable SATA feature]
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     07:56:48.210  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00     07:56:48.210  SECURITY FREEZE LOCK
+  ef 00 66 00 00 00 00 00 00 00 00 a0 00     07:56:48.210  SET FEATURES [Disable revert defaults]
 
-Error 8455 [6] occurred at disk power-on lifetime: 19590 hours (816 days + 6 hours)
+Error 8991 [6] occurred at disk power-on lifetime: 28449 hours (1185 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 40 00 00 00 00 00 00 00 ff 40 00   at LBA = 0x000000ff = 255
+  00 -- d0 00 01 00 00 00 00 00 00 e0 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     00:05:04.200  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     00:05:04.200  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:05:04.200  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:05:04.200  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:04.200  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-
-Error 8454 [5] occurred at disk power-on lifetime: 19590 hours (816 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 40 00 00 00 00 00 00 00 ff 40 00   at LBA = 0x000000ff = 255
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 00 00 08 00 40 00     02:29:06.480  READ FPDMA QUEUED
-  60 00 00 01 00 00 00 00 00 00 00 40 00     02:29:06.480  READ FPDMA QUEUED
-  ef 00 10 00 03 00 00 00 00 00 00 a0 00     02:29:06.480  SET FEATURES [Enable SATA feature]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:29:06.480  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     02:29:06.480  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  42 00 00 00 01 00 00 00 00 00 00 e0 00     06:59:08.730  READ VERIFY SECTOR(S) EXT
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00     06:59:08.730  SET FEATURES [Disable SATA feature]
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     06:59:08.730  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00     06:59:08.730  SECURITY FREEZE LOCK
+  ef 00 66 00 00 00 00 00 00 00 00 a0 00     06:59:08.730  SET FEATURES [Disable revert defaults]
 
 SMART Extended Self-test Log Version: 0 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -281,8 +281,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     --/32 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     --/38 Celsius
 Lifetime    Min/Max Temperature:     --/63 Celsius
 
 SCT Temperature History Version:     2
@@ -290,7 +290,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (2)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -302,8 +302,8 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x0001  2            0  Command failed due to ICRC error
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0001  2          698  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
@@ -311,7 +311,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           74  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

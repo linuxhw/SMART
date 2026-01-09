@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-51-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.15.5-x64v3-xanmod1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Dec 20 18:46:56 2024 MSK
+Local Time is:    Thu Dec 18 11:04:42 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -27,6 +27,7 @@ Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -62,30 +63,30 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    83915904
-  3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    756
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    157972488
+  3 Spin_Up_Time            PO----   097   097   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    2047
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    80869721
-  9 Power_On_Hours          -O--CK   015   015   000    -    74785
+  7 Seek_Error_Rate         POSR--   079   060   030    -    92474473
+  9 Power_On_Hours          -O--CK   011   011   000    -    78057
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    304
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1305
 183 Runtime_Bad_Block       -O--CK   098   098   000    -    2
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    0 0 15
+188 Command_Timeout         -O--CK   100   099   000    -    1 1 16
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   053   045    -    36 (Min/Max 35/36)
+190 Airflow_Temperature_Cel -O---K   067   045   045    Past 33 (Min/Max 19/34)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    361
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1038891
-194 Temperature_Celsius     -O---K   036   047   000    -    36 (0 16 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    533
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1054184
+194 Temperature_Celsius     -O---K   033   055   000    -    33 (0 16 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    8
-240 Head_Flying_Hours       ------   100   253   000    -    51322h+30m+32.306s
-241 Total_LBAs_Written      ------   100   253   000    -    9839216291
-242 Total_LBAs_Read         ------   100   253   000    -    518521674295
+240 Head_Flying_Hours       ------   100   253   000    -    53906h+44m+48.630s
+241 Total_LBAs_Written      ------   100   253   000    -    14942169883
+242 Total_LBAs_Read         ------   100   253   000    -    659453001704
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,7 +127,8 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Aborted by host               30%     10685         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,9 +144,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     35/36 Celsius
-Lifetime    Min/Max Temperature:     16/47 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     19/34 Celsius
+Lifetime    Min/Max Temperature:     16/55 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -163,4 +165,6 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

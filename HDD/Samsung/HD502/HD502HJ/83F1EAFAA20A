@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.78-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint F3
@@ -11,10 +11,10 @@ User Capacity:    500,106,780,160 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Nov 22 13:29:36 2020 CET
+Local Time is:    Thu Mar 27 16:24:13 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,7 +22,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,26 +65,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   082   080   025    -    5641
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6498
+  3 Spin_Up_Time            PO---K   082   080   025    -    5606
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7952
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    12220
+  9 Power_On_Hours          -O--CK   100   100   000    -    16790
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6608
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8088
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    1
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   053   000    -    22 (Min/Max 11/47)
+194 Temperature_Celsius     -O----   064   053   000    -    30 (Min/Max 11/47)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   099   099   000    -    810
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    66
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    67
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    6654
+225 Load_Cycle_Count        -O--CK   100   100   000    -    8134
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 811 (device log contains only the most recent 8 errors)
+Device Error Count: 825 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,141 +126,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 811 [2] occurred at disk power-on lifetime: 5966 hours (248 days + 14 hours)
+Error 825 [0] occurred at disk power-on lifetime: 15798 hours (658 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 20 00 00 3a 38 57 ef e0 00  Error: IDNF at LBA = 0x3a3857ef = 976771055
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  34 00 00 00 20 00 00 3a 38 57 ef e0 00     00:00:11.167  WRITE SECTORS(S) EXT
-  24 00 00 00 20 00 00 3a 38 57 cf e0 00     00:00:11.167  READ SECTOR(S) EXT
-  34 00 00 00 20 00 00 3a 38 57 cf e0 00     00:00:11.167  WRITE SECTORS(S) EXT
-  24 00 00 00 20 00 00 3a 38 57 af e0 00     00:00:11.167  READ SECTOR(S) EXT
-  34 00 00 00 20 00 00 3a 38 57 af e0 00     00:00:11.167  WRITE SECTORS(S) EXT
+  b0 00 f8 00 00 00 00 00 c2 4f 00 e0 00     00:00:06.537  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.537  IDENTIFY DEVICE
+  b0 00 d1 00 00 00 00 00 c2 4f 00 a0 00     00:00:06.536  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.536  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     00:00:06.536  SMART READ DATA
 
-Error 810 [1] occurred at disk power-on lifetime: 3268 hours (136 days + 4 hours)
+Error 824 [7] occurred at disk power-on lifetime: 15798 hours (658 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 41 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 65 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 40 e0 08     00:00:00.025  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.025  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.025  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:00.025  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.025  SET MULTIPLE MODE
+  b0 00 f8 00 f6 00 00 00 c2 4f b9 e0 00     00:00:06.536  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.536  IDENTIFY DEVICE
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     00:00:06.536  SMART ENABLE OPERATIONS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.536  IDENTIFY DEVICE
+  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     00:00:06.534  SMART READ LOG
 
-Error 809 [0] occurred at disk power-on lifetime: 3259 hours (135 days + 19 hours)
+Error 823 [6] occurred at disk power-on lifetime: 15791 hours (657 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 41 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 65 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 40 e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.010  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.010  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  b0 00 f8 00 00 00 00 00 c2 4f 00 e0 00     00:00:10.775  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:10.775  IDENTIFY DEVICE
+  b0 00 d1 00 00 00 00 00 c2 4f 00 a0 00     00:00:10.775  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:10.775  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     00:00:10.775  SMART READ DATA
 
-Error 808 [7] occurred at disk power-on lifetime: 3259 hours (135 days + 19 hours)
+Error 822 [5] occurred at disk power-on lifetime: 15791 hours (657 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 64 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:00.010  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.010  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.010  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.010  RECALIBRATE [OBS-4]
+  b0 00 f8 00 f6 00 00 00 c2 4f b9 e0 00     00:00:10.774  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:10.774  IDENTIFY DEVICE
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     00:00:10.774  SMART ENABLE OPERATIONS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:10.774  IDENTIFY DEVICE
+  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     00:00:10.772  SMART READ LOG
 
-Error 807 [6] occurred at disk power-on lifetime: 3245 hours (135 days + 5 hours)
+Error 821 [4] occurred at disk power-on lifetime: 15057 hours (627 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 43 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 67 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 42 e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 41 e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 40 e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
+  b0 00 f8 00 00 00 00 00 c2 4f 00 e0 00     00:00:06.640  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.640  IDENTIFY DEVICE
+  60 00 d1 00 08 00 00 02 50 a0 00 40 00     00:00:06.639  READ FPDMA QUEUED
+  60 00 d1 00 08 00 00 00 60 18 e8 40 00     00:00:06.639  READ FPDMA QUEUED
+  b0 00 d1 00 00 00 00 00 c2 4f 00 a0 00     00:00:06.639  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 806 [5] occurred at disk power-on lifetime: 3237 hours (134 days + 21 hours)
+Error 820 [3] occurred at disk power-on lifetime: 15057 hours (627 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 64 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.010  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:00.010  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.010  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.010  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  b0 00 f8 00 f6 00 00 00 c2 4f b9 e0 00     00:00:06.639  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.639  IDENTIFY DEVICE
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     00:00:06.639  SMART ENABLE OPERATIONS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.639  IDENTIFY DEVICE
+  61 00 d5 00 04 00 00 0b cc 03 78 40 00     00:00:06.638  WRITE FPDMA QUEUED
 
-Error 805 [4] occurred at disk power-on lifetime: 3237 hours (134 days + 21 hours)
+Error 819 [2] occurred at disk power-on lifetime: 14975 hours (623 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:00.010  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.010  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.010  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.010  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.010  NOP [Abort queued commands]
+  b0 00 f8 00 00 00 00 00 c2 4f 00 e0 00     00:00:22.963  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:22.963  IDENTIFY DEVICE
+  b0 00 d1 00 00 00 00 00 c2 4f 00 a0 00     00:00:22.963  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:22.963  IDENTIFY DEVICE
+  61 00 00 00 64 00 00 1b e6 9b b8 40 00     00:00:22.963  WRITE FPDMA QUEUED
 
-Error 804 [3] occurred at disk power-on lifetime: 3237 hours (134 days + 21 hours)
+Error 818 [1] occurred at disk power-on lifetime: 14975 hours (623 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+  a4 -- 51 00 00 00 00 00 c2 4f 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:00.010  READ DMA EXT
-  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.010  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.010  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.010  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.010  NOP [Abort queued commands]
+  b0 00 f8 00 f6 00 00 00 c2 4f b9 e0 00     00:00:22.962  SMART [Vendor specific subcommand]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:22.962  IDENTIFY DEVICE
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     00:00:22.962  SMART ENABLE OPERATIONS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:22.962  IDENTIFY DEVICE
+  61 00 d5 00 e0 00 00 1b e6 8c e0 40 00     00:00:22.961  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -281,8 +281,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    20 Celsius
-Power Cycle Min/Max Temperature:     17/20 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     20/30 Celsius
 Lifetime    Min/Max Temperature:     15/65 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -292,7 +292,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (119)
+Temperature History Size (Index):    128 (90)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -312,8 +312,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

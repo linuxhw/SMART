@@ -11,11 +11,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Dec  1 22:13:18 2023 CET
+Local Time is:    Wed Mar 13 08:22:01 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     1 (minimum power consumption with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -62,22 +62,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   198   198   040    -    133
-  3 Spin_Up_Time            POS---   214   214   033    -    1
-  4 Start_Stop_Count        -O--C-   100   100   000    -    37
+  3 Spin_Up_Time            POS---   238   238   033    -    1
+  4 Start_Stop_Count        -O--C-   100   100   000    -    322
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   107   107   040    -    37
-  9 Power_On_Hours          -O--C-   100   100   000    -    2
+  9 Power_On_Hours          -O--C-   100   100   000    -    47
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    8
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    14
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    3
-193 Load_Cycle_Count        -O--C-   100   100   000    -    40
-194 Temperature_Celsius     -O----   240   240   000    -    25 (Min/Max 12/28)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    4
+193 Load_Cycle_Count        -O--C-   100   100   000    -    971
+194 Temperature_Celsius     -O----   250   250   000    -    24 (Min/Max 12/32)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    1
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 8 (device log contains only the most recent 4 errors)
+Device Error Count: 9 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,23 @@ Device Error Count: 8 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 9 [0] occurred at disk power-on lifetime: 3 hours (0 days + 3 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:05.203  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 00 04     00:02:05.049  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 00 ff     00:02:04.740  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 00 ff     00:02:03.494  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 a0 ff     00:02:03.379  IDENTIFY DEVICE
 
 Error 8 [3] occurred at disk power-on lifetime: 2700 hours (112 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -170,23 +187,6 @@ Error 6 [1] occurred at disk power-on lifetime: 2422 hours (100 days + 22 hours)
   ef 00 10 00 02 00 00 00 00 00 00 00 00     00:06:16.106  SET FEATURES [Enable SATA feature]
   ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:16.106  IDENTIFY DEVICE
 
-Error 5 [0] occurred at disk power-on lifetime: 2422 hours (100 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 70 00 00 06 48 98 b0 06 00  Error: UNC at LBA = 0x064898b0 = 105420976
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 80 00 70 00 00 06 48 98 a0 40 00     00:03:09.449  READ FPDMA QUEUED
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:03:09.449  SMART RETURN STATUS
-  2f 00 00 00 01 00 00 00 00 00 10 28 00     00:03:09.449  READ LOG EXT
-  60 00 80 00 60 00 00 06 48 98 a0 40 00     00:00:05.856  READ FPDMA QUEUED
-  60 00 80 00 58 00 00 06 48 98 20 40 00     00:00:05.855  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%         0         -
@@ -205,10 +205,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     20/25 Celsius
-Lifetime    Min/Max Temperature:     12/28 Celsius
-Specified Max Operating Temperature:    24 Celsius
+Current Temperature:                    24 Celsius
+Power Cycle Min/Max Temperature:     22/24 Celsius
+Lifetime    Min/Max Temperature:     12/32 Celsius
+Specified Max Operating Temperature:    21 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -216,7 +216,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (51)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -235,8 +235,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           32  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

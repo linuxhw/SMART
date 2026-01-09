@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.5-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.1-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -8,9 +8,9 @@ LU WWN Device Id: 5 0000f0 ...
 Firmware Version: JE100-23
 User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        Not in smartctl database 7.3/5528
+Device is:        Not in smartctl database
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Apr 28 11:12:15 2024 UTC
+Local Time is:    Sun Jan  5 14:02:48 2025 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,29 +58,29 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   253   253   025    -    4352
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9673
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9860
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    24271
+  9 Power_On_Hours          -O--CK   100   100   000    -    24387
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5692
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    5742
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5794
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    9086131
 184 End-to-End_Error        PO--CK   253   253   099    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    1
-190 Airflow_Temperature_Cel -O---K   072   051   045    -    28 (Min/Max 7/49)
-194 Temperature_Celsius     -O---K   072   050   000    -    28 (Min/Max 7/50)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    5742
+190 Airflow_Temperature_Cel -O---K   071   051   045    -    29 (Min/Max 7/49)
+194 Temperature_Celsius     -O---K   071   050   000    -    29 (Min/Max 7/50)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    9086131
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    6
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -186,7 +186,7 @@ Error 45 [4] occurred at disk power-on lifetime: 8829 hours (367 days + 21 hours
   3a 13 98 08 72 60 00 00 40 cc 01 00 18  1d+13:16:57.729  WRITE STREAM DMA
   3a 10 80 08 c2 60 00 00 40 d5 eb 00 a0  6d+05:07:50.913  WRITE STREAM DMA
   fb 0e 78 08 9a 60 00 00 40 d4 36 00 80  4d+15:50:53.185  [VENDOR SPECIFIC]
-  00 11 89 11 91 00 00 11 00 c9 b1 01 11 31d+01:39:14.560  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 11 89 11 91 00 00 11 00 c9 b1 00 11 31d+01:39:14.560  NOP [Reserved subcommand] [OBS-ACS-2]
 
 Error 44 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -236,8 +236,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     28/28 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     17/32 Celsius
 Lifetime    Min/Max Temperature:      8/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -246,7 +246,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (65)
+Temperature History Size (Index):    128 (7)
 
 SCT Error Recovery Control:
            Read:     75 (7.5 seconds)
@@ -267,7 +267,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           32  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -8,23 +8,23 @@ Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Mon Oct 23 12:26:35 2023 CEST
+Local Time is:    Sat Mar 16 23:41:22 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     128 (minimum power consumption without standby)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,26 +59,26 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    40779
-  2 Throughput_Performance  P-S---   100   100   030    -    114558638
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    7212
+  2 Throughput_Performance  P-S---   100   100   030    -    111543928
   3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    4419
+  4 Start_Stop_Count        -O--CK   099   099   000    -    4461
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    2763
+  7 Seek_Error_Rate         POSR--   100   100   047    -    671
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    9322
+  9 Power_On_Hours          -O--CK   082   082   000    -    9453
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4391
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    537
-193 Load_Cycle_Count        -O--CK   096   096   000    -    83492
-194 Temperature_Celsius     -O---K   100   075   000    -    39 (Min/Max 4/65)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    51
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4418
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    544
+193 Load_Cycle_Count        -O--CK   096   096   000    -    83540
+194 Temperature_Celsius     -O---K   100   075   000    -    35 (Min/Max 4/65)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    5
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 10285)
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   253   000    -    2
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    29385
-203 Run_Out_Cancel          -O----   100   100   000    -    1533206331325
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    17308
+203 Run_Out_Cancel          -O----   100   100   000    -    1533224681159
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +104,157 @@ Address    Access  R/W   Size  Description
 0xa1       GPL,SL  VS       1  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 20
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 20 [19] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 01 f2 00 89 b4 e0 00  Error: UNC 1 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:25:52.879  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:51.885  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:51.875  NOP [Abort queued commands]
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:25:31.866  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:30.867  NOP [Abort queued commands]
+
+Error 19 [18] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 01 f2 00 89 b4 e0 00  Error: UNC 1 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:25:31.866  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:30.867  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:30.857  NOP [Abort queued commands]
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:25:10.844  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:09.844  NOP [Abort queued commands]
+
+Error 18 [17] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 01 f2 00 89 b4 e0 00  Error: UNC 1 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:25:10.844  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:09.844  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:25:09.834  NOP [Abort queued commands]
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:24:49.819  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:24:48.833  NOP [Abort queued commands]
+
+Error 17 [16] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 01 f2 00 89 b4 e0 00  Error: UNC 1 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:24:49.819  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:24:48.833  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:24:48.823  NOP [Abort queued commands]
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:24:28.816  READ DMA EXT
+  25 00 00 00 01 00 01 f2 00 89 b3 e0 00  1d+05:24:28.815  READ DMA EXT
+
+Error 16 [15] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 01 f2 00 89 b4 e0 00  Error: UNC 1 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 01 f2 00 89 b4 e0 00  1d+05:24:28.816  READ DMA EXT
+  25 00 00 00 01 00 01 f2 00 89 b3 e0 00  1d+05:24:28.815  READ DMA EXT
+  25 00 00 00 01 00 01 f2 00 89 b2 e0 00  1d+05:24:28.815  READ DMA EXT
+  25 00 00 00 01 00 01 f2 00 89 b1 e0 00  1d+05:24:28.815  READ DMA EXT
+  25 00 00 00 01 00 01 f2 00 89 b0 e0 00  1d+05:24:28.814  READ DMA EXT
+
+Error 15 [14] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 4c 00 01 f2 00 89 b4 e0 00  Error: UNC 76 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:24:05.338  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:24:04.343  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:24:04.333  NOP [Abort queued commands]
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:23:44.329  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:43.329  NOP [Abort queued commands]
+
+Error 14 [13] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 4c 00 01 f2 00 89 b4 e0 00  Error: UNC 76 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:23:44.329  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:43.329  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:43.319  NOP [Abort queued commands]
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:23:23.312  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:22.312  NOP [Abort queued commands]
+
+Error 13 [12] occurred at disk power-on lifetime: 9438 hours (393 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 4c 00 01 f2 00 89 b4 e0 00  Error: UNC 76 sectors at LBA = 0x1f20089b4 = 8355088820
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:23:23.312  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:22.312  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 ff  1d+05:23:22.302  NOP [Abort queued commands]
+  25 00 00 00 80 00 01 f2 00 89 80 e0 00  1d+05:23:02.295  READ DMA EXT
+  25 00 00 00 80 00 01 17 00 8a 80 e0 00  1d+05:23:01.549  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -122,9 +272,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     36/41 Celsius
+Device State:                        Active (0)
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     34/37 Celsius
 Lifetime    Min/Max Temperature:      4/65 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -133,7 +283,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (368)
+Temperature History Size (Index):    478 (69)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -152,8 +302,8 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
