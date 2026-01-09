@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Nov 28 00:12:40 2023 GMT
+Local Time is:    Mon May  5 10:00:25 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,16 +65,16 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   010    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    257
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    216
-164 Unknown_Attribute       ------   100   100   000    -    47247261719
-165 Unknown_Attribute       ------   100   100   000    -    40
-166 Unknown_Attribute       ------   100   100   000    -    11
-167 Unknown_Attribute       -O---K   100   100   000    -    23
-194 Temperature_Celsius     -O---K   031   031   000    -    31 (Min/Max 28/40)
+  9 Power_On_Hours          -O--C-   100   100   000    -    2776
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1829
+164 Unknown_Attribute       ------   100   100   000    -    231945207995
+165 Unknown_Attribute       ------   100   100   000    -    259
+166 Unknown_Attribute       ------   100   100   000    -    54
+167 Unknown_Attribute       -O---K   100   100   000    -    187
+194 Temperature_Celsius     -O---K   028   028   000    -    28 (Min/Max 28/44)
 199 UDMA_CRC_Error_Count    -O--C-   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    8652
-242 Total_LBAs_Read         -O--CK   100   100   000    -    7202
+241 Total_LBAs_Written      -O--CK   100   100   000    -    68537
+242 Total_LBAs_Read         -O--CK   100   100   000    -    70855
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +101,106 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 5
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 [4] occurred at disk power-on lifetime: 2485 hours (103 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 d0 00 00 1b 22 6b b0 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:41:58.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:41:57.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:41:52.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:41:51.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:41:51.000  FLUSH CACHE EXT
+
+Error 4 [3] occurred at disk power-on lifetime: 1921 hours (80 days + 1 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 28 00 00 28 0f fa 00 40 08
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:31:30.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:31:30.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:31:30.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:31:30.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:31:30.000  FLUSH CACHE EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 1202 hours (50 days + 2 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 a8 00 00 00 57 2e 00 40 08
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:18:39.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:18:39.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:18:39.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:18:39.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:18:39.500  FLUSH CACHE EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 1202 hours (50 days + 2 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 68 00 00 01 1f 38 18 40 08
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:25.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:25.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:21.900  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:21.900  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:16.900  FLUSH CACHE EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 60 00 00 1d e8 16 48 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     02:46:34.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     02:46:34.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     02:46:33.900  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     02:46:33.500  FLUSH CACHE EXT
+  06 00 01 00 01 00 00 00 00 00 00 e0 80     02:46:33.100  DATA SET MANAGEMENT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -120,8 +219,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:      ?/37 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:      ?/32 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -130,22 +229,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (17)
+Temperature History Size (Index):    478 (431)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             216  ---  Lifetime Power-On Resets
-0x01  0x010  4             257  ---  Power-on Hours
-0x01  0x018  6     18146413964  ---  Logical Sectors Written
-0x01  0x020  6       132316901  ---  Number of Write Commands
-0x01  0x028  6     15103887660  ---  Logical Sectors Read
-0x01  0x030  6       128928572  ---  Number of Read Commands
-0x01  0x038  6    237147484880  ---  Date and Time TimeStamp
+0x01  0x008  4            1829  ---  Lifetime Power-On Resets
+0x01  0x010  4            2776  ---  Power-on Hours
+0x01  0x018  6    143733226358  ---  Logical Sectors Written
+0x01  0x020  6      1139485946  ---  Number of Write Commands
+0x01  0x028  6    148594364715  ---  Logical Sectors Read
+0x01  0x030  6      1147102415  ---  Number of Read Commands
+0x01  0x038  6   2556905944928  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               5  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              34  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -154,16 +253,18 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
+0x0001  2            8  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

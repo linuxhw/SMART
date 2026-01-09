@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-22-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.38+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron Client SSDs
@@ -12,10 +12,10 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 20 21:49:02 2021 EST
+Local Time is:    Wed Aug 20 12:55:35 2025 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,21 +23,21 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Unavailable
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 2380) seconds.
+data collection: 		(10235) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -67,27 +67,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    49210
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    263
+  9 Power_On_Hours          -O--CK   100   100   000    -    72021
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2435
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   081   081   000    -    575
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    181
+173 Ave_Block-Erase_Count   -O--CK   080   080   000    -    603
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    256
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    4403
-183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
+183 SATA_Interfac_Downshift -O--CK   100   100   000    -    43
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   070   042   000    -    30 (Min/Max 19/58)
+194 Temperature_Celsius     -O---K   062   040   000    -    38 (Min/Max 19/60)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain P---CK   081   081   000    -    19
+202 Percent_Lifetime_Remain P---CK   080   080   000    -    20
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    132345481757
-247 Host_Program_Page_Count -O--CK   100   100   000    -    4184305521
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    12300618785
+246 Total_LBAs_Written      -O--CK   100   100   000    -    149946127437
+247 Host_Program_Page_Count -O--CK   100   100   000    -    4734774904
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    12603759054
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,30 +126,30 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%     49162         -
-# 2  Vendor (0xff)       Completed without error       00%     49112         -
-# 3  Vendor (0xff)       Completed without error       00%     39978         -
-# 4  Vendor (0xff)       Completed without error       00%     38703         -
-# 5  Vendor (0xff)       Completed without error       00%     37699         -
-# 6  Vendor (0xff)       Completed without error       00%     36643         -
-# 7  Vendor (0xff)       Completed without error       00%     34854         -
-# 8  Vendor (0xff)       Completed without error       00%     18857         -
-# 9  Vendor (0xff)       Completed without error       00%     18808         -
-#10  Vendor (0xff)       Completed without error       00%     18742         -
-#11  Vendor (0xff)       Completed without error       00%     18659         -
-#12  Vendor (0xff)       Completed without error       00%     18568         -
-#13  Vendor (0xff)       Completed without error       00%     18487         -
-#14  Vendor (0xff)       Completed without error       00%     18397         -
-#15  Vendor (0xff)       Completed without error       00%     18325         -
-#16  Vendor (0xff)       Completed without error       00%     18250         -
-#17  Vendor (0xff)       Completed without error       00%     18178         -
-#18  Vendor (0xff)       Completed without error       00%     18106         -
-#19  Vendor (0xff)       Completed without error       00%     18032         -
+# 1  Vendor (0xff)       Completed without error       00%      6483         -
+# 2  Vendor (0xff)       Completed without error       00%      6267         -
+# 3  Vendor (0xff)       Completed without error       00%      6185         -
+# 4  Vendor (0xff)       Completed without error       00%      5823         -
+# 5  Vendor (0xff)       Completed without error       00%      5746         -
+# 6  Vendor (0xff)       Completed without error       00%      5419         -
+# 7  Vendor (0xff)       Completed without error       00%      5334         -
+# 8  Vendor (0xff)       Completed without error       00%      5302         -
+# 9  Vendor (0xff)       Completed without error       00%      5284         -
+#10  Vendor (0xff)       Completed without error       00%      5238         -
+#11  Vendor (0xff)       Completed without error       00%      5172         -
+#12  Vendor (0xff)       Completed without error       00%      5137         -
+#13  Vendor (0xff)       Completed without error       00%      5120         -
+#14  Vendor (0xff)       Completed without error       00%      5060         -
+#15  Vendor (0xff)       Completed without error       00%      5008         -
+#16  Vendor (0xff)       Completed without error       00%      4990         -
+#17  Vendor (0xff)       Completed without error       00%      4963         -
+#18  Vendor (0xff)       Completed without error       00%      4844         -
+#19  Vendor (0xff)       Completed without error       00%      4779         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
-    2        0        0  Not_testing
+    2        0        0  Completed [00% left] (129092671-129158206)
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
@@ -159,10 +159,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     27/30 Celsius
-Lifetime    Min/Max Temperature:     19/58 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     33/46 Celsius
+Lifetime    Min/Max Temperature:     19/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -170,27 +170,27 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (384)
+Temperature History Size (Index):    478 (8)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             263  ---  Lifetime Power-On Resets
-0x01  0x010  4           49210  ---  Power-on Hours
-0x01  0x018  6    132345481757  ---  Logical Sectors Written
-0x01  0x020  6      1351106454  ---  Number of Write Commands
-0x01  0x028  6     72098180955  ---  Logical Sectors Read
-0x01  0x030  6      1682228239  ---  Number of Read Commands
+0x01  0x008  4            2435  ---  Lifetime Power-On Resets
+0x01  0x010  4           72021  ---  Power-on Hours
+0x01  0x018  6    149946127437  ---  Logical Sectors Written
+0x01  0x020  6      1407863171  ---  Number of Write Commands
+0x01  0x028  6     81380219787  ---  Logical Sectors Read
+0x01  0x030  6      1725601241  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             208  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            8363  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              43  ---  Average Short Term Temperature
-0x05  0x018  1              38  ---  Average Long Term Temperature
-0x05  0x020  1              58  ---  Highest Temperature
+0x05  0x008  1              38  ---  Current Temperature
+0x05  0x010  1              39  ---  Average Short Term Temperature
+0x05  0x018  1              37  ---  Average Long Term Temperature
+0x05  0x020  1              60  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x030  1              57  ---  Highest Average Short Term Temperature
 0x05  0x038  1              25  ---  Lowest Average Short Term Temperature
@@ -201,7 +201,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               -  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4               0  ---  Number of Hardware Resets
+0x06  0x008  4             350  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -215,5 +215,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4          150  Device-to-host register FISes sent due to a COMRESET
+
+
 

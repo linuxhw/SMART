@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov 20 20:49:31 2024 UTC
+Local Time is:    Tue May 20 07:53:37 2025 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -37,7 +37,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  120) seconds.
+data collection: 		(    2) seconds.
 Offline data collection
 capabilities: 			 (0x79) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -67,31 +67,31 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    38841
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    31
+  9 Power_On_Hours          -O--CK   100   100   000    -    38842
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    34
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    24
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    15310 (262 5)
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    15350 (265 4)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Temperature_Case        -O---K   079   078   000    -    21 (Min/Max 16/22)
+190 Temperature_Case        -O---K   079   079   000    -    21 (Min/Max 14/21)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    24
 194 Temperature_Internal    -O---K   100   100   000    -    21
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    874208
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    1208
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    52
-228 Workload_Minutes        -O--CK   100   100   000    -    2330148
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    874209
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    102400
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    1
+228 Workload_Minutes        -O--CK   100   100   000    -    1077702509
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
 234 Thermal_Throttle        -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    874208
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    948901
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    1872495
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    874209
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    996774
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    1872643
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,8 +115,7 @@ Address    Access  R/W   Size  Description
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xb5       GPL,SL  VS       2  Device vendor specific log
-0xb6       GPL,SL  VS     120  Device vendor specific log
+0xb5-0xb6  GPL,SL  VS       2  Device vendor specific log
 0xb7       GPL     VS   30976  Device vendor specific log
 0xb8       GPL,SL  VS       1  Device vendor specific log
 0xb9       GPL     VS    1704  Device vendor specific log
@@ -125,17 +124,20 @@ Address    Access  R/W   Size  Description
 0xbb       GPL,SL  VS       2  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      8  SCT Data Transfer
-0xff       GPL     -    55808  Reserved
+0xff       GPL     -    43776  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (20 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%         3         -
-# 2  Abort offline test  Aborted by host               00%         2         -
-# 3  Short offline       Completed without error       00%         2         -
-# 4  Abort offline test  Aborted by host               00%         2         -
+# 1  Short offline       Completed without error       00%     38842         -
+# 2  Extended offline    Completed without error       00%     38842         -
+# 3  Conveyance offline  Completed without error       00%     38842         -
+# 4  Extended offline    Completed without error       00%         3         -
+# 5  Abort offline test  Aborted by host               00%         2         -
+# 6  Short offline       Completed without error       00%         2         -
+# 7  Abort offline test  Aborted by host               00%         2         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -152,7 +154,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     16/22 Celsius
+Power Cycle Min/Max Temperature:     14/21 Celsius
 Lifetime    Min/Max Temperature:     14/31 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -165,7 +167,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (194)
+Temperature History Size (Index):    478 (221)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -174,11 +176,11 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              31  ---  Lifetime Power-On Resets
-0x01  0x018  6     57292154832  ---  Logical Sectors Written
-0x01  0x020  6       209981235  ---  Number of Write Commands
-0x01  0x028  6     62187227413  ---  Logical Sectors Read
-0x01  0x030  6       431144367  ---  Number of Read Commands
+0x01  0x008  4              34  ---  Lifetime Power-On Resets
+0x01  0x018  6     57292163024  ---  Logical Sectors Written
+0x01  0x020  6       209981243  ---  Number of Write Commands
+0x01  0x028  6     65324627083  ---  Logical Sectors Read
+0x01  0x030  6       431145049  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -197,8 +199,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           26903  ---  Number of Hardware Resets
-0x06  0x010  4             314  ---  Number of ASR Events
+0x06  0x008  4           26915  ---  Number of Hardware Resets
+0x06  0x010  4             322  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-51-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-62-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Apr  6 11:16:34 2025 CEST
+Local Time is:    Mon Jun 30 11:44:14 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,24 +63,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    12
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    5
+  9 Power_On_Hours          -O--C-   100   100   000    -    181
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    79
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       -O--C-   100   100   000    -    4294966420
 163 Unknown_Attribute       PO----   100   100   050    -    67
-164 Unknown_Attribute       ------   100   100   000    -    80650
-165 Unknown_Attribute       ------   100   100   000    -    10
-166 Unknown_Attribute       ------   100   100   000    -    9
-167 Unknown_Attribute       ------   100   100   000    -    9
+164 Unknown_Attribute       ------   100   100   000    -    90106
+165 Unknown_Attribute       ------   100   100   000    -    14
+166 Unknown_Attribute       ------   100   100   000    -    10
+167 Unknown_Attribute       ------   100   100   000    -    10
 172 Unknown_Attribute       -O--C-   100   100   000    -    0
 173 Unknown_Attribute       -O---K   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    3
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    23
 194 Temperature_Celsius     PO---K   100   100   000    -    40
 196 Reallocated_Event_Count ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    834
-242 Total_LBAs_Read         -O--C-   100   100   000    -    163
-249 Unknown_Attribute       -O--C-   100   100   000    -    18
+241 Total_LBAs_Written      -O--C-   100   100   000    -    11311
+242 Total_LBAs_Read         -O--C-   100   100   000    -    9179
+249 Unknown_Attribute       -O--C-   100   100   000    -    513
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,13 +105,13 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
-SMART Extended Comprehensive Error Log Version: 116 (64 sectors)
-Invalid Error Log index = 0x0000 (reserved = 0x00)
-Device Error Count: 25970 (possibly also invalid)
+SMART Extended Comprehensive Error Log Version: 141 (64 sectors)
+Invalid Error Log index = 0x8c4c (reserved = 0x05)
+Device Error Count: 32 (possibly also invalid)
 
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
-SMART Extended Self-test Log Version: 243 (1 sectors)
-Invalid Self-test Log index = 0xfa1e (reserved = 0x0f)
+SMART Extended Self-test Log Version: 134 (1 sectors)
+Invalid Self-test Log index = 0x0d49 (reserved = 0x02)
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,20 +129,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 3) ==
-0x01  0x008  4               5  ---  Lifetime Power-On Resets
-0x01  0x010  4              12  ---  Power-on Hours
-0x01  0x018  6        54660752  ---  Logical Sectors Written
-0x01  0x028  6        10721805  ---  Logical Sectors Read
+0x01  0x008  4              79  ---  Lifetime Power-On Resets
+0x01  0x010  4             181  ---  Power-on Hours
+0x01  0x018  6       741302187  ---  Logical Sectors Written
+0x01  0x028  6       601595192  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1             -81  ---  Current Temperature
+0x05  0x008  1             -67  ---  Current Temperature
 0x05  0x020  1               0  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              90  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              76  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -1,7 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.27-generic-3rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Silicon Motion based OEM SSDs
 Device Model:     KingFast
 Serial Number:    --
 Firmware Version: U0401A0
@@ -9,10 +10,11 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sat Oct 14 16:54:43 2023 MSK
+Local Time is:    Sun Apr 13 10:46:25 2025 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,34 +61,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    5805
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1685
-160 Unknown_Attribute       -O--CK   100   100   050    -    0
-161 Unknown_Attribute       PO--CK   100   100   050    -    100
-163 Unknown_Attribute       -O--CK   100   100   050    -    8
-164 Unknown_Attribute       -O--CK   100   100   050    -    144941
-165 Unknown_Attribute       -O--CK   100   100   050    -    352
-166 Unknown_Attribute       -O--CK   100   100   050    -    270
-167 Unknown_Attribute       -O--CK   100   100   050    -    293
-168 Unknown_Attribute       -O--CK   100   100   050    -    7000
-169 Unknown_Attribute       -O--CK   100   100   050    -    96
+  9 Power_On_Hours          -O--CK   100   100   050    -    9186
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    5197
+160 Uncorrectable_Error_Cnt -O--CK   100   100   050    -    0
+161 Valid_Spare_Block_Cnt   PO--CK   100   100   050    -    100
+163 Initial_Bad_Block_Count -O--CK   100   100   050    -    8
+164 Total_Erase_Count       -O--CK   100   100   050    -    345480
+165 Max_Erase_Count         -O--CK   100   100   050    -    3746
+166 Min_Erase_Count         -O--CK   100   100   050    -    376
+167 Average_Erase_Count     -O--CK   100   100   050    -    699
+168 Max_Erase_Count_of_Spec -O--CK   100   100   050    -    7000
+169 Remaining_Lifetime_Perc -O--CK   100   100   050    -    91
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
-178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
+178 Runtime_Invalid_Blk_Cnt -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    1081
-194 Temperature_Celsius     -O---K   100   100   050    -    44
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    679134
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    3603
+194 Temperature_Celsius     -O---K   100   100   050    -    47
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    1030789
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    1
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    289782
-242 Total_LBAs_Read         ----CK   100   100   050    -    1050737
-245 Unknown_Attribute       -O--CK   100   100   050    -    283624
+241 Host_Writes_32MiB       ----CK   100   100   050    -    683142
+242 Host_Reads_32MiB        ----CK   100   100   050    -    1532102
+245 TLC_Writes_32MiB        -O--CK   100   100   050    -    757421
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,14 +140,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1685  ---  Lifetime Power-On Resets
-0x01  0x010  4            5805  ---  Power-on Hours
-0x01  0x018  6      1811308708  ---  Logical Sectors Written
+0x01  0x008  4            5197  ---  Lifetime Power-On Resets
+0x01  0x010  4            9186  ---  Power-on Hours
+0x01  0x018  6      1820761849  ---  Logical Sectors Written
 0x01  0x020  6               0  ---  Number of Write Commands
-0x01  0x028  6       141662094  ---  Logical Sectors Read
-0x01  0x030  6             188  ---  Number of Read Commands
+0x01  0x028  6      1623598817  ---  Logical Sectors Read
+0x01  0x030  6             285  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -157,7 +159,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 
 
 

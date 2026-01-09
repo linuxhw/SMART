@@ -13,8 +13,8 @@ Form Factor:      2.5 inches
 TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
-SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Jan 14 19:36:44 2025 IST
+SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Tue Jan 14 22:09:51 2025 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,29 +62,29 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    0
   9 Power_On_Hours          -O--CK   100   100   000    -    35
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    345
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    379
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 173 Unknown_Attribute       -O--CK   100   100   000    -    4
-174 Unknown_Attribute       -O--CK   100   100   000    -    292
+174 Unknown_Attribute       -O--CK   100   100   000    -    324
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    35
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    86
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    87
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   061   052   000    -    39 (Min/Max 23/48)
+194 Temperature_Celsius     -O---K   068   052   000    -    32 (Min/Max 23/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    31868
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    32104
 202 Unknown_SSD_Attribute   ----CK   100   100   001    -    0
 206 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 210 Unknown_Attribute       -O--CK   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    1179904527
-247 Unknown_Attribute       -O--CK   100   100   000    -    36872016
+246 Unknown_Attribute       -O--CK   100   100   000    -    1234407599
+247 Unknown_Attribute       -O--CK   100   100   000    -    38575237
 248 Unknown_Attribute       -O--CK   100   100   000    -    8471496
 249 Unknown_Attribute       -O--CK   100   100   000    -    0
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
-251 Unknown_Attribute       -O--CK   100   100   000    -    803065334
+251 Unknown_Attribute       -O--CK   100   100   000    -    810664412
 252 Unknown_Attribute       -O--CK   100   100   000    -    0
 253 Unknown_Attribute       -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -123,8 +123,10 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4            5  Command failed due to ICRC error
-0x0002  4            3  R_ERR response for data FIS
+0x0001  4            0  Command failed due to ICRC error
+0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+
+
 

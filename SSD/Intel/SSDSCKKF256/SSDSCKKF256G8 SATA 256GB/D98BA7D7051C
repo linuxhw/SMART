@@ -1,7 +1,8 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.5.0-21-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.1-arch1-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Intel 545s Series SSDs
 Device Model:     INTEL SSDSCKKF256G8 SATA 256GB
 Serial Number:    --
 LU WWN Device Id: 5 5cd2e4 ...
@@ -11,14 +12,14 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar  2 11:37:30 2024 WET
+Local Time is:    Thu Oct  3 01:45:04 2024 WEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -65,35 +66,35 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2700
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5535
+  9 Power_On_Hours          -O--CK   100   100   000    -    3064
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    7158
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    231
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    546
 175 Program_Fail_Count_Chip PO--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   PO--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--CK   095   095   005    -    30502
+177 Wear_Leveling_Count     PO--CK   097   097   005    -    44961
 178 Used_Rsvd_Blk_Cnt_Chip  PO--CK   100   100   010    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   010    -    518
 181 Program_Fail_Cnt_Total  PO--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  PO--CK   100   100   010    -    0
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   052   070   000    -    52 (Min/Max 7/70)
-195 Hardware_ECC_Recovered  -O--CK   105   105   000    -    7767626
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    746585
-226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
-227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
-228 Power-off_Retract_Count -O--CK   100   100   000    -    0
+194 Temperature_Celsius     -O--CK   040   070   000    -    40 (Min/Max 7/70)
+195 Hardware_ECC_Recovered  -O--CK   112   112   000    -    45467115
+199 CRC_Error_Count         -O--CK   100   100   000    -    0
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    1011992
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    0
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
+228 Workload_Minutes        -O--CK   100   100   000    -    0
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   090   090   000    -    0
-238 Unknown_Attribute       -O--CK   090   090   000    -    0
-236 Unknown_Attribute       -O--CK   090   090   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    746585
-242 Total_LBAs_Read         -O--CK   100   100   000    -    843608
-249 Unknown_Attribute       -O--CK   100   100   000    -    18904
+233 Media_Wearout_Indicator -O--CK   087   087   000    -    0
+238 Unknown_Attribute       -O--CK   087   087   000    -    0
+236 Unknown_Attribute       -O--CK   087   087   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    1011992
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    1079958
+249 NAND_Writes_1GiB        -O--CK   100   100   000    -    26307
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -125,20 +126,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      2672         -
-# 2  Short offline       Completed without error       00%      2633         -
-# 3  Short offline       Completed without error       00%      2631         -
-# 4  Short offline       Completed without error       00%      2608         -
-# 5  Short offline       Completed without error       00%      2544         -
-# 6  Short offline       Completed without error       00%      2542         -
-# 7  Short offline       Completed without error       00%      2526         -
-# 8  Short offline       Completed without error       00%      2522         -
-# 9  Short offline       Completed without error       00%      2481         -
-#10  Short offline       Completed without error       00%      2467         -
-#11  Short offline       Completed without error       00%      2460         -
-#12  Short offline       Completed without error       00%      2439         -
-#13  Short offline       Interrupted (host reset)      90%      2429         -
-#14  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%      2773         -
+# 2  Short offline       Aborted by host               60%      2732         -
+# 3  Short offline       Aborted by host               60%      2732         -
+# 4  Short offline       Completed without error       00%      2730         -
+# 5  Short offline       Completed without error       00%      2672         -
+# 6  Short offline       Completed without error       00%      2633         -
+# 7  Short offline       Completed without error       00%      2631         -
+# 8  Short offline       Completed without error       00%      2608         -
+# 9  Short offline       Completed without error       00%      2544         -
+#10  Short offline       Completed without error       00%      2542         -
+#11  Short offline       Completed without error       00%      2526         -
+#12  Short offline       Completed without error       00%      2522         -
+#13  Short offline       Completed without error       00%      2481         -
+#14  Short offline       Completed without error       00%      2467         -
+#15  Short offline       Completed without error       00%      2460         -
+#16  Short offline       Completed without error       00%      2439         -
+#17  Short offline       Interrupted (host reset)      90%      2429         -
+#18  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -154,8 +159,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    65 Celsius
-Power Cycle Min/Max Temperature:     30/65 Celsius
+Current Temperature:                    50 Celsius
+Power Cycle Min/Max Temperature:     29/64 Celsius
 Lifetime    Min/Max Temperature:     11/86 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -164,7 +169,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (105)
+Temperature History Size (Index):    128 (90)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -173,17 +178,17 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            5535  ---  Lifetime Power-On Resets
-0x01  0x010  4            2700  ---  Power-on Hours
-0x01  0x018  6     48928244446  ---  Logical Sectors Written
-0x01  0x020  6       965485031  ---  Number of Write Commands
-0x01  0x028  6     55286719428  ---  Logical Sectors Read
-0x01  0x030  6       858390026  ---  Number of Read Commands
+0x01  0x008  4            7158  ---  Lifetime Power-On Resets
+0x01  0x010  4            3064  ---  Power-on Hours
+0x01  0x018  6     66321911735  ---  Logical Sectors Written
+0x01  0x020  6      1139037885  ---  Number of Write Commands
+0x01  0x028  6     70776161127  ---  Logical Sectors Read
+0x01  0x030  6      1067390220  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             231  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             546  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              65  ---  Current Temperature
+0x05  0x008  1              50  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              34  ---  Highest Temperature
@@ -197,10 +202,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           34884  ---  Number of Hardware Resets
+0x06  0x008  4           45215  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -211,5 +216,5 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0005  2            0  R_ERR response for non-data FIS
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 

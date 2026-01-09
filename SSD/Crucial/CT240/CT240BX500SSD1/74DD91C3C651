@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.20-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.12.25-generic-1rosa13-x86_64] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron Client SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Apr  7 00:42:02 2023 -05
+Local Time is:    Wed Jul  9 23:14:04 2025 -05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,8 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,33 +61,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1424
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    398
+  9 Power_On_Hours          -O--CK   100   100   000    -    5069
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1375
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    9
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    52
+173 Ave_Block-Erase_Count   -O--CK   097   097   000    -    34
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    577
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    42
-183 SATA_Interfac_Downshift -O--CK   100   100   000    -    190
+183 SATA_Interfac_Downshift -O--CK   100   100   000    -    624
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   065   052   000    -    35 (Min/Max 23/48)
+194 Temperature_Celsius     -O---K   062   052   000    -    38 (Min/Max 23/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    1
-202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    3
+202 Percent_Lifetime_Remain ----CK   097   097   001    -    3
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    2285782949
-247 Host_Program_Page_Count -O--CK   100   100   000    -    71430717
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    56196096
+246 Total_LBAs_Written      -O--CK   100   100   000    -    9854273471
+247 Host_Program_Page_Count -O--CK   100   100   000    -    307946045
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    400040896
 249 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
-251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    3381260290
-252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
+251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    3025786767
+252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    3
 253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    5
+254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    52
 223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    1
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -111,10 +110,29 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+Read SMART Error Log failed: scsi error badly formed scsi parameters
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      5050         -
+# 2  Extended offline    Completed without error       00%      5048         -
+# 3  Short offline       Completed without error       00%      5045         -
+# 4  Short offline       Completed without error       00%      5040         -
+# 5  Short offline       Completed without error       00%      5035         -
+# 6  Short offline       Completed without error       00%      5031         -
+# 7  Short offline       Completed without error       00%      5027         -
+# 8  Short offline       Completed without error       00%      5014         -
+# 9  Short offline       Completed without error       00%      5004         -
+#10  Short offline       Completed without error       00%      4999         -
+#11  Short offline       Completed without error       00%      4995         -
+#12  Short offline       Completed without error       00%      4991         -
+#13  Short offline       Completed without error       00%      4987         -
+#14  Short offline       Completed without error       00%      4983         -
+#15  Short offline       Completed without error       00%      4973         -
+#16  Short offline       Completed without error       00%      4958         -
+#17  Short offline       Completed without error       00%      4953         -
+#18  Short offline       Completed without error       00%      4948         -
+#19  Short offline       Completed without error       00%      4944         -
 
 Selective Self-tests/Logging not supported
 
@@ -129,5 +147,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            3  R_ERR response for non-data FIS
-0x000a  4           29  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
+
+
 

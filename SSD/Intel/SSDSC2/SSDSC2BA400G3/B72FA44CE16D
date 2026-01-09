@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-107-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-117-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 21 06:57:19 2024 UTC
+Local Time is:    Wed Jul 16 14:42:20 2025 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,13 +24,10 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Write SCT (Get) Feature Control Command failed: ATA return descriptor not supported by controller firmware
-Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
-SMART Status not supported: ATA return descriptor not supported by controller firmware
 SMART overall-health self-assessment test result: PASSED
-Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -70,18 +67,18 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    69814
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    34
+  9 Power_On_Hours          -O--CK   100   100   000    -    69844
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    39
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    20
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    651 (407 7)
+174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    24
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    645 (407 5)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    4
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Temperature_Case        -O---K   087   087   000    -    13 (Min/Max 9/13)
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    20
+190 Temperature_Case        -O---K   087   087   000    -    13 (Min/Max 13/14)
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    24
 194 Temperature_Internal    -O---K   100   100   000    -    13
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
@@ -93,7 +90,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 233 Media_Wearout_Indicator -O--CK   091   091   000    -    0
 234 Thermal_Throttle        -O--CK   100   100   000    -    0/0
 241 Host_Writes_32MiB       -O--CK   100   100   000    -    31225215
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    28035918
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    28035923
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -145,30 +142,35 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    13 Celsius
-Power Cycle Min/Max Temperature:      9/13 Celsius
+Power Cycle Min/Max Temperature:     13/14 Celsius
 Lifetime    Min/Max Temperature:      1/27 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-Write SCT Data Table failed: SMART WRITE LOG SECTOR may cause problems, try with -T permissive to force
-Read SCT Temperature History failed
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      0/70 Celsius
+Min/Max Temperature Limit:            0/70 Celsius
+Temperature History Size (Index):    478 (105)
 
-Write SCT (Get) Error Recovery Control Command failed: ATA return descriptor not supported by controller firmware
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              34  ---  Lifetime Power-On Resets
-0x01  0x018  6   2046375700551  ---  Logical Sectors Written
+0x01  0x008  4              39  ---  Lifetime Power-On Resets
+0x01  0x018  6   2046375725975  ---  Logical Sectors Written
 0x01  0x020  6               0  ---  Number of Write Commands
-0x01  0x028  6   1837361979458  ---  Logical Sectors Read
-0x01  0x030  6             787  ---  Number of Read Commands
+0x01  0x028  6   1837362279923  ---  Logical Sectors Read
+0x01  0x030  6             213  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              13  ---  Current Temperature
-0x05  0x010  1              18  ---  Average Short Term Temperature
+0x05  0x010  1              13  ---  Average Short Term Temperature
 0x05  0x018  1              17  ---  Average Long Term Temperature
 0x05  0x020  1              27  ---  Highest Temperature
 0x05  0x028  1               4  ---  Lowest Temperature
@@ -181,8 +183,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1              70  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           13904  ---  Number of Hardware Resets
-0x06  0x010  4             279  ---  Number of ASR Events
+0x06  0x008  4           13918  ---  Number of Hardware Resets
+0x06  0x010  4             291  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
@@ -198,9 +200,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
-
-
 

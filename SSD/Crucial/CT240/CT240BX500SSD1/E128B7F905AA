@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron Client SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
-SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu May  4 22:01:20 2023 CEST
+SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Sat Jun 14 10:43:33 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,34 +62,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1172
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1109
+  9 Power_On_Hours          -O--CK   100   100   000    -    1385
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1431
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   096   096   000    -    31
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    770
+173 Ave_Block-Erase_Count   -O--CK   095   095   000    -    37
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    808
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    46
-183 SATA_Interfac_Downshift -O--CK   100   100   000    -    27
+183 SATA_Interfac_Downshift -O--CK   100   100   000    -    32
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   072   043   000    -    28 (Min/Max 18/57)
+194 Temperature_Celsius     -O---K   068   043   000    -    32 (Min/Max 16/57)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    2
-202 Percent_Lifetime_Remain ----CK   096   096   001    -    4
+202 Percent_Lifetime_Remain ----CK   095   095   001    -    5
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    6107849540
-247 Host_Program_Page_Count -O--CK   100   100   000    -    190870298
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    132822128
+246 Total_LBAs_Written      -O--CK   100   100   000    -    7121287283
+247 Host_Program_Page_Count -O--CK   100   100   000    -    222540227
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    150918688
 249 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
-251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    379194002
+251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    1561568601
 252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    2
 253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    29
-223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
+254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    102
+223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    2
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+Read SMART Error Log failed: scsi error badly formed scsi parameters
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -129,6 +129,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            1  R_ERR response for non-data FIS
+0x0005  4            0  R_ERR response for non-data FIS
 0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

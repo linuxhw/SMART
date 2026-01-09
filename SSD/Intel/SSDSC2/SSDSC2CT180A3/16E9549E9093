@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic
 Device is:        In smartctl database
 ATA Version is:   ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Mar 26 15:39:18 2024 GMT
+SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Thu Jun  5 09:42:18 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    903267h+26m+00.130s
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    9132
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    905503h+43m+49.750s
+ 12 Power_Cycle_Count       -O--CK   090   090   000    -    11202
 181 Program_Fail_Cnt_Total  -O--CK   000   000   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   000   000   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    8464
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    359858
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    10312
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    483896
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    359858
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    223230
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    8275
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    483896
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    368740
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    10813
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -86,15 +86,23 @@ General Purpose Log Directory Version 1
 SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
 0x00       GPL,SL  R/O      1  Log Directory
+0x04       GPL,SL  R/O      1  Device Statistics log
+0x07       GPL     R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xb7       GPL,SL  VS      16  Device vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+SMART Error Log Version: 0
+No Errors Logged
 
-SMART Extended Self-test Log (GP Log 0x07) not supported
-
-SMART Self-test Log not supported
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -115,17 +123,35 @@ Power Cycle Min/Max Temperature:     127/-127 Celsius
 Lifetime    Min/Max Temperature:      0/ 0 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     10 (Unknown, should be 2)
+SCT Temperature History Version:     0 (Unknown, should be 2)
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:      0/100 Celsius
+Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    37468 (276)
-Invalid Temperature History Size or Index
+Temperature History Size (Index):    0 (21)
+Temperature History is empty
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP/SMART Log 0x04) not supported
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4           11208  ---  Lifetime Power-On Resets
+0x01  0x010  4           10709  ---  Power-on Hours
+0x01  0x018  6     31917033161  ---  Logical Sectors Written
+0x01  0x028  6     24350514665  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4          248987  ---  Resets Between Cmd Acceptance and Completion
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4          248987  ---  Number of Hardware Resets
+0x06  0x010  4           57514  ---  Number of ASR Events
+0x06  0x018  4              44  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 Pending Defects log (GP Log 0x0c) not supported
 
@@ -137,8 +163,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

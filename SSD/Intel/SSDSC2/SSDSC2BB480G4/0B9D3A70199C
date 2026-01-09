@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5417
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jan 16 14:55:11 2025 MSK
+Local Time is:    Fri Apr  4 23:17:17 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -70,30 +70,30 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    551
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    11
+  9 Power_On_Hours          -O--CK   100   100   000    -    2409
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    35
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    11
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    610 (3 1269)
+174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    26
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    609 (10 492)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Temperature_Case        -O---K   083   083   000    -    17 (Min/Max 15/17)
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    11
-194 Temperature_Internal    -O---K   100   100   000    -    28
+190 Temperature_Case        -O---K   084   084   000    -    16 (Min/Max 10/17)
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    26
+194 Temperature_Internal    -O---K   100   100   000    -    27
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    783
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    1542
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    65535
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
 234 Thermal_Throttle        -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    783
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    37
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    1542
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    143209
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,9 +144,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    17 Celsius
-Power Cycle Min/Max Temperature:     15/17 Celsius
-Lifetime    Min/Max Temperature:     12/27 Celsius
+Current Temperature:                    16 Celsius
+Power Cycle Min/Max Temperature:     10/17 Celsius
+Lifetime    Min/Max Temperature:     10/27 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -162,31 +162,31 @@ SCT (Get) Error Recovery Control command failed
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x018  6        51369401  ---  Logical Sectors Written
-0x01  0x020  6       473737128  ---  Number of Write Commands
-0x01  0x028  6         2489093  ---  Logical Sectors Read
-0x01  0x030  6       704661216  ---  Number of Read Commands
+0x01  0x008  4              35  ---  Lifetime Power-On Resets
+0x01  0x018  6       101071877  ---  Logical Sectors Written
+0x01  0x020  6       475762482  ---  Number of Write Commands
+0x01  0x028  6      9385406540  ---  Logical Sectors Read
+0x01  0x030  6       778976558  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              17  ---  Current Temperature
-0x05  0x010  1              16  ---  Average Short Term Temperature
-0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x008  1              16  ---  Current Temperature
+0x05  0x010  1              15  ---  Average Short Term Temperature
+0x05  0x018  1              15  ---  Average Long Term Temperature
 0x05  0x020  1              27  ---  Highest Temperature
-0x05  0x028  1              16  ---  Lowest Temperature
+0x05  0x028  1              15  ---  Lowest Temperature
 0x05  0x030  1              17  ---  Highest Average Short Term Temperature
-0x05  0x038  1              16  ---  Lowest Average Short Term Temperature
-0x05  0x040  1               -  ---  Highest Average Long Term Temperature
-0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x038  1              15  ---  Lowest Average Short Term Temperature
+0x05  0x040  1              16  ---  Highest Average Long Term Temperature
+0x05  0x048  1              15  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4047  ---  Number of Hardware Resets
-0x06  0x010  4              17  ---  Number of ASR Events
+0x06  0x008  4            4068  ---  Number of Hardware Resets
+0x06  0x010  4              30  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

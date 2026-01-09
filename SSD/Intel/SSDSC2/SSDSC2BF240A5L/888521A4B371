@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.9-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.15.0-desktop-0.rc2.3omv2590] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic
 Device is:        Not in smartctl database
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan 17 17:49:13 2025 CET
+Local Time is:    Thu Sep  4 22:51:15 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,29 +62,29 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    21
-  9 Power_On_Hours          -O--CK   100   100   000    -    4828
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    7583
+  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    29
+  9 Power_On_Hours          -O--CK   100   100   000    -    5152
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    7894
 170 Unknown_Attribute       PO--CK   096   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    94
+174 Unknown_Attribute       -O--CK   100   100   000    -    100
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   028   100   000    -    28 (Min/Max 14/60)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    94
-194 Temperature_Celsius     -O--CK   028   100   000    -    28 (Min/Max 14/60)
+190 Airflow_Temperature_Cel -O--CK   030   100   000    -    30 (Min/Max 14/60)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    100
+194 Temperature_Celsius     -O--CK   030   100   000    -    30 (Min/Max 14/60)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    545278
+225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    562308
 226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    65535
 227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    56
 228 Power-off_Retract_Count -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   096   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   075   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    545278
-242 Total_LBAs_Read         -O--CK   100   100   000    -    708157
-249 Unknown_Attribute       -O--CK   100   100   000    -    98194
+233 Media_Wearout_Indicator -O--CK   074   100   000    -    0
+241 Total_LBAs_Written      -O--CK   100   100   000    -    562308
+242 Total_LBAs_Read         -O--CK   100   100   000    -    720612
+249 Unknown_Attribute       -O--CK   100   100   000    -    99591
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +99,8 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+SMART Error Log Version: 0
+No Errors Logged
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -120,7 +121,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     14/60 Celsius
 Lifetime    Min/Max Temperature:     14/73 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -130,7 +131,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    0 (116)
+Temperature History Size (Index):    0 (436)
 Temperature History is empty
 
 SCT Error Recovery Control command not supported
@@ -148,7 +149,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

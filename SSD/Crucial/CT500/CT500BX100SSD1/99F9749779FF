@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.5-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.4-301.fc41.x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar  5 23:07:42 2025 UTC
+Local Time is:    Sat Mar  8 16:04:03 2025 AST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Write SCT (Get) Feature Control Command failed: scsi error badly formed scsi parameters
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -67,12 +67,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    1871
- 12 Power_Cycle_Count       ------   100   100   000    -    717
+  9 Power_On_Hours          ------   100   100   000    -    1873
+ 12 Power_Cycle_Count       ------   100   100   000    -    751
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    58
 163 Initial_Bad_Block_Count ------   100   100   000    -    33
-164 Total_Erase_Count       ------   100   100   000    -    17432
+164 Total_Erase_Count       ------   100   100   000    -    17576
 165 Max_Erase_Count         ------   100   100   000    -    58
 166 Min_Erase_Count         ------   100   100   000    -    0
 167 Average_Erase_Count     ------   100   100   000    -    15
@@ -84,17 +84,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    224
-194 Temperature_Celsius     ------   100   100   000    -    35
-195 Hardware_ECC_Recovered  ------   100   100   000    -    94106
+192 Power-Off_Retract_Count ------   100   100   000    -    227
+194 Temperature_Celsius     ------   100   100   000    -    37
+195 Hardware_ECC_Recovered  ------   100   100   000    -    94118
 196 Reallocated_Event_Count ------   100   100   000    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    131678
-242 Host_Reads_32MiB        ------   100   100   000    -    148834
-245 TLC_Writes_32MiB        ------   100   100   000    -    278912
+241 Host_Writes_32MiB       ------   100   100   000    -    132671
+242 Host_Reads_32MiB        ------   100   100   000    -    149371
+245 TLC_Writes_32MiB        ------   100   100   000    -    281216
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,12 +121,11 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-Read SMART Error Log failed: scsi error badly formed scsi parameters
+SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      1870         -
-# 2  Abort offline test  Aborted by host               90%      1869         -
+# 1  Short offline       Completed without error       00%      1873         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -143,7 +142,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
-Power Cycle Min/Max Temperature:     25/35 Celsius
+Power Cycle Min/Max Temperature:     29/38 Celsius
 Lifetime    Min/Max Temperature:      0/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,24 +151,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        0 minutes
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (5)
+Temperature History Size (Index):    128 (7)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             717  ---  Lifetime Power-On Resets
-0x01  0x010  4            1871  ---  Power-on Hours
-0x01  0x018  6        39741396  ---  Logical Sectors Written
-0x01  0x020  6       214253542  ---  Number of Write Commands
-0x01  0x028  6      1164061602  ---  Logical Sectors Read
-0x01  0x030  6       175540261  ---  Number of Read Commands
+0x01  0x008  4             751  ---  Lifetime Power-On Resets
+0x01  0x010  4            1873  ---  Power-on Hours
+0x01  0x018  6       104855284  ---  Logical Sectors Written
+0x01  0x020  6       214669942  ---  Number of Write Commands
+0x01  0x028  6      1199246944  ---  Logical Sectors Read
+0x01  0x030  6       175819682  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             224  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             227  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1915  ---  Number of Hardware Resets
+0x06  0x008  4            2148  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -197,4 +196,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 
