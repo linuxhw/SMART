@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.3] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-rc6+] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -8,14 +8,14 @@ Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
 Firmware Version: 415020WD
 User Capacity:    2,000,398,934,016 bytes [2.00 TB]
-Sector Sizes:     512 bytes logical, 4096 bytes physical
+Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
 TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jun  2 13:24:18 2024 EEST
+Local Time is:    Wed Apr  2 14:17:57 2025 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,29 +61,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    3237
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    591
-165 Block_Erase_Count       -O--CK   100   100   ---    -    69993256
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    3
+  9 Power_On_Hours          -O--CK   100   100   ---    -    6234
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    1201
+165 Block_Erase_Count       -O--CK   100   100   ---    -    562880187301
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    17
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    88
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    16
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    62
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    935
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    8
-174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    34
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    30
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    207
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    3
-194 Temperature_Celsius     -O---K   059   051   ---    -    41 (Min/Max 23/51)
+188 Command_Timeout         -O--CK   100   100   ---    -    4
+194 Temperature_Celsius     -O---K   062   067   ---    -    38 (Min/Max 19/67)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x013d0050013d
+230 Media_Wearout_Indicator -O--CK   005   005   ---    -    0x056003000560
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    17620
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    18044
-241 Host_Writes_GiB         ----CK   253   253   ---    -    16688
-242 Host_Reads_GiB          ----CK   253   253   ---    -    17936
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    64649
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    66475
+241 Host_Writes_GiB         ----CK   253   253   ---    -    41854
+242 Host_Reads_GiB          ----CK   253   253   ---    -    45367
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -115,9 +115,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      3231         -
-# 2  Extended offline    Completed without error       00%      2369         -
-# 3  Extended offline    Interrupted (host reset)      00%      2334         -
+# 1  Extended offline    Completed without error       00%      6036         -
+# 2  Extended offline    Interrupted (host reset)      00%      4841         -
+# 3  Extended offline    Completed without error       00%      4139         -
+# 4  Extended offline    Completed without error       00%      3231         -
+# 5  Extended offline    Completed without error       00%      2369         -
+# 6  Extended offline    Interrupted (host reset)      00%      2334         -
 
 Selective Self-tests/Logging not supported
 
@@ -126,14 +129,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             591  ---  Lifetime Power-On Resets
-0x01  0x010  4            3237  ---  Power-on Hours
-0x01  0x018  6     34998782807  ---  Logical Sectors Written
-0x01  0x020  6       129225917  ---  Number of Write Commands
-0x01  0x028  6     37616430470  ---  Logical Sectors Read
-0x01  0x030  6     56097314459  ---  Number of Read Commands
+0x01  0x008  4            1201  ---  Lifetime Power-On Resets
+0x01  0x010  4            6234  ---  Power-on Hours
+0x01  0x018  6     87776000391  ---  Logical Sectors Written
+0x01  0x020  6       354982041  ---  Number of Write Commands
+0x01  0x028  6     95142523272  ---  Logical Sectors Read
+0x01  0x030  6    331311249463  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -145,7 +148,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 
 
 

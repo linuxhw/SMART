@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.0-2-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.21-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SanDisk based SSDs
@@ -12,14 +12,14 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      1.8 inches
 TRIM Command:     Available, deterministic
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Jul 20 00:55:09 2022 CEST
+Local Time is:    Tue Apr 15 05:09:45 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -61,20 +61,20 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    30047
- 12 Power_Cycle_Count       -O----   100   100   000    -    4632
-165 Total_Write/Erase_Count -O----   100   100   000    -    165031
+  9 Power_On_Hours          -O----   100   100   000    -    42576
+ 12 Power_Cycle_Count       -O----   100   100   000    -    6031
+165 Total_Write/Erase_Count -O----   100   100   000    -    365165
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    42
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    404
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    94
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    443
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-194 Temperature_Celsius     -O---K   054   046   000    -    46 (Min/Max 16/53)
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    140
+194 Temperature_Celsius     -O---K   056   044   000    -    44 (Min/Max 14/53)
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    313
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    211
-241 Total_LBAs_Written      -O----   100   100   000    -    5887176293
-242 Total_LBAs_Read         -O----   100   100   000    -    21064221206
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    687
+241 Total_LBAs_Written      -O----   100   100   000    -    13673462465
+242 Total_LBAs_Read         -O----   100   100   000    -    29440735607
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -274,11 +274,11 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              46  ---  Current Temperature
+0x05  0x008  1              44  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              53  ---  Highest Temperature
-0x05  0x028  1              28  ---  Lowest Temperature
+0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1              50  ---  Highest Average Short Term Temperature
 0x05  0x038  1              50  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -288,7 +288,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -306,4 +306,6 @@ ID      Size     Value  Description
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error
+
+
 

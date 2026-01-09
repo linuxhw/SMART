@@ -1,8 +1,8 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-0.deb11.2-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.16.3+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     Silicon Motion based OEM SSDs
+Model Family:     Supermicro SATA DOM (SuperDOM)
 Device Model:     SuperMicro SSD
 Serial Number:    --
 LU WWN Device Id: 5 15d945 ...
@@ -11,10 +11,10 @@ User Capacity:    31,675,383,808 bytes [31.6 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 16 22:15:18 2022 MSK
+Local Time is:    Wed Sep 17 09:46:13 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,33 +63,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    8709
- 12 Power_Cycle_Count       ------   100   100   000    -    784
- 15 Unknown_Attribute       ------   100   100   000    -    61865984
-160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
-161 Valid_Spare_Block_Cnt   ------   100   100   000    -    165
-163 Initial_Bad_Block_Count ------   100   100   000    -    8
-164 Total_Erase_Count       ------   100   100   000    -    247085
-165 Max_Erase_Count         ------   100   100   000    -    178
-166 Min_Erase_Count         ------   100   100   000    -    75
-167 Average_Erase_Count     ------   100   100   000    -    118
-168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
+  9 Power_On_Hours          ------   100   100   000    -    24588
+ 12 Power_Cycle_Count       ------   100   100   000    -    1873
+ 15 User_Cpcty_Sector_Cnt   ------   100   100   000    -    61865984
+160 Not_In_Use              ------   100   100   000    -    0
+161 Not_In_Use              ------   100   100   000    -    165
+163 Not_In_Use              ------   100   100   000    -    8
+164 Not_In_Use              ------   100   100   000    -    457452
+165 Not_In_Use              ------   100   100   000    -    262
+166 Minimum_PE_Cycles_TLC   ------   100   100   000    -    159
+167 Not_In_Use              ------   100   100   000    -    218
+168 Maximum_PE_Cycles_TLC   ------   100   100   000    -    3000
 172 Unknown_Attribute       ------   100   100   000    -    0
 175 Program_Fail_Count_Chip ------   100   100   000    -    8
-177 Wear_Leveling_Count     ------   100   100   000    -    228
+177 Wear_Leveling_Count     ------   100   100   000    -    267
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    123
-194 Temperature_Celsius     ------   100   100   000    -    43 (Min/Max 14/64)
-195 Hardware_ECC_Recovered  ------   100   100   000    -    3291
+192 Power-Off_Retract_Count ------   100   100   000    -    304
+194 Temperature_Celsius     ------   100   100   000    -    40 (Min/Max 10/64)
+195 Hardware_ECC_Recovered  ------   100   100   000    -    3599
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
-231 Unknown_SSD_Attribute   ------   100   100   000    -    100
-232 Available_Reservd_Space ------   100   100   000    -    97
-233 Media_Wearout_Indicator ------   100   100   000    -    3860
-241 Host_Writes_32MiB       ------   100   100   000    -    3045
-242 Host_Reads_32MiB        ------   100   100   000    -    812
+231 SSD_Life_Left           ------   100   100   000    -    100
+232 Available_Reservd_Space ------   100   100   000    -    93
+233 NAND_Writes_1GiB        ------   100   100   000    -    7147
+241 Lifetime_Writes_GiB     ------   100   100   000    -    5667
+242 Lifetime_Reads_GiB      ------   100   100   000    -    1889
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -134,23 +134,23 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             784  ---  Lifetime Power-On Resets
-0x01  0x010  4            8709  ---  Power-on Hours
-0x01  0x018  6      2092785859  ---  Logical Sectors Written
-0x01  0x020  6        57907639  ---  Number of Write Commands
-0x01  0x028  6      1704822108  ---  Logical Sectors Read
-0x01  0x030  6        22233520  ---  Number of Read Commands
+0x01  0x008  4            1873  ---  Lifetime Power-On Resets
+0x01  0x010  4           24588  ---  Power-on Hours
+0x01  0x018  6      3294806655  ---  Logical Sectors Written
+0x01  0x020  6       136173848  ---  Number of Write Commands
+0x01  0x028  6      3962088682  ---  Logical Sectors Read
+0x01  0x030  6        42235313  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             123  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             304  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            9629  ---  Number of Hardware Resets
+0x06  0x008  4           18842  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -158,6 +158,4 @@ Page  Offset Size        Value Flags Description
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-51-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-27-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,8 +14,8 @@ Form Factor:      Unknown (0x000a)
 TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Dec 18 13:59:45 2024 CET
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Mon Aug  4 15:36:31 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -61,24 +61,24 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    37331
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    2601
+  9 Power_On_Hours          -O--CK   253   100   ---    -    38619
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    2773
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    19
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    138
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    156
 169 Total_Bad_Block         -O--CK   100   100   ---    -    149
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    74
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    95
-187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   072   045   ---    -    28 (Min/Max 17/45)
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    79
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    118
+187 Reported_Uncorrect      -O--CK   100   100   ---    -    22549
+194 Temperature_Celsius     -O---K   075   045   ---    -    25 (Min/Max 17/45)
 212 SATA_PHY_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    0 0 558
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    0 0 575
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    9714
-241 Total_Writes_GiB        ----CK   253   253   ---    -    4555
-242 Total_Reads_GiB         ----CK   253   253   ---    -    6244
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    10343
+241 Total_Writes_GiB        ----CK   253   253   ---    -    4872
+242 Total_Reads_GiB         ----CK   253   253   ---    -    6559
 243 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +103,89 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 65535 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 65535 [3] occurred at disk power-on lifetime: 38318 hours (1596 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  51 -- 40 00 08 00 00 00 48 c8 00 e0 08   8 sectors at LBA = 0x0048c800 = 4769792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 48 c8 00 e0 08     00:00:00.000  READ DMA
+  ca 00 00 00 08 00 00 00 c1 38 00 e3 08     00:00:00.000  WRITE DMA
+  c8 00 00 00 00 00 00 00 48 c9 00 e0 08     00:00:00.000  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.000  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 65534 [2] occurred at disk power-on lifetime: 38318 hours (1596 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  51 -- 40 00 00 00 00 00 48 c8 00 e0 08   at LBA = 0x0048c800 = 4769792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 48 c8 00 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 00 00 00 00 48 c7 00 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 00 00 00 00 48 c6 00 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 00 00 00 00 48 c5 00 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 00 00 00 00 48 c4 00 e0 08     00:00:00.000  READ DMA
+
+Error 65533 [1] occurred at disk power-on lifetime: 38318 hours (1596 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  51 -- 40 00 08 00 00 00 48 c8 00 e0 08   8 sectors at LBA = 0x0048c800 = 4769792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 48 c8 00 e0 08     00:00:00.000  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.000  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+
+Error 65532 [0] occurred at disk power-on lifetime: 38318 hours (1596 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  51 -- 40 00 08 00 00 00 48 c8 00 e0 08   8 sectors at LBA = 0x0048c800 = 4769792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 48 c8 00 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 08 00 00 00 48 c7 f8 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 08 00 00 00 48 c7 f0 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 08 00 00 00 48 c7 e8 e0 08     00:00:00.000  READ DMA
+  c8 00 00 00 08 00 00 00 48 c7 e0 e0 08     00:00:00.000  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -128,7 +210,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
-
-
+0x000a  4           14  Device-to-host register FISes sent due to a COMRESET
 

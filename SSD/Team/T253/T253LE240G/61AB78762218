@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov  8 04:39:22 2024 GMT
+Local Time is:    Thu May 15 04:34:53 2025 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -31,9 +31,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(65535) seconds.
 Offline data collection
@@ -61,15 +60,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    10904
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    541
+  9 Power_On_Hours          -O--C-   100   100   000    -    11280
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    720
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   010    -    152
-173 Unknown_Attribute       -O--C-   100   100   000    -    2752578
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    81
+173 Unknown_Attribute       -O--C-   100   100   000    -    3014725
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    115
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
 231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    98
-241 Total_LBAs_Written      -O--C-   100   100   000    -    5600
+241 Total_LBAs_Written      -O--C-   100   100   000    -    6182
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +97,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10799         -
+# 1  Short offline       Aborted by host               00%     10921         -
+# 2  Short offline       Completed without error       00%     10799         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -117,10 +117,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             541  ---  Lifetime Power-On Resets
-0x01  0x010  4           10904  ---  Power-on Hours
-0x01  0x018  6     11746091842  ---  Logical Sectors Written
-0x01  0x028  6     17619033359  ---  Logical Sectors Read
+0x01  0x008  4             720  ---  Lifetime Power-On Resets
+0x01  0x010  4           11280  ---  Power-on Hours
+0x01  0x018  6     12964660349  ---  Logical Sectors Written
+0x01  0x028  6     19097349803  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -128,7 +128,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1998  ---  Number of Hardware Resets
+0x06  0x008  4            2665  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
@@ -146,12 +146,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.9-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.13.2-1-cachyos] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan 24 13:23:48 2025 IST
+Local Time is:    Fri Mar  7 13:57:29 2025 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -33,9 +33,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(65535) seconds.
 Offline data collection
@@ -63,23 +62,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   094   094   010    -    1
-  9 Power_On_Hours          -O--C-   100   100   000    -    26621
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2505
+  9 Power_On_Hours          -O--C-   100   100   000    -    27593
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3187
 160 Uncorrectable_Error_Cnt PO-R--   100   100   050    -    0
 161 Valid_Spare_Block_Cnt   PO----   094   094   010    -    104
 163 Initial_Bad_Block_Count PO----   094   094   010    -    46
-165 Max_Erase_Count         -O--C-   100   100   000    -    381
-167 Average_Erase_Count     -O--C-   100   100   000    -    358
+165 Max_Erase_Count         -O--C-   100   100   000    -    390
+167 Average_Erase_Count     -O--C-   100   100   000    -    367
 168 Max_Erase_Count_of_Spec -O--C-   100   100   000    -    1000
-169 Remaining_Lifetime_Perc PO--C-   100   100   000    -    64
+169 Remaining_Lifetime_Perc PO--C-   100   100   000    -    63
 181 Program_Fail_Cnt_Total  -O--C-   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--C-   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    1681
-194 Temperature_Celsius     PO---K   076   076   000    -    24 (Min/Max 16/45)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    1780
+194 Temperature_Celsius     PO---K   078   078   000    -    22 (Min/Max 16/45)
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
-241 Host_Writes_32MiB       -O--C-   100   100   000    -    855562
-242 Host_Reads_32MiB        -O--C-   100   100   000    -    623351
-245 TLC_Writes_32MiB        -O--C-   100   100   000    -    1294078
+241 Host_Writes_32MiB       -O--C-   100   100   000    -    893802
+242 Host_Reads_32MiB        -O--C-   100   100   000    -    685433
+245 TLC_Writes_32MiB        -O--C-   100   100   000    -    1336540
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,16 +107,17 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%     26483         -
-# 2  Short offline       Completed without error       00%     26483         -
-# 3  Short offline       Completed without error       00%     26409         -
-# 4  Short offline       Completed without error       00%     24723         -
+# 1  Extended offline    Aborted by host               00%     27082         -
+# 2  Conveyance offline  Completed without error       00%     26483         -
+# 3  Short offline       Completed without error       00%     26483         -
+# 4  Short offline       Completed without error       00%     26409         -
 # 5  Short offline       Completed without error       00%     24723         -
-# 6  Conveyance offline  Completed without error       00%     24688         -
-# 7  Short offline       Completed without error       00%     24688         -
-# 8  Short offline       Completed without error       00%     24687         -
-# 9  Short offline       Completed without error       00%     24635         -
-#10  Short offline       Completed without error       00%     24624         -
+# 6  Short offline       Completed without error       00%     24723         -
+# 7  Conveyance offline  Completed without error       00%     24688         -
+# 8  Short offline       Completed without error       00%     24688         -
+# 9  Short offline       Completed without error       00%     24687         -
+#10  Short offline       Completed without error       00%     24635         -
+#11  Short offline       Completed without error       00%     24624         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -136,20 +136,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2505  ---  Lifetime Power-On Resets
-0x01  0x010  4           26621  ---  Power-on Hours
-0x01  0x018  6     56070154937  ---  Logical Sectors Written
-0x01  0x028  6     40851987827  ---  Logical Sectors Read
+0x01  0x008  4            3187  ---  Lifetime Power-On Resets
+0x01  0x010  4           27593  ---  Power-on Hours
+0x01  0x018  6     58576227171  ---  Logical Sectors Written
+0x01  0x028  6     44920594720  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  ---  Current Temperature
+0x05  0x008  1              22  ---  Current Temperature
 0x05  0x020  1              45  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              35  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              36  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -164,10 +164,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           31  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4           54  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

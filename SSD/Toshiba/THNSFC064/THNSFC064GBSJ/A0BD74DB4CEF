@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.6.88-desktop-3.mga9] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.6.101-desktop-1.mga9] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed May 14 23:45:42 2025 CEST
+Local Time is:    Sun Oct  5 16:31:15 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,17 +68,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    2381
+  9 Power_On_Hours          -O--C-   100   100   000    -    2467
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1644
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1665
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
+168 Unknown_Attribute       -O--C-   100   100   000    -    1
 169 Unknown_Attribute       PO--C-   100   100   010    -    390876103112
 170 Unknown_Attribute       PO--C-   100   100   010    -    107390697554
 173 Unknown_Attribute       -O--C-   186   186   000    -    0
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    243
-194 Temperature_Celsius     PO---K   070   053   030    -    30 (Min/Max 12/47)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    250
+194 Temperature_Celsius     PO---K   069   047   030    -    31 (Min/Max 12/53)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1
+Device Error Count: 2
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +119,23 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 2459 hours (102 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 06 88 00 00 04 a6 a5 70 e0 00  Error: ICRC, ABRT 1672 sectors at LBA = 0x04a6a570 = 78030192
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 06 88 00 00 04 a6 a5 70 e0 00     00:07:59.952  WRITE DMA EXT
+  ca 00 00 00 08 00 00 00 a5 c9 50 e4 00     00:07:59.952  WRITE DMA
+  e7 00 00 00 00 00 00 00 00 00 00 a0 00     00:07:59.449  FLUSH CACHE
+  ca 00 00 00 08 00 00 00 0b b3 b0 e5 00     00:07:59.449  WRITE DMA
+  e7 00 00 00 00 00 00 00 00 00 00 a0 00     00:07:59.447  FLUSH CACHE
 
 Error 1 [0] occurred at disk power-on lifetime: 171 hours (7 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -154,20 +171,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     20/30 Celsius
-Lifetime    Min/Max Temperature:     12/47 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     24/31 Celsius
+Lifetime    Min/Max Temperature:     12/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 02 01 00 2c ce 82 00 04 00 00 00 00 00 00 03
+00 02 01 00 65 85 87 00 04 00 00 00 00 00 00 03
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (68)
+Temperature History Size (Index):    128 (62)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -187,8 +204,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

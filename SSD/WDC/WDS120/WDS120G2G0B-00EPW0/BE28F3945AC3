@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database 7.5/5706
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Aug 15 17:07:23 2025 +07
+Local Time is:    Tue Aug 19 11:20:07 2025 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,7 +60,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    2
   9 Power_On_Hours          -O--CK   100   100   000    -    8000
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3351
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3352
 165 Block_Erase_Count       -O--CK   100   100   000    -    4378
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    37
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    1
@@ -74,7 +74,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   074   043   000    -    26 (Min/Max 6/43)
+194 Temperature_Celsius     -O---K   076   043   000    -    24 (Min/Max 6/43)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
 230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x0c3207280c32
 232 Available_Reservd_Space PO--CK   100   100   005    -    98
@@ -116,16 +116,17 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      50%      7079         -
-# 2  Extended offline    Completed without error       00%      7058         -
-# 3  Extended offline    Completed without error       00%      7026         -
-# 4  Extended offline    Completed without error       00%      4613         -
-# 5  Extended offline    Completed without error       00%      3167         -
-# 6  Extended offline    Completed without error       00%      2473         -
-# 7  Extended offline    Interrupted (host reset)      80%      2352         -
-# 8  Extended offline    Completed without error       00%       946         -
-# 9  Extended offline    Completed without error       00%       917         -
-#10  Extended offline    Completed without error       00%        82         -
+# 1  Extended offline    Completed without error       00%      8000         -
+# 2  Extended offline    Interrupted (host reset)      50%      7079         -
+# 3  Extended offline    Completed without error       00%      7058         -
+# 4  Extended offline    Completed without error       00%      7026         -
+# 5  Extended offline    Completed without error       00%      4613         -
+# 6  Extended offline    Completed without error       00%      3167         -
+# 7  Extended offline    Completed without error       00%      2473         -
+# 8  Extended offline    Interrupted (host reset)      80%      2352         -
+# 9  Extended offline    Completed without error       00%       946         -
+#10  Extended offline    Completed without error       00%       917         -
+#11  Extended offline    Completed without error       00%        82         -
 
 Selective Self-tests/Logging not supported
 
@@ -134,13 +135,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3351  ---  Lifetime Power-On Resets
+0x01  0x008  4            3352  ---  Lifetime Power-On Resets
 0x01  0x010  4            8000  ---  Power-on Hours
 0x01  0x018  6     18285986598  ---  Logical Sectors Written
-0x01  0x028  6     24812263316  ---  Logical Sectors Read
+0x01  0x028  6     24812277255  ---  Logical Sectors Read
 0x01  0x038  6            8000  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
+0x05  0x008  1              24  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
@@ -167,7 +168,7 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           20  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
