@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.16-11-bpo11-pve] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.8.12-4-pve] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital RE3 Serial ATA
@@ -10,22 +10,25 @@ Firmware Version: 02.03B07
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Fri Jan 19 15:50:58 2024 +05
+Local Time is:    Mon Dec  2 19:35:59 2024 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Enabled
+Write SCT (Get) Feature Control Command failed: ATA return descriptor not supported by controller firmware
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: ATA return descriptor not supported by controller firmware
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x84)	Offline data collection activity
@@ -65,17 +68,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   200   200   021    -    1000
-  4 Start_Stop_Count        -O--CK   100   100   000    -    64
+  3 Spin_Up_Time            POS--K   199   199   021    -    1025
+  4 Start_Stop_Count        -O--CK   100   100   000    -    73
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   029   029   000    -    51895
+  9 Power_On_Hours          -O--CK   021   021   000    -    58262
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    63
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    48
-193 Load_Cycle_Count        -O--CK   200   200   000    -    15
-194 Temperature_Celsius     -O---K   117   104   000    -    26
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    72
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    55
+193 Load_Cycle_Count        -O--CK   200   200   000    -    17
+194 Temperature_Celsius     -O---K   126   104   000    -    17
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -178,21 +181,16 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     14/35 Celsius
-Lifetime    Min/Max Temperature:     25/39 Celsius
+Current Temperature:                    18 Celsius
+Power Cycle Min/Max Temperature:     14/21 Celsius
+Lifetime    Min/Max Temperature:     15/39 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:      0/60 Celsius
-Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (109)
+Write SCT Data Table failed: SMART WRITE LOG SECTOR may cause problems, try with -T permissive to force
+Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read:     75 (7.5 seconds)
-          Write:     75 (7.5 seconds)
+Write SCT (Get) Error Recovery Control Command failed: ATA return descriptor not supported by controller firmware
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -207,6 +205,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
-0x8000  4     22598965  Vendor specific
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x8000  4      7583825  Vendor specific
+
+
 
